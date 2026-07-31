@@ -1,5 +1,34 @@
 /* ============ ME GUSTA WORLD — script ============ */
 
+// ---------- Live market cap ----------
+// Ide írd be a token contract address-t (CA) — amíg üres, az MCAP chip rejtve marad.
+const TOKEN_CA = "";
+
+function formatMcap(v) {
+  if (v >= 1e9) return "$" + (v / 1e9).toFixed(2) + "B";
+  if (v >= 1e6) return "$" + (v / 1e6).toFixed(1) + "M";
+  if (v >= 1e3) return "$" + Math.round(v / 1e3) + "K";
+  return "$" + Math.round(v);
+}
+
+async function updateMcap() {
+  if (!TOKEN_CA) return;
+  try {
+    const resp = await fetch("https://api.dexscreener.com/latest/dex/tokens/" + TOKEN_CA);
+    const data = await resp.json();
+    const pairs = (data.pairs || []).filter((p) => p.marketCap || p.fdv);
+    if (!pairs.length) return;
+    pairs.sort((a, b) => ((b.liquidity && b.liquidity.usd) || 0) - ((a.liquidity && a.liquidity.usd) || 0));
+    const best = pairs[0];
+    const chip = document.getElementById("mcapChip");
+    document.getElementById("mcapValue").textContent = formatMcap(best.marketCap || best.fdv);
+    if (best.url) chip.href = best.url;
+    chip.hidden = false;
+  } catch { /* keep last value */ }
+}
+updateMcap();
+setInterval(updateMcap, 60000);
+
 // ---------- Boot screen ----------
 const boot = document.getElementById("boot");
 window.addEventListener("load", () => {

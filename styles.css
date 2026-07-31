@@ -266,11 +266,11 @@ button { font-family: inherit; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3.5rem 0 2rem;
+  padding: 3.5rem 0 6.5rem;
 }
 .island {
   width: min(1020px, 86vw);
-  max-height: 74vh;
+  max-height: 68vh;
 }
 .island__float {
   animation: islandFloat 7s ease-in-out infinite;
@@ -397,18 +397,43 @@ button { font-family: inherit; }
 .dock {
   position: fixed;
   left: 50%;
-  bottom: 1.1rem;
+  bottom: .9rem;
   transform: translateX(-50%);
   z-index: 55;
   display: flex;
-  gap: 2.4rem;
-  padding: .9rem 2rem .7rem;
+  align-items: center;
+  gap: 1.5rem;
+  padding: .55rem 1.3rem .45rem;
   background: rgba(12,12,12,.85);
   border: 1px solid rgba(255,255,255,.12);
-  border-radius: 22px;
+  border-radius: 18px;
   box-shadow: 0 12px 34px rgba(0,0,0,.6);
   transition: opacity .5s ease, transform .5s ease;
 }
+.dock__mcap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .15rem;
+  align-self: stretch;
+  padding-right: 1.3rem;
+  border-right: 1px solid rgba(255,255,255,.14);
+  text-decoration: none;
+}
+.dock__mcap[hidden] { display: none; }
+.dock__mcap-label {
+  font-size: .58rem;
+  letter-spacing: .22em;
+  color: var(--grey);
+}
+.dock__mcap-value {
+  font-family: var(--display);
+  font-size: .95rem;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+.dock__mcap:hover .dock__mcap-value { color: var(--white); }
 .site.locked .dock {
   opacity: 0;
   transform: translateX(-50%) translateY(20px);
@@ -422,9 +447,9 @@ button { font-family: inherit; }
   text-decoration: none;
 }
 .dock__icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +462,7 @@ button { font-family: inherit; }
 .dock__icon--tg { background: linear-gradient(180deg, #37aee2, #1e96c8); }
 .dock__icon--pump { background: #ffffff; }
 .dock__label {
-  font-size: .78rem;
+  font-size: .66rem;
   letter-spacing: .05em;
   color: #cfcfca;
 }
@@ -719,6 +744,8 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .spot__label { opacity: 1; }
   .lab__wrap { grid-template-columns: 1fr; }
   .worldfoot { display: none; }
-  .dock { gap: 1.6rem; padding: .8rem 1.4rem .6rem; }
-  .dock__icon { width: 48px; height: 48px; }
+  .world { padding-bottom: 6rem; }
+  .dock { gap: 1.1rem; padding: .5rem 1rem .4rem; }
+  .dock__icon { width: 36px; height: 36px; }
+  .dock__mcap { padding-right: 1rem; }
 }
