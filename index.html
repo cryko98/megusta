@@ -186,13 +186,13 @@
 
           <!-- ============ ROADS ============ -->
           <g fill="none" stroke-linecap="round">
-            <path stroke="#101010" stroke-width="21" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 820 546 786 555 758 561 C 732 566 706 566 682 564"/>
-            <path stroke="#101010" stroke-width="21" d="M 532 564 C 500 570 468 572 436 570"/>
+            <path stroke="#101010" stroke-width="21" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 818 544 786 548 762 546 C 736 544 708 542 686 540"/>
+            <path stroke="#101010" stroke-width="21" d="M 530 542 C 498 552 464 560 436 566"/>
             <path stroke="#101010" stroke-width="21" d="M 262 550 C 240 500 248 430 268 384"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 820 546 786 555 758 561 C 732 566 706 566 682 564"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M 532 564 C 500 570 468 572 436 570"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 818 544 786 548 762 546 C 736 544 708 542 686 540"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M 530 542 C 498 552 464 560 436 566"/>
             <path stroke="#e6d6a4" stroke-width="15" d="M 262 550 C 240 500 248 430 268 384"/>
-            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 820 546 786 555 758 561 C 732 566 706 566 682 564"/>
+            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 818 544 786 548 762 546 C 736 544 708 542 686 540"/>
           </g>
 
           <!-- ============ GRASS TEXTURE ============ -->
@@ -223,76 +223,98 @@
             <use href="#flower" transform="translate(1050 450)"/>
           </g>
 
-          <!-- ============ THE GRIN LAGOON — the mouth of the face ============ -->
-          <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M 285 440 C 370 415 500 404 600 404 C 705 404 830 415 895 444 C 875 510 765 566 620 570 C 470 572 330 528 285 440 Z"/>
-          <g fill="#d9c98e" stroke="none">
-            <circle cx="380" cy="436" r="2.5"/><circle cx="470" cy="412" r="2.5"/>
-            <circle cx="720" cy="414" r="2.5"/><circle cx="840" cy="446" r="2.5"/>
-            <circle cx="500" cy="566" r="2"/><circle cx="700" cy="564" r="2"/>
+          <!-- ============ THE FACE, mapped from the original drawing ============ -->
+          <!-- forehead marks + heavy brow (image y52/y66/y86 -> island) -->
+          <g fill="none" stroke-linecap="round">
+            <path stroke="#101010" stroke-width="7" opacity=".2" d="M 539 332 C 590 326 640 325 683 329"/>
+            <path stroke="#357a26" stroke-width="6" d="M 539 330 C 590 324 640 323 683 327"/>
+            <path stroke="#101010" stroke-width="8" opacity=".2" d="M 492 358 C 560 348 660 346 730 352"/>
+            <path stroke="#357a26" stroke-width="7" d="M 492 356 C 560 346 660 344 730 350"/>
+            <path stroke="#b9ec92" stroke-width="3" opacity=".6" d="M 496 361 C 560 352 658 350 726 355"/>
+            <path stroke="#101010" stroke-width="11" opacity=".25" d="M 424 390 C 550 374 700 370 816 382"/>
+            <path stroke="#357a26" stroke-width="9" d="M 424 386 C 550 370 700 366 816 378"/>
+            <path stroke="#b9ec92" stroke-width="4" opacity=".65" d="M 430 392 C 552 377 698 373 810 384"/>
           </g>
-          <path fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5" d="M 300 445 C 380 425 500 415 600 415 C 700 415 820 425 880 448 C 860 505 760 555 620 558 C 480 560 340 520 300 445 Z"/>
-          <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M 380 440 C 450 424 520 418 600 418"/>
-          <!-- teeth shimmer -->
-          <g fill="none" stroke="#e7d8a2" stroke-width="4.5" stroke-linecap="round" opacity=".55">
-            <path d="M400 434 Q 396 480 402 512"/>
-            <path d="M460 424 Q 456 486 462 534"/>
-            <path d="M520 419 Q 516 490 522 548"/>
-            <path d="M580 416 Q 576 492 582 556"/>
-            <path d="M640 417 Q 636 492 642 555"/>
-            <path d="M700 420 Q 696 488 702 546"/>
-            <path d="M760 426 Q 756 482 762 530"/>
-            <path d="M820 434 Q 816 472 822 506"/>
+          <!-- wide-set eyes, heavy lids, tiny mad pupils -->
+          <g stroke="#101010">
+            <ellipse cx="492" cy="405" rx="40" ry="19" fill="#f7f5ee" stroke-width="4"/>
+            <path fill="none" stroke-width="3.5" d="M 456 396 C 470 388 514 388 528 397"/>
+            <ellipse cx="504" cy="409" rx="6.5" ry="5" fill="#101010" stroke="none"/>
+            <circle cx="501.5" cy="406.5" r="1.8" fill="#ffffff" stroke="none"/>
+            <ellipse cx="730" cy="400" rx="47" ry="22" fill="#f7f5ee" stroke-width="4"/>
+            <path fill="none" stroke-width="3.5" d="M 688 390 C 705 381 757 381 772 391"/>
+            <ellipse cx="714" cy="404" rx="7" ry="5.5" fill="#101010" stroke="none"/>
+            <circle cx="711.5" cy="401.5" r="1.8" fill="#ffffff" stroke="none"/>
+          </g>
+
+          <!-- the grin: upturned crescent lagoon, corners near the cheeks -->
+          <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M 320 394 C 435 434 530 448 611 450 C 695 448 810 422 893 385 C 838 458 722 522 611 524 C 498 524 386 466 320 394 Z"/>
+          <g fill="#d9c98e" stroke="none">
+            <circle cx="420" cy="440" r="2.5"/><circle cx="500" cy="458" r="2.5"/>
+            <circle cx="700" cy="452" r="2.5"/><circle cx="800" cy="428" r="2.5"/>
+            <circle cx="560" cy="516" r="2"/><circle cx="680" cy="514" r="2"/>
+          </g>
+          <path fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5" d="M 334 400 C 440 442 530 458 611 458 C 695 456 805 428 881 391 C 830 452 720 510 611 512 C 500 512 390 465 334 400 Z"/>
+          <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M 400 420 C 480 442 540 452 611 455"/>
+          <!-- teeth hatching along the smile -->
+          <g fill="none" stroke="#e7d8a2" stroke-width="4.5" stroke-linecap="round" opacity=".6">
+            <path d="M420 438 Q 417 452 421 466"/>
+            <path d="M480 452 Q 477 470 481 488"/>
+            <path d="M540 459 Q 537 480 541 501"/>
+            <path d="M611 462 Q 608 485 612 508"/>
+            <path d="M680 461 Q 677 483 681 504"/>
+            <path d="M740 454 Q 737 473 741 492"/>
+            <path d="M800 441 Q 797 457 801 472"/>
+            <path d="M845 424 Q 842 434 846 444"/>
           </g>
           <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".7">
-            <path d="M480 460 q 20 8 44 2"/>
-            <path d="M660 500 q 22 8 46 0"/>
-            <path d="M540 510 q 16 6 34 2"/>
+            <path d="M480 462 q 20 8 44 2"/>
+            <path d="M660 498 q 22 8 46 0"/>
+            <path d="M560 496 q 16 6 34 2"/>
           </g>
           <g stroke="#101010" stroke-width="2">
-            <ellipse cx="430" cy="490" rx="13" ry="6.5" fill="#57a844"/>
-            <path d="M430 490 l13 -3" stroke="#2f6b2a"/>
+            <ellipse cx="470" cy="480" rx="13" ry="6.5" fill="#57a844"/>
+            <path d="M470 480 l13 -3" stroke="#2f6b2a"/>
             <ellipse cx="770" cy="470" rx="11" ry="5.5" fill="#4c9440"/>
             <path d="M770 470 l11 -2.5" stroke="#2f6b2a"/>
           </g>
-
-          <!-- the eyes: two sandy clearings with pupil stones -->
-          <g stroke="#101010" stroke-width="3">
-            <ellipse cx="480" cy="378" rx="34" ry="20" fill="#f2ecd8"/>
-            <ellipse cx="480" cy="378" rx="25" ry="13" fill="none" stroke-width="1.5" opacity=".25"/>
-            <ellipse cx="491" cy="382" rx="7" ry="5" fill="#101010" stroke="none"/>
-            <ellipse cx="755" cy="372" rx="34" ry="20" fill="#f2ecd8"/>
-            <ellipse cx="755" cy="372" rx="25" ry="13" fill="none" stroke-width="1.5" opacity=".25"/>
-            <ellipse cx="745" cy="376" rx="7" ry="5" fill="#101010" stroke="none"/>
+          <!-- broad nose on the lip -->
+          <g>
+            <ellipse cx="618" cy="430" rx="52" ry="17" fill="#3f8a2e" opacity=".3"/>
+            <ellipse cx="618" cy="424" rx="50" ry="17" fill="#9edd77" stroke="#101010" stroke-width="3.5"/>
+            <path fill="none" stroke="#b9ec92" stroke-width="3" opacity=".7" d="M 588 417 C 600 410 636 410 648 417"/>
+            <ellipse cx="600" cy="430" rx="5.5" ry="3.5" fill="#101010" opacity=".85"/>
+            <ellipse cx="636" cy="429" rx="5.5" ry="3.5" fill="#101010" opacity=".85"/>
           </g>
 
           <!-- ============ WATERFALL ============ -->
           <g stroke="#101010" stroke-width="3">
-            <ellipse cx="548" cy="564" rx="12" ry="8" fill="#8d929b"/>
-            <ellipse cx="664" cy="564" rx="13" ry="8" fill="#7d828b"/>
+            <ellipse cx="548" cy="520" rx="12" ry="8" fill="#8d929b"/>
+            <ellipse cx="664" cy="520" rx="13" ry="8" fill="#7d828b"/>
           </g>
-          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 556 C 556 630 552 665 548 720 L 540 880 L 672 880 L 662 720 C 657 665 653 630 650 556 Z"/>
+          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 512 C 556 620 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 653 620 650 512 Z"/>
           <g class="fall-lines" stroke="#e9f7ff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85">
-            <path d="M575 568 C 572 650 568 725 562 860"/>
-            <path d="M605 573 C 604 655 602 730 600 865"/>
-            <path d="M635 568 C 637 650 640 725 645 858"/>
+            <path d="M575 524 C 572 640 568 720 562 860"/>
+            <path d="M605 529 C 604 645 602 725 600 865"/>
+            <path d="M635 524 C 637 640 640 720 645 858"/>
           </g>
           <g class="fall-lines fall-lines--slow" stroke="#cdeefb" stroke-width="3" stroke-linecap="round" fill="none" opacity=".6">
-            <path d="M590 570 C 588 655 585 735 580 862"/>
-            <path d="M620 570 C 620 655 621 735 624 862"/>
+            <path d="M590 526 C 588 650 585 730 580 862"/>
+            <path d="M620 526 C 620 650 621 730 624 862"/>
           </g>
           <!-- foam lip -->
-          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 553 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
+          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 509 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
           <!-- wooden bridge over the falls -->
           <g stroke="#101010" stroke-width="3">
-            <rect x="528" y="564" width="156" height="20" rx="4" fill="#a06b3c"/>
+            <rect x="528" y="530" width="156" height="20" rx="4" fill="#a06b3c"/>
             <g stroke="#7c4a24" stroke-width="2">
-              <line x1="552" y1="566" x2="552" y2="582"/>
-              <line x1="576" y1="566" x2="576" y2="582"/>
-              <line x1="600" y1="566" x2="600" y2="582"/>
-              <line x1="624" y1="566" x2="624" y2="582"/>
-              <line x1="648" y1="566" x2="648" y2="582"/>
+              <line x1="552" y1="532" x2="552" y2="548"/>
+              <line x1="576" y1="532" x2="576" y2="548"/>
+              <line x1="600" y1="532" x2="600" y2="548"/>
+              <line x1="624" y1="532" x2="624" y2="548"/>
+              <line x1="648" y1="532" x2="648" y2="548"/>
             </g>
-            <rect x="524" y="558" width="164" height="5" rx="2.5" fill="#c98a4b"/>
+            <rect x="524" y="524" width="164" height="5" rx="2.5" fill="#c98a4b"/>
           </g>
           <!-- mist -->
           <g fill="#ffffff" stroke="none">
@@ -317,7 +339,6 @@
           <use href="#tree" transform="translate(1010 472)"/>
           <use href="#pine" transform="translate(1052 428) scale(.85)"/>
           <use href="#tree" transform="translate(385 592) scale(.85)"/>
-          <use href="#pine" transform="translate(690 598) scale(.8)"/>
           <use href="#tree" transform="translate(940 530) scale(.8)"/>
           <use href="#bush" transform="translate(1052 482) scale(.8)"/>
           <use href="#bush" transform="translate(475 592) scale(.85)"/>
@@ -335,13 +356,12 @@
 
           <!-- lakeside bench + flowers -->
           <g stroke="#101010" stroke-width="2.5">
-            <rect x="346" y="392" width="32" height="6" rx="2" fill="#a06b3c"/>
-            <rect x="344" y="398" width="36" height="8" rx="2" fill="#c98a4b"/>
-            <line x1="350" y1="406" x2="350" y2="416"/>
-            <line x1="374" y1="406" x2="374" y2="416"/>
+            <rect x="338" y="360" width="32" height="6" rx="2" fill="#a06b3c"/>
+            <rect x="336" y="366" width="36" height="8" rx="2" fill="#c98a4b"/>
+            <line x1="342" y1="374" x2="342" y2="384"/>
+            <line x1="366" y1="374" x2="366" y2="384"/>
           </g>
           <use href="#flower" transform="translate(302 398)"/>
-          <use href="#flower" transform="translate(408 390)"/>
 
           <!-- SW pebbles -->
           <g stroke="#101010" stroke-width="2">
@@ -360,9 +380,9 @@
 
           <!-- ============ GUSTA STATUE ============ -->
           <g stroke="#101010" stroke-width="3">
-            <ellipse cx="659" cy="391" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
-            <rect x="645" y="372" width="30" height="16" rx="3" fill="#a8a8a0"/>
-            <g transform="translate(660 356)">
+            <ellipse cx="559" cy="305" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <rect x="545" y="286" width="30" height="16" rx="3" fill="#a8a8a0"/>
+            <g transform="translate(560 270)">
               <circle r="17" fill="#c9c9c2"/>
               <image class="statue-img" href="Megusta.jpg" x="-16" y="-16" width="32" height="32" clip-path="url(#statueClip)"/>
             </g>
