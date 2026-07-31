@@ -393,6 +393,56 @@ button { font-family: inherit; }
   50% { opacity: 1; }
 }
 
+/* ============ SOCIAL DOCK ============ */
+.dock {
+  position: fixed;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  z-index: 55;
+  display: flex;
+  gap: 2.4rem;
+  padding: .9rem 2rem .7rem;
+  background: rgba(12,12,12,.85);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 22px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.6);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.site.locked .dock {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+.dock__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .45rem;
+  text-decoration: none;
+}
+.dock__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1);
+}
+.dock__item:hover .dock__icon {
+  transform: translateY(-5px) scale(1.07);
+}
+.dock__icon--x { background: #000; border: 1px solid #3a3a3a; }
+.dock__icon--tg { background: linear-gradient(180deg, #37aee2, #1e96c8); }
+.dock__icon--pump { background: #ffffff; }
+.dock__label {
+  font-size: .78rem;
+  letter-spacing: .05em;
+  color: #cfcfca;
+}
+.dock__item:hover .dock__label { color: var(--white); }
+
 .worldfoot {
   position: fixed;
   left: 1.4rem;
@@ -665,8 +715,10 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .nav { background: rgba(5,5,5,.85); }
   .nav__badge { font-size: .58rem; padding: .38rem .7rem; }
   .world { padding-top: 4.2rem; }
-  .island { width: 145vw; max-width: none; max-height: 56vh; }
+  .island { width: 96vw; max-width: none; max-height: 46vh; }
   .spot__label { opacity: 1; }
   .lab__wrap { grid-template-columns: 1fr; }
-  .worldfoot { font-size: .6rem; right: 1.4rem; text-align: center; }
+  .worldfoot { display: none; }
+  .dock { gap: 1.6rem; padding: .8rem 1.4rem .6rem; }
+  .dock__icon { width: 48px; height: 48px; }
 }
