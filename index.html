@@ -185,15 +185,13 @@
 
           <!-- ============ ROADS ============ -->
           <g fill="none" stroke-linecap="round">
-            <path stroke="#101010" stroke-width="21" d="M372 334 C 340 348 310 358 296 366"/>
-            <path stroke="#101010" stroke-width="21" d="M272 372 C 282 424 292 472 312 522 C 322 546 330 558 338 568"/>
-            <path stroke="#101010" stroke-width="21" d="M968 348 C 985 385 982 420 960 445"/>
-            <path stroke="#101010" stroke-width="21" d="M930 466 C 905 495 870 520 828 542"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M372 334 C 340 348 310 358 296 366"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M272 372 C 282 424 292 472 312 522 C 322 546 330 558 338 568"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M968 348 C 985 385 982 420 960 445"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M930 466 C 905 495 870 520 828 542"/>
-            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M272 372 C 282 424 292 472 312 522 C 322 546 330 558 338 568"/>
+            <path stroke="#101010" stroke-width="21" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 820 546 786 555 758 561 C 732 566 706 566 682 564"/>
+            <path stroke="#101010" stroke-width="21" d="M 532 564 C 500 570 468 572 436 570"/>
+            <path stroke="#101010" stroke-width="21" d="M 262 550 C 240 500 248 430 268 384"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 820 546 786 555 758 561 C 732 566 706 566 682 564"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M 532 564 C 500 570 468 572 436 570"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M 262 550 C 240 500 248 430 268 384"/>
+            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M 276 368 C 320 350 380 342 430 340 C 500 330 560 332 618 330 C 690 334 760 322 810 330 C 870 340 905 345 930 350 C 990 368 1000 412 978 456 C 950 492 905 512 852 532 C 820 546 786 555 758 561 C 732 566 706 566 682 564"/>
           </g>
 
           <!-- ============ GRASS TEXTURE ============ -->
@@ -267,6 +265,18 @@
           </g>
           <!-- foam lip -->
           <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 535 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
+          <!-- wooden bridge over the falls -->
+          <g stroke="#101010" stroke-width="3">
+            <rect x="528" y="550" width="156" height="20" rx="4" fill="#a06b3c"/>
+            <g stroke="#7c4a24" stroke-width="2">
+              <line x1="552" y1="552" x2="552" y2="568"/>
+              <line x1="576" y1="552" x2="576" y2="568"/>
+              <line x1="600" y1="552" x2="600" y2="568"/>
+              <line x1="624" y1="552" x2="624" y2="568"/>
+              <line x1="648" y1="552" x2="648" y2="568"/>
+            </g>
+            <rect x="524" y="544" width="164" height="5" rx="2.5" fill="#c98a4b"/>
+          </g>
           <!-- mist -->
           <g fill="#ffffff" stroke="none">
             <ellipse class="mist mist--1" cx="580" cy="845" rx="26" ry="12"/>
@@ -293,7 +303,34 @@
           <use href="#pine" transform="translate(690 598) scale(.8)"/>
           <use href="#tree" transform="translate(940 530) scale(.8)"/>
           <use href="#bush" transform="translate(1052 482) scale(.8)"/>
-          <use href="#bush" transform="translate(300 548) scale(.85)"/>
+          <use href="#bush" transform="translate(475 592) scale(.85)"/>
+          <use href="#tree" transform="translate(240 418) scale(.8)"/>
+          <use href="#pine" transform="translate(872 296) scale(.75)"/>
+
+          <!-- cave mound -->
+          <g stroke="#101010" stroke-width="3">
+            <ellipse cx="810" cy="312" rx="48" ry="14" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <path fill="#6cbb47" d="M 766 310 a 44 30 0 0 1 88 0 Z"/>
+            <path fill="#1c2417" d="M 788 310 a 22 16 0 0 1 44 0 Z"/>
+            <line x1="856" y1="298" x2="856" y2="312" stroke="#7c4a24" stroke-width="4"/>
+            <path fill="#ffd23f" d="M 856 280 l 9 16 h -18 Z"/>
+          </g>
+
+          <!-- lakeside bench + flowers -->
+          <g stroke="#101010" stroke-width="2.5">
+            <rect x="346" y="432" width="32" height="6" rx="2" fill="#a06b3c"/>
+            <rect x="344" y="438" width="36" height="8" rx="2" fill="#c98a4b"/>
+            <line x1="350" y1="446" x2="350" y2="456"/>
+            <line x1="374" y1="446" x2="374" y2="456"/>
+          </g>
+          <use href="#flower" transform="translate(395 462)"/>
+          <use href="#flower" transform="translate(340 478)"/>
+
+          <!-- SW pebbles -->
+          <g stroke="#101010" stroke-width="2">
+            <ellipse cx="500" cy="602" rx="8" ry="5" fill="#8d929b"/>
+            <ellipse cx="518" cy="608" rx="6" ry="4" fill="#7d828b"/>
+          </g>
 
           <!-- ============ BEACH SET ============ -->
           <g stroke="#101010" stroke-width="3" transform="translate(-104 58)">
@@ -306,9 +343,9 @@
 
           <!-- ============ GUSTA STATUE ============ -->
           <g stroke="#101010" stroke-width="3">
-            <ellipse cx="639" cy="317" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
-            <rect x="625" y="298" width="30" height="16" rx="3" fill="#a8a8a0"/>
-            <g transform="translate(640 282)">
+            <ellipse cx="659" cy="391" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <rect x="645" y="372" width="30" height="16" rx="3" fill="#a8a8a0"/>
+            <g transform="translate(660 356)">
               <circle r="17" fill="#c9c9c2"/>
               <image class="statue-img" href="Megusta.jpg" x="-16" y="-16" width="32" height="32" clip-path="url(#statueClip)"/>
             </g>
