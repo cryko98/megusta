@@ -40,6 +40,7 @@
         <button data-panel="lab">Meme Lab</button>
         <button data-panel="how">How To MeGusta</button>
         <button data-panel="community">Community</button>
+        <button data-panel="listings">Listings</button>
       </nav>
     </header>
 
@@ -52,6 +53,7 @@
           <clipPath id="faceClip"><circle cx="0" cy="0" r="34"/></clipPath>
           <clipPath id="statueClip"><circle cx="0" cy="0" r="16"/></clipPath>
           <clipPath id="headClip"><circle cx="112" cy="114" r="103"/></clipPath>
+          <clipPath id="domeClip"><circle cx="0" cy="0" r="38"/></clipPath>
           <!-- dark sketch lines of the face -> dark green engraved lines -->
           <filter id="inkLines" color-interpolation-filters="sRGB">
             <feColorMatrix type="matrix" values="0 0 0 0 0.06  0 0 0 0 0.11  0 0 0 0 0.04  -0.60 -1.18 -0.22 0 1.12"/>
@@ -238,24 +240,24 @@
             <path stroke="#101010" stroke-width="8" opacity=".2" d="M 492 358 C 560 348 660 346 730 352"/>
             <path stroke="#357a26" stroke-width="7" d="M 492 356 C 560 346 660 344 730 350"/>
             <path stroke="#b9ec92" stroke-width="3" opacity=".6" d="M 496 361 C 560 352 658 350 726 355"/>
-            <path stroke="#101010" stroke-width="11" opacity=".25" d="M 424 390 C 550 374 700 370 816 382"/>
-            <path stroke="#357a26" stroke-width="9" d="M 424 386 C 550 370 700 366 816 378"/>
-            <path stroke="#b9ec92" stroke-width="4" opacity=".65" d="M 430 392 C 552 377 698 373 810 384"/>
+            <path stroke="#101010" stroke-width="13" opacity=".3" d="M 424 391 C 550 375 700 371 816 383"/>
+            <path stroke="#2a5c1c" stroke-width="11" d="M 424 386 C 550 370 700 366 816 378"/>
+            <path stroke="#b9ec92" stroke-width="4" opacity=".65" d="M 430 393 C 552 378 698 374 810 385"/>
           </g>
           <!-- wide-set eyes, heavy lids, bags, tiny mad pupils -->
           <g stroke="#101010">
             <ellipse cx="492" cy="405" rx="40" ry="19" fill="#f7f5ee" stroke-width="4"/>
             <ellipse cx="492" cy="405" rx="30" ry="13" fill="none" stroke-width="1.5" opacity=".22"/>
-            <path fill="none" stroke-width="3.5" d="M 456 396 C 470 388 514 388 528 397"/>
+            <path fill="none" stroke-width="5" d="M 456 396 C 470 388 514 388 528 397"/>
             <path fill="none" stroke-width="3" opacity=".75" d="M 464 426 C 477 433 508 433 521 427"/>
-            <ellipse cx="479" cy="408" rx="6.5" ry="5" fill="#101010" stroke="none"/>
-            <circle cx="476.5" cy="405.5" r="1.8" fill="#ffffff" stroke="none"/>
+            <ellipse cx="479" cy="408" rx="7.5" ry="5.8" fill="#101010" stroke="none"/>
+            <circle cx="476.5" cy="405.5" r="2" fill="#ffffff" stroke="none"/>
             <ellipse cx="730" cy="400" rx="47" ry="22" fill="#f7f5ee" stroke-width="4"/>
             <ellipse cx="730" cy="400" rx="36" ry="16" fill="none" stroke-width="1.5" opacity=".22"/>
-            <path fill="none" stroke-width="3.5" d="M 688 390 C 705 381 757 381 772 391"/>
+            <path fill="none" stroke-width="5" d="M 688 390 C 705 381 757 381 772 391"/>
             <path fill="none" stroke-width="3" opacity=".75" d="M 694 424 C 710 432 752 432 766 424"/>
-            <ellipse cx="747" cy="403" rx="7" ry="5.5" fill="#101010" stroke="none"/>
-            <circle cx="744.5" cy="400.5" r="1.8" fill="#ffffff" stroke="none"/>
+            <ellipse cx="747" cy="403" rx="8" ry="6.2" fill="#101010" stroke="none"/>
+            <circle cx="744.5" cy="400.5" r="2" fill="#ffffff" stroke="none"/>
           </g>
 
           <!-- the grin: slim upturned crescent, corners toward the cheeks -->
@@ -265,23 +267,37 @@
             <circle cx="700" cy="448" r="2.5"/><circle cx="800" cy="424" r="2.5"/>
             <circle cx="580" cy="498" r="2"/><circle cx="660" cy="496" r="2"/>
           </g>
-          <path fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5" d="M 350 412 C 450 448 540 462 615 463 C 700 461 800 436 872 402 C 806 448 700 484 615 485 C 530 484 430 458 350 412 Z"/>
+          <path fill="url(#lakeGrad)" stroke="#101010" stroke-width="4.5" d="M 350 412 C 450 448 540 462 615 463 C 700 461 800 436 872 402 C 806 448 700 484 615 485 C 530 484 430 458 350 412 Z"/>
           <path fill="none" stroke="#5fb2dd" stroke-width="4" opacity=".6" d="M 420 436 C 490 452 550 460 615 462"/>
-          <!-- teeth hatching along the smile -->
-          <g fill="none" stroke="#e7d8a2" stroke-width="4" stroke-linecap="round" opacity=".65">
-            <path d="M420 439 Q 418 443 421 447"/>
-            <path d="M455 447 Q 453 452 456 458"/>
-            <path d="M490 453 Q 488 459 491 465"/>
-            <path d="M525 458 Q 523 464 526 471"/>
-            <path d="M560 461 Q 558 468 561 476"/>
-            <path d="M615 466 Q 613 473 616 481"/>
-            <path d="M580 463 Q 578 470 581 479"/>
-            <path d="M650 465 Q 648 472 651 480"/>
-            <path d="M685 463 Q 683 470 686 478"/>
-            <path d="M720 458 Q 718 464 721 471"/>
-            <path d="M755 452 Q 753 457 756 463"/>
-            <path d="M790 444 Q 788 449 791 454"/>
-            <path d="M825 433 Q 823 437 826 442"/>
+          <!-- dense teeth hatching along the smile, like the drawing -->
+          <g fill="none" stroke="#3f7086" stroke-width="3.5" stroke-linecap="round" opacity=".8">
+            <path d="M415 437 v6"/>
+            <path d="M440 445 v8"/>
+            <path d="M465 450 v10"/>
+            <path d="M490 455 v12"/>
+            <path d="M515 459 v14"/>
+            <path d="M540 462 v15"/>
+            <path d="M565 464 v16"/>
+            <path d="M590 465 v17"/>
+            <path d="M615 466 v17"/>
+            <path d="M640 465.5 v17"/>
+            <path d="M665 464.5 v16"/>
+            <path d="M690 462 v16"/>
+            <path d="M715 458 v15"/>
+            <path d="M740 452 v14"/>
+            <path d="M765 446 v12"/>
+            <path d="M790 439 v11"/>
+            <path d="M815 430 v10"/>
+            <path d="M840 419 v9"/>
+          </g>
+          <!-- smile-corner curls + chin marks -->
+          <g fill="none" stroke-linecap="round">
+            <path stroke="#2a5c1c" stroke-width="4.5" d="M 352 414 C 342 406 337 397 340 388"/>
+            <path stroke="#2a5c1c" stroke-width="4.5" d="M 870 404 C 880 396 884 388 882 379"/>
+            <path stroke="#101010" stroke-width="7" opacity=".13" d="M 500 510 C 516 516 530 519 540 519"/>
+            <path stroke="#3f8a2e" stroke-width="5" opacity=".85" d="M 500 508 C 516 514 530 517 540 517"/>
+            <path stroke="#101010" stroke-width="7" opacity=".13" d="M 676 519 C 690 518 706 514 720 507"/>
+            <path stroke="#3f8a2e" stroke-width="5" opacity=".85" d="M 676 517 C 690 516 706 512 720 505"/>
           </g>
           <g stroke="#101010" stroke-width="2">
             <ellipse cx="490" cy="460" rx="11" ry="5.5" fill="#57a844"/>
@@ -319,6 +335,7 @@
           <!-- wooden bridge over the falls -->
           <g stroke="#101010" stroke-width="3">
             <rect x="528" y="506" width="156" height="20" rx="4" fill="#a06b3c"/>
+            <path fill="#7c4a24" d="M 528 524 L 684 524 L 684 532 L 528 532 Z"/>
             <g stroke="#7c4a24" stroke-width="2">
               <line x1="552" y1="508" x2="552" y2="524"/>
               <line x1="576" y1="508" x2="576" y2="524"/>
@@ -357,6 +374,42 @@
           <use href="#tree" transform="translate(240 418) scale(.8)"/>
           <use href="#pine" transform="translate(872 296) scale(.75)"/>
 
+          <!-- COMING SOON shop -->
+          <g stroke="#101010" stroke-width="3" transform="translate(0 8)">
+            <ellipse cx="660" cy="300" rx="66" ry="11" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <path fill="#d5d2ca" d="M 714 258 L 726 250 L 726 288 L 714 296 Z"/>
+            <path fill="#eceae4" d="M 606 258 L 714 258 L 714 296 L 606 296 Z"/>
+            <path fill="#d9463e" d="M 602 251 L 722 251 L 726 250 L 718 244 L 598 244 L 602 251 Z"/>
+            <rect x="602" y="251" width="116" height="8" fill="#c94038"/>
+            <!-- marquee sign -->
+            <rect x="612" y="212" width="96" height="36" rx="5" fill="#17181a"/>
+            <g fill="#ffd23f" stroke="none">
+              <circle cx="620" cy="218" r="2.5" class="blink" style="animation-delay:0s"/>
+              <circle cx="640" cy="215" r="2.5" class="blink" style="animation-delay:.3s"/>
+              <circle cx="660" cy="214" r="2.5" class="blink" style="animation-delay:.6s"/>
+              <circle cx="680" cy="215" r="2.5" class="blink" style="animation-delay:.9s"/>
+              <circle cx="700" cy="218" r="2.5" class="blink" style="animation-delay:1.2s"/>
+              <circle cx="620" cy="242" r="2.5" class="blink" style="animation-delay:.75s"/>
+              <circle cx="640" cy="245" r="2.5" class="blink" style="animation-delay:1.05s"/>
+              <circle cx="660" cy="246" r="2.5" class="blink" style="animation-delay:.15s"/>
+              <circle cx="680" cy="245" r="2.5" class="blink" style="animation-delay:.45s"/>
+              <circle cx="700" cy="242" r="2.5" class="blink" style="animation-delay:1.35s"/>
+            </g>
+            <text x="660" y="228" class="shopsign shopsign--1">COMING</text>
+            <text x="660" y="243" class="shopsign shopsign--2">SOON</text>
+            <!-- awnings + door + windows -->
+            <g fill="#bfe0ff" stroke-width="2">
+              <rect x="614" y="270" width="24" height="13"/>
+              <rect x="682" y="270" width="24" height="13"/>
+            </g>
+            <g fill="#4d7dbf" stroke-width="2">
+              <path d="M 612 270 h 28 a 14 8 0 0 1 -28 0 Z" transform="translate(0 -4)"/>
+              <path d="M 680 270 h 28 a 14 8 0 0 1 -28 0 Z" transform="translate(0 -4)"/>
+            </g>
+            <rect x="650" y="272" width="20" height="24" rx="2" fill="#35414f"/>
+            <line x1="660" y1="272" x2="660" y2="296" stroke-width="2"/>
+          </g>
+
           <!-- cave mound -->
           <g stroke="#101010" stroke-width="3">
             <ellipse cx="810" cy="312" rx="48" ry="14" fill="#3f8a2e" opacity=".45" stroke="none"/>
@@ -393,6 +446,8 @@
           <!-- ============ GUSTA STATUE ============ -->
           <g stroke="#101010" stroke-width="3">
             <ellipse cx="559" cy="305" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <path fill="#c6c6be" d="M 545 286 L 553 281 L 583 281 L 575 286 Z"/>
+            <path fill="#8b8b83" d="M 575 286 L 583 281 L 583 297 L 575 302 Z"/>
             <rect x="545" y="286" width="30" height="16" rx="3" fill="#a8a8a0"/>
             <g transform="translate(560 270)">
               <circle r="17" fill="#c9c9c2"/>
@@ -404,54 +459,66 @@
           <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="MeGusta City — open the Lore">
             <g>
              <g transform="translate(10 -22)">
-              <ellipse cx="424" cy="352" rx="92" ry="17" fill="#3f8a2e" opacity=".45"/>
-              <g stroke="#101010" stroke-width="3.5">
-                <!-- back building -->
-                <rect x="352" y="258" width="46" height="90" fill="#3d6299"/>
-                <rect x="349" y="252" width="52" height="8" fill="#2f4f7d"/>
+              <ellipse cx="424" cy="340" rx="100" ry="17" fill="#3f8a2e" opacity=".45"/>
+              <g stroke="#101010" stroke-width="3">
+                <!-- plaza platform -->
+                <path fill="#cdd2d8" d="M 326 318 L 506 318 L 540 288 L 360 288 Z"/>
+                <path fill="#aab1b9" d="M 326 318 L 506 318 L 506 326 L 326 326 Z"/>
+                <!-- face dome -->
+                <g transform="translate(432 250)">
+                  <circle r="43" fill="#141414"/>
+                  <image href="Megusta.jpg" x="-39" y="-39" width="78" height="78" clip-path="url(#domeClip)"/>
+                </g>
+                <!-- yellow slab (back-left) -->
+                <path fill="#d8b32a" d="M 366 218 L 354 226 L 354 250 L 366 242 Z"/>
+                <path fill="#f7dd6d" d="M 366 218 L 378 208 L 432 208 L 420 218 Z"/>
+                <path fill="#ecc93f" d="M 366 218 L 420 218 L 420 242 L 366 242 Z"/>
+                <g fill="#8a6d13" stroke="none">
+                  <rect x="374" y="224" width="9" height="6"/><rect x="391" y="224" width="9" height="6"/><rect x="406" y="224" width="8" height="6"/>
+                </g>
+                <!-- yellow tower with stack (back-right) -->
+                <rect x="484" y="182" width="6" height="26" fill="#6b7078"/>
+                <circle cx="487" cy="179" r="3" fill="#d9463e"/>
+                <path fill="#f7dd6d" d="M 476 208 L 488 200 L 508 200 L 496 208 Z"/>
+                <path fill="#d8b32a" d="M 496 208 L 508 200 L 508 250 L 496 258 Z"/>
+                <path fill="#ecc93f" d="M 476 208 L 496 208 L 496 258 L 476 258 Z"/>
+                <g fill="#8a6d13" stroke="none">
+                  <rect x="481" y="216" width="10" height="6"/><rect x="481" y="228" width="10" height="6"/><rect x="481" y="240" width="10" height="6"/>
+                </g>
+                <!-- blue tall (front-left) -->
+                <path fill="#6fa3e0" d="M 342 246 L 354 238 L 380 238 L 368 246 Z"/>
+                <path fill="#35619c" d="M 368 246 L 380 238 L 380 304 L 368 312 Z"/>
+                <path fill="#4d7dbf" d="M 342 246 L 368 246 L 368 312 L 342 312 Z"/>
+                <g fill="#dff0ff" stroke="none">
+                  <rect x="347" y="254" width="7" height="7"/><rect x="358" y="254" width="7" height="7"/>
+                  <rect x="347" y="268" width="7" height="7"/><rect x="358" y="268" width="7" height="7"/>
+                  <rect x="347" y="282" width="7" height="7"/><rect x="358" y="282" width="7" height="7"/>
+                  <rect x="347" y="296" width="7" height="7"/><rect x="358" y="296" width="7" height="7"/>
+                </g>
+                <!-- light blue mid -->
+                <path fill="#8fc0ef" d="M 386 268 L 396 261 L 422 261 L 412 268 Z"/>
+                <path fill="#4d7dbf" d="M 412 268 L 422 261 L 422 307 L 412 314 Z"/>
+                <path fill="#6fa3e0" d="M 386 268 L 412 268 L 412 314 L 386 314 Z"/>
                 <g fill="#ffe9a8" stroke="none">
-                  <rect x="360" y="270" width="9" height="9"/><rect x="378" y="270" width="9" height="9"/>
-                  <rect x="360" y="288" width="9" height="9"/><rect x="378" y="288" width="9" height="9"/>
-                  <rect x="360" y="306" width="9" height="9"/><rect x="378" y="306" width="9" height="9"/>
-                  <rect x="360" y="324" width="9" height="9"/>
+                  <rect x="391" y="276" width="7" height="7"/><rect x="402" y="276" width="7" height="7"/>
+                  <rect x="391" y="290" width="7" height="7"/><rect x="402" y="290" width="7" height="7"/>
                 </g>
-                <!-- tall building -->
-                <rect x="447" y="238" width="42" height="110" fill="#2f4f7d"/>
-                <line x1="468" y1="238" x2="468" y2="218"/>
-                <circle cx="468" cy="215" r="3.5" fill="#d9463e"/>
-                <g fill="#bfe0ff" stroke="none">
-                  <rect x="455" y="250" width="8" height="8"/><rect x="470" y="250" width="8" height="8"/>
-                  <rect x="455" y="266" width="8" height="8"/><rect x="470" y="266" width="8" height="8"/>
-                  <rect x="455" y="282" width="8" height="8"/><rect x="470" y="282" width="8" height="8"/>
-                  <rect x="455" y="298" width="8" height="8"/><rect x="470" y="298" width="8" height="8"/>
-                  <rect x="455" y="314" width="8" height="8"/><rect x="470" y="314" width="8" height="8"/>
+                <rect x="394" y="300" width="12" height="14" rx="2" fill="#35414f"/>
+                <!-- blue block (front-right) -->
+                <path fill="#6fa3e0" d="M 452 262 L 464 254 L 490 254 L 478 262 Z"/>
+                <path fill="#35619c" d="M 478 262 L 490 254 L 490 306 L 478 314 Z"/>
+                <path fill="#4d7dbf" d="M 452 262 L 478 262 L 478 314 L 452 314 Z"/>
+                <g fill="#dff0ff" stroke="none">
+                  <rect x="457" y="270" width="7" height="7"/><rect x="468" y="270" width="7" height="7"/>
+                  <rect x="457" y="284" width="7" height="7"/><rect x="468" y="284" width="7" height="7"/>
+                  <rect x="457" y="298" width="7" height="7"/><rect x="468" y="298" width="7" height="7"/>
                 </g>
-                <!-- front building -->
-                <rect x="385" y="294" width="70" height="54" fill="#6fa3e0"/>
-                <rect x="381" y="288" width="78" height="8" fill="#4d7dbf"/>
+                <!-- small light (right) -->
+                <path fill="#8fc0ef" d="M 496 276 L 506 269 L 526 269 L 516 276 Z"/>
+                <path fill="#4d7dbf" d="M 516 276 L 526 269 L 526 305 L 516 312 Z"/>
+                <path fill="#6fa3e0" d="M 496 276 L 516 276 L 516 312 L 496 312 Z"/>
                 <g fill="#ffe9a8" stroke="none">
-                  <rect x="394" y="304" width="10" height="10"/><rect x="430" y="304" width="10" height="10"/>
-                </g>
-                <rect x="410" y="320" width="18" height="28" rx="2" fill="#35414f"/>
-                <path d="M406 320 h26 l-4 -7 h-18 Z" fill="#d9463e"/>
-              </g>
-              <!-- billboard with face -->
-              <g stroke="#101010" stroke-width="3.5">
-                <line x1="424" y1="252" x2="424" y2="230"/>
-                <g transform="translate(424 224)">
-                  <circle r="41" fill="#35414f"/>
-                  <circle r="36" fill="#f2f0ea"/>
-                  <image href="Megusta.jpg" x="-34" y="-34" width="68" height="68" clip-path="url(#faceClip)"/>
-                  <g fill="#ffd23f" stroke="none">
-                    <circle cx="0" cy="-41" r="3" class="blink" style="animation-delay:0s"/>
-                    <circle cx="29" cy="-29" r="3" class="blink" style="animation-delay:.2s"/>
-                    <circle cx="41" cy="0" r="3" class="blink" style="animation-delay:.4s"/>
-                    <circle cx="29" cy="29" r="3" class="blink" style="animation-delay:.6s"/>
-                    <circle cx="0" cy="41" r="3" class="blink" style="animation-delay:.8s"/>
-                    <circle cx="-29" cy="29" r="3" class="blink" style="animation-delay:1s"/>
-                    <circle cx="-41" cy="0" r="3" class="blink" style="animation-delay:1.2s"/>
-                    <circle cx="-29" cy="-29" r="3" class="blink" style="animation-delay:1.4s"/>
-                  </g>
+                  <rect x="501" y="284" width="7" height="7"/><rect x="501" y="297" width="7" height="7"/>
                 </g>
               </g>
              </g>
@@ -549,6 +616,7 @@
               <g stroke="#101010" stroke-width="3.5">
                 <rect x="248" y="344" width="84" height="12" rx="6" fill="#97a0a8"/>
                 <rect x="258" y="334" width="64" height="12" rx="6" fill="#aab3ba"/>
+                <ellipse cx="300" cy="287" rx="57" ry="64" fill="#6f4e2f"/>
                 <ellipse cx="290" cy="282" rx="57" ry="64" fill="#a97c50"/>
                 <g stroke-width="2.5" opacity=".7">
                   <path d="M290 218 l0 12 M340 250 l-10 7 M347 292 l-12 -2 M330 334 l-9 -8 M240 250 l10 7 M233 292 l12 -2 M250 334 l9 -8"/>
@@ -714,6 +782,30 @@
           <a class="btn btn--big" href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">KNOW YOUR MEME</a>
         </div>
         <img class="community__face" src="Megusta.jpg" alt="Me Gusta">
+      </div>
+    </div>
+
+    <div class="panel" id="panel-listings" role="dialog" aria-modal="true" aria-label="Listings">
+      <div class="panel__inner panel__inner--narrow panel__inner--left">
+        <button class="panel__close" aria-label="Close">✕</button>
+        <h2 class="section__title">LISTINGS</h2>
+        <p class="section__sub">where to get $MEGUSTA</p>
+        <div class="listing__head">
+          <img src="Megusta.jpg" alt="MeGusta token">
+          <div>
+            <div class="listing__price" id="listPrice">$—</div>
+            <div class="listing__mcapline">MARKET CAP <b id="listMcap">—</b></div>
+          </div>
+        </div>
+        <svg class="listing__chart" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
+          <polyline points="0,44 20,40 40,46 60,32 80,38 100,22 120,30 140,26 160,34 180,24 200,32 220,28 240,36 260,30 280,34 300,31" fill="none" stroke="#4a4a4a" stroke-width="2"/>
+        </svg>
+        <div class="listing__rows">
+          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">—</span></div>
+          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">—</span></div>
+          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">—</span></div>
+        </div>
+        <p class="listing__note">listings are not endorsements — do your own research. not financial advice.</p>
       </div>
     </div>
 

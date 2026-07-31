@@ -23,6 +23,10 @@ async function updateMcap() {
     const chip = document.getElementById("mcapChip");
     document.getElementById("mcapValue").textContent = formatMcap(best.marketCap || best.fdv);
     if (best.url) chip.href = best.url;
+    const lp = document.getElementById("listPrice");
+    if (lp && best.priceUsd) lp.textContent = "$" + Number(best.priceUsd).toPrecision(4);
+    const lm = document.getElementById("listMcap");
+    if (lm) lm.textContent = formatMcap(best.marketCap || best.fdv);
   } catch { /* keep last value */ }
 }
 
@@ -195,6 +199,31 @@ document.querySelectorAll(".panel").forEach((panel) =>
 );
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closePanel();
+});
+
+// ---------- Mood blast ----------
+document.querySelectorAll(".mood").forEach((mood) => {
+  mood.addEventListener("click", () => {
+    const img = mood.querySelector("img");
+    const caption = mood.querySelector("figcaption").textContent;
+    const blast = document.createElement("div");
+    blast.className = "moodblast";
+    const rays = document.createElement("div");
+    rays.className = "moodblast__rays";
+    const face = img.cloneNode();
+    face.classList.add("moodblast__face");
+    const cap = document.createElement("div");
+    cap.className = "moodblast__cap";
+    cap.textContent = caption;
+    const hint = document.createElement("div");
+    hint.className = "moodblast__hint";
+    hint.textContent = "click to close";
+    blast.append(rays, face, cap, hint);
+    const kill = () => blast.remove();
+    blast.addEventListener("click", kill);
+    setTimeout(kill, 6000);
+    document.body.appendChild(blast);
+  });
 });
 
 // ---------- Meme Lab ----------

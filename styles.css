@@ -743,6 +743,148 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   animation: floaty 4s ease-in-out infinite;
 }
 
+/* ============ LISTINGS ============ */
+.panel__inner--left { text-align: left; }
+.listing__head {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+.listing__head img {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.15);
+}
+.listing__price {
+  font-family: var(--display);
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.listing__mcapline {
+  color: var(--grey);
+  font-size: .8rem;
+  letter-spacing: .14em;
+}
+.listing__mcapline b { color: var(--white); margin-left: .4rem; }
+.listing__chart {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 1.6rem;
+}
+.listing__rows {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+.listing__row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  padding: .9rem 1.2rem;
+  opacity: .65;
+}
+.listing__q {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  color: var(--grey);
+}
+.listing__name {
+  flex: 1;
+  font-family: var(--display);
+  font-size: .85rem;
+  letter-spacing: .12em;
+  color: var(--grey);
+}
+.listing__vol { color: var(--grey); font-size: .9rem; }
+.listing__note {
+  margin-top: 1.6rem;
+  color: var(--grey);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+/* ============ MOOD BLAST ============ */
+.mood { cursor: pointer; }
+.moodblast {
+  position: fixed;
+  inset: 0;
+  z-index: 130;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  background: rgba(3,3,3,.9);
+  cursor: pointer;
+  overflow: hidden;
+  animation: blastIn .25s ease;
+}
+@keyframes blastIn { from { opacity: 0; } }
+.moodblast__rays {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 240vmax; height: 240vmax;
+  margin: -120vmax 0 0 -120vmax;
+  background: repeating-conic-gradient(rgba(199,242,74,.14) 0 9deg, transparent 9deg 22deg);
+  border-radius: 50%;
+  animation: raySpin 14s linear infinite;
+  pointer-events: none;
+}
+@keyframes raySpin { to { transform: rotate(360deg); } }
+.moodblast__face {
+  width: min(320px, 64vw);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 120px rgba(199,242,74,.35);
+  animation: facePop .65s cubic-bezier(.34,1.56,.64,1), faceWob 2.2s ease-in-out .65s infinite;
+}
+@keyframes facePop {
+  from { transform: scale(.05) rotate(-560deg); }
+  to { transform: scale(1) rotate(0); }
+}
+@keyframes faceWob {
+  0%, 100% { transform: rotate(-4deg) scale(1); }
+  50% { transform: rotate(4deg) scale(1.05); }
+}
+.moodblast__cap {
+  position: relative;
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 5vw, 2.6rem);
+  letter-spacing: .12em;
+  color: var(--white);
+  text-shadow: 0 0 30px rgba(199,242,74,.6);
+  animation: capSlide .5s ease .2s backwards;
+}
+@keyframes capSlide {
+  from { opacity: 0; transform: translateY(26px); }
+}
+.moodblast__hint {
+  position: relative;
+  color: var(--grey);
+  font-size: .75rem;
+  letter-spacing: .25em;
+}
+
+/* ============ SHOP SIGN (SVG text) ============ */
+.shopsign {
+  font-family: var(--display);
+  text-anchor: middle;
+  fill: #8dff5a;
+  stroke: none;
+  letter-spacing: .06em;
+}
+.shopsign--1 { font-size: 13px; }
+.shopsign--2 { font-size: 16px; }
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 860px) {
   .nav { background: rgba(5,5,5,.85); }
