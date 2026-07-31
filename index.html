@@ -17,26 +17,8 @@
 </head>
 <body>
 
-  <!-- ============ LOCK SCREEN ============ -->
-  <div class="lock" id="lock">
-    <div class="lock__noise"></div>
-    <div class="lock__clock" id="lockClock">4:20</div>
-    <div class="lock__date" id="lockDate">Monday, March 8</div>
-    <img class="lock__face" src="Megusta.jpg" alt="Me Gusta face" draggable="false">
-    <div class="lock__hint">me gusta unlocking things</div>
-    <div class="lock__slider" id="slider">
-      <div class="lock__slider-track">
-        <span class="lock__slider-label">SLIDE TO UNLOCK</span>
-        <div class="lock__slider-thumb" id="sliderThumb">
-          <img src="Megusta.jpg" alt="" draggable="false">
-        </div>
-      </div>
-    </div>
-    <button class="lock__skip" id="lockSkip">skip &gt;</button>
-  </div>
-
   <!-- ============ WORLD ============ -->
-  <div class="site" id="site">
+  <div class="site locked" id="site">
 
     <header class="nav">
       <a class="nav__logo" href="#">
@@ -496,6 +478,12 @@
       </svg>
       <p class="world__hint">click around the island, me gusta exploring</p>
     </main>
+
+    <!-- slide to unlock -->
+    <div class="unlockbar" id="unlockbar" tabindex="0" role="button" aria-label="Slide to unlock">
+      <div class="unlockbar__thumb" id="unlockThumb">❯</div>
+      <span class="unlockbar__label">SLIDE TO UNLOCK</span>
+    </div>
 
     <footer class="worldfoot">© 2010–forever ME GUSTA. no rights reserved, me gusta sharing.</footer>
 

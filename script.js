@@ -1,53 +1,37 @@
 /* ============ ME GUSTA WORLD — script ============ */
 
-// ---------- Lock screen clock ----------
-function updateClock() {
-  const now = new Date();
-  let h = now.getHours() % 12;
-  if (h === 0) h = 12;
-  const m = String(now.getMinutes()).padStart(2, "0");
-  document.getElementById("lockClock").textContent = h + ":" + m;
-  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  document.getElementById("lockDate").textContent =
-    days[now.getDay()] + ", " + months[now.getMonth()] + " " + now.getDate();
-}
-updateClock();
-setInterval(updateClock, 15000);
-
 // ---------- Slide to unlock ----------
-const lock = document.getElementById("lock");
 const site = document.getElementById("site");
-const slider = document.getElementById("slider");
-const thumb = document.getElementById("sliderThumb");
+const bar = document.getElementById("unlockbar");
+const thumb = document.getElementById("unlockThumb");
 
 let dragging = false;
 let startX = 0;
 let unlocked = false;
 
 function maxTravel() {
-  return slider.querySelector(".lock__slider-track").offsetWidth - thumb.offsetWidth - 8;
+  return bar.offsetWidth - thumb.offsetWidth - 14;
 }
 
 function unlock() {
   if (unlocked) return;
   unlocked = true;
-  lock.classList.add("unlocked");
-  site.classList.add("revealed");
-  setTimeout(() => lock.remove(), 800);
+  site.classList.remove("locked");
+  bar.classList.add("gone");
+  setTimeout(() => bar.remove(), 600);
 }
 
 function onDown(e) {
   if (unlocked) return;
   dragging = true;
-  startX = (e.touches ? e.touches[0].clientX : e.clientX) - (parseFloat(thumb.style.left) || 4);
+  startX = (e.touches ? e.touches[0].clientX : e.clientX) - (parseFloat(thumb.style.left) || 7);
   thumb.style.transition = "none";
 }
 
 function onMove(e) {
   if (!dragging || unlocked) return;
   const x = (e.touches ? e.touches[0].clientX : e.clientX) - startX;
-  const clamped = Math.max(4, Math.min(x, maxTravel()));
+  const clamped = Math.max(7, Math.min(x, maxTravel()));
   thumb.style.left = clamped + "px";
   if (clamped >= maxTravel() - 2) unlock();
 }
@@ -57,7 +41,7 @@ function onUp() {
   dragging = false;
   if (!unlocked) {
     thumb.style.transition = "left .3s cubic-bezier(.34,1.56,.64,1)";
-    thumb.style.left = "4px";
+    thumb.style.left = "7px";
   }
 }
 
@@ -68,12 +52,7 @@ window.addEventListener("touchmove", onMove, { passive: true });
 window.addEventListener("mouseup", onUp);
 window.addEventListener("touchend", onUp);
 
-document.getElementById("lockSkip").addEventListener("click", unlock);
-
-slider.setAttribute("tabindex", "0");
-slider.setAttribute("role", "button");
-slider.setAttribute("aria-label", "Slide to unlock");
-slider.addEventListener("keydown", (e) => {
+bar.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); unlock(); }
 });
 
