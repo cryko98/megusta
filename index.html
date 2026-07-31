@@ -21,10 +21,12 @@
   <div class="site locked" id="site">
 
     <header class="nav">
+      <a class="nav__badge" href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">me gusta · est. 2010</a>
       <a class="nav__logo" href="#">
         <img src="Megusta.jpg" alt="Me Gusta logo">
         <span>ME<br>GUSTA</span>
       </a>
+      <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
       <nav class="nav__links">
         <button data-panel="lore">Lore</button>
         <button data-panel="moods">Moods</button>
@@ -32,7 +34,6 @@
         <button data-panel="how">How To Gusta</button>
         <button data-panel="community">Community</button>
       </nav>
-      <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
     </header>
 
     <div class="stars" id="stars" aria-hidden="true"></div>
@@ -222,60 +223,76 @@
             <use href="#flower" transform="translate(1050 450)"/>
           </g>
 
-          <!-- ============ SAND + LAKE ============ -->
-          <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M430 470 C 432 424 500 392 600 392 C 700 392 770 426 768 472 C 766 516 700 552 600 552 C 500 552 428 516 430 470 Z"/>
+          <!-- ============ THE GRIN LAGOON — the mouth of the face ============ -->
+          <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M 285 440 C 370 415 500 404 600 404 C 705 404 830 415 895 444 C 875 510 765 566 620 570 C 470 572 330 528 285 440 Z"/>
           <g fill="#d9c98e" stroke="none">
-            <circle cx="470" cy="432" r="2.5"/><circle cx="505" cy="528" r="2.5"/>
-            <circle cx="700" cy="420" r="2.5"/><circle cx="730" cy="516" r="2.5"/>
-            <circle cx="620" cy="545" r="2"/><circle cx="452" cy="478" r="2"/>
+            <circle cx="380" cy="436" r="2.5"/><circle cx="470" cy="412" r="2.5"/>
+            <circle cx="720" cy="414" r="2.5"/><circle cx="840" cy="446" r="2.5"/>
+            <circle cx="500" cy="566" r="2"/><circle cx="700" cy="564" r="2"/>
           </g>
-          <ellipse cx="600" cy="470" rx="150" ry="62" fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5"/>
-          <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M478 448 C 510 422 552 412 600 412"/>
-          <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".75">
-            <path d="M500 455 q 20 8 44 2"/>
-            <path d="M640 492 q 22 8 46 0"/>
-            <path d="M552 488 q 16 6 34 2"/>
+          <path fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5" d="M 300 445 C 380 425 500 415 600 415 C 700 415 820 425 880 448 C 860 505 760 555 620 558 C 480 560 340 520 300 445 Z"/>
+          <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M 380 440 C 450 424 520 418 600 418"/>
+          <!-- teeth shimmer -->
+          <g fill="none" stroke="#e7d8a2" stroke-width="4.5" stroke-linecap="round" opacity=".55">
+            <path d="M400 434 Q 396 480 402 512"/>
+            <path d="M460 424 Q 456 486 462 534"/>
+            <path d="M520 419 Q 516 490 522 548"/>
+            <path d="M580 416 Q 576 492 582 556"/>
+            <path d="M640 417 Q 636 492 642 555"/>
+            <path d="M700 420 Q 696 488 702 546"/>
+            <path d="M760 426 Q 756 482 762 530"/>
+            <path d="M820 434 Q 816 472 822 506"/>
+          </g>
+          <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".7">
+            <path d="M480 460 q 20 8 44 2"/>
+            <path d="M660 500 q 22 8 46 0"/>
+            <path d="M540 510 q 16 6 34 2"/>
           </g>
           <g stroke="#101010" stroke-width="2">
-            <ellipse cx="498" cy="496" rx="13" ry="6.5" fill="#57a844"/>
-            <path d="M498 496 l13 -3" stroke="#2f6b2a"/>
-            <ellipse cx="692" cy="452" rx="11" ry="5.5" fill="#4c9440"/>
-            <path d="M692 452 l11 -2.5" stroke="#2f6b2a"/>
+            <ellipse cx="430" cy="490" rx="13" ry="6.5" fill="#57a844"/>
+            <path d="M430 490 l13 -3" stroke="#2f6b2a"/>
+            <ellipse cx="770" cy="470" rx="11" ry="5.5" fill="#4c9440"/>
+            <path d="M770 470 l11 -2.5" stroke="#2f6b2a"/>
           </g>
-          <!-- south beach cove -->
-          <path fill="#eee0a9" stroke="#101010" stroke-width="3" d="M 726 558 C 730 541 750 531 778 531 C 806 531 824 543 826 560 C 826 577 806 587 778 588 C 750 588 724 575 726 558 Z"/>
-          <g fill="#d9c98e" stroke="none">
-            <circle cx="756" cy="553" r="2.5"/><circle cx="793" cy="573" r="2.5"/><circle cx="810" cy="551" r="2"/>
+
+          <!-- the eyes: two sandy clearings with pupil stones -->
+          <g stroke="#101010" stroke-width="3">
+            <ellipse cx="480" cy="378" rx="34" ry="20" fill="#f2ecd8"/>
+            <ellipse cx="480" cy="378" rx="25" ry="13" fill="none" stroke-width="1.5" opacity=".25"/>
+            <ellipse cx="491" cy="382" rx="7" ry="5" fill="#101010" stroke="none"/>
+            <ellipse cx="755" cy="372" rx="34" ry="20" fill="#f2ecd8"/>
+            <ellipse cx="755" cy="372" rx="25" ry="13" fill="none" stroke-width="1.5" opacity=".25"/>
+            <ellipse cx="745" cy="376" rx="7" ry="5" fill="#101010" stroke="none"/>
           </g>
 
           <!-- ============ WATERFALL ============ -->
           <g stroke="#101010" stroke-width="3">
-            <ellipse cx="548" cy="546" rx="12" ry="8" fill="#8d929b"/>
-            <ellipse cx="664" cy="546" rx="13" ry="8" fill="#7d828b"/>
+            <ellipse cx="548" cy="564" rx="12" ry="8" fill="#8d929b"/>
+            <ellipse cx="664" cy="564" rx="13" ry="8" fill="#7d828b"/>
           </g>
-          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 538 C 556 620 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 653 620 650 538 Z"/>
+          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 556 C 556 630 552 665 548 720 L 540 880 L 672 880 L 662 720 C 657 665 653 630 650 556 Z"/>
           <g class="fall-lines" stroke="#e9f7ff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85">
-            <path d="M575 550 C 572 640 568 720 562 860"/>
-            <path d="M605 555 C 604 645 602 725 600 865"/>
-            <path d="M635 550 C 637 640 640 720 645 858"/>
+            <path d="M575 568 C 572 650 568 725 562 860"/>
+            <path d="M605 573 C 604 655 602 730 600 865"/>
+            <path d="M635 568 C 637 650 640 725 645 858"/>
           </g>
           <g class="fall-lines fall-lines--slow" stroke="#cdeefb" stroke-width="3" stroke-linecap="round" fill="none" opacity=".6">
-            <path d="M590 552 C 588 650 585 730 580 862"/>
-            <path d="M620 552 C 620 650 621 730 624 862"/>
+            <path d="M590 570 C 588 655 585 735 580 862"/>
+            <path d="M620 570 C 620 655 621 735 624 862"/>
           </g>
           <!-- foam lip -->
-          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 535 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
+          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 553 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
           <!-- wooden bridge over the falls -->
           <g stroke="#101010" stroke-width="3">
-            <rect x="528" y="550" width="156" height="20" rx="4" fill="#a06b3c"/>
+            <rect x="528" y="564" width="156" height="20" rx="4" fill="#a06b3c"/>
             <g stroke="#7c4a24" stroke-width="2">
-              <line x1="552" y1="552" x2="552" y2="568"/>
-              <line x1="576" y1="552" x2="576" y2="568"/>
-              <line x1="600" y1="552" x2="600" y2="568"/>
-              <line x1="624" y1="552" x2="624" y2="568"/>
-              <line x1="648" y1="552" x2="648" y2="568"/>
+              <line x1="552" y1="566" x2="552" y2="582"/>
+              <line x1="576" y1="566" x2="576" y2="582"/>
+              <line x1="600" y1="566" x2="600" y2="582"/>
+              <line x1="624" y1="566" x2="624" y2="582"/>
+              <line x1="648" y1="566" x2="648" y2="582"/>
             </g>
-            <rect x="524" y="544" width="164" height="5" rx="2.5" fill="#c98a4b"/>
+            <rect x="524" y="558" width="164" height="5" rx="2.5" fill="#c98a4b"/>
           </g>
           <!-- mist -->
           <g fill="#ffffff" stroke="none">
@@ -318,13 +335,13 @@
 
           <!-- lakeside bench + flowers -->
           <g stroke="#101010" stroke-width="2.5">
-            <rect x="346" y="432" width="32" height="6" rx="2" fill="#a06b3c"/>
-            <rect x="344" y="438" width="36" height="8" rx="2" fill="#c98a4b"/>
-            <line x1="350" y1="446" x2="350" y2="456"/>
-            <line x1="374" y1="446" x2="374" y2="456"/>
+            <rect x="346" y="392" width="32" height="6" rx="2" fill="#a06b3c"/>
+            <rect x="344" y="398" width="36" height="8" rx="2" fill="#c98a4b"/>
+            <line x1="350" y1="406" x2="350" y2="416"/>
+            <line x1="374" y1="406" x2="374" y2="416"/>
           </g>
-          <use href="#flower" transform="translate(395 462)"/>
-          <use href="#flower" transform="translate(340 478)"/>
+          <use href="#flower" transform="translate(302 398)"/>
+          <use href="#flower" transform="translate(408 390)"/>
 
           <!-- SW pebbles -->
           <g stroke="#101010" stroke-width="2">
@@ -333,12 +350,12 @@
           </g>
 
           <!-- ============ BEACH SET ============ -->
-          <g stroke="#101010" stroke-width="3" transform="translate(-104 58)">
-            <line x1="884" y1="446" x2="884" y2="504" stroke-width="4" stroke="#7c4a24"/>
-            <path fill="#d9463e" d="M850 452 q 10 -26 34 -26 q 24 0 34 26 q -8 -7 -17 1 q -8 -8 -17 0 q -8 -8 -17 0 q -9 -8 -17 -1 Z"/>
-            <path fill="#f2f0ea" stroke="none" d="M867 429 q 8 -3 17 -3 l 0 24 q -9 -6 -17 1 Z" opacity=".85"/>
-            <path fill="#ffd23f" d="M846 512 l30 10 -6 12 -30 -10 Z"/>
-            <path fill="#4d7dbf" d="M886 520 l30 10 -6 12 -30 -10 Z"/>
+          <g stroke="#101010" stroke-width="3">
+            <line x1="700" y1="545" x2="700" y2="602" stroke-width="4" stroke="#7c4a24"/>
+            <path fill="#d9463e" d="M666 522 q 10 -26 34 -26 q 24 0 34 26 q -8 -7 -17 1 q -8 -8 -17 0 q -8 -8 -17 0 q -9 -8 -17 -1 Z"/>
+            <path fill="#f2f0ea" stroke="none" d="M683 499 q 8 -3 17 -3 l 0 24 q -9 -6 -17 1 Z" opacity=".85"/>
+            <path fill="#ffd23f" d="M676 580 l30 10 -6 12 -30 -10 Z"/>
+            <path fill="#4d7dbf" d="M716 588 l30 10 -6 12 -30 -10 Z"/>
           </g>
 
           <!-- ============ GUSTA STATUE ============ -->
@@ -416,7 +433,7 @@
           <!-- ============ HOTSPOT: OBSERVATORY → MEME LAB ============ -->
           <g class="spot" data-panel="lab" tabindex="0" role="button" aria-label="Meme Observatory — open the Meme Lab">
             <g>
-             <g transform="translate(120 95)">
+             <g transform="translate(140 100)">
               <ellipse cx="812" cy="372" rx="72" ry="15" fill="#3f8a2e" opacity=".45"/>
               <g stroke="#101010" stroke-width="3.5">
                 <path fill="#c9c6bc" d="M768 330 h84 v26 a42 14 0 0 1 -84 0 Z"/>
@@ -432,7 +449,7 @@
               </g>
              </g>
             </g>
-            <g class="spot__label" transform="translate(930 490)">
+            <g class="spot__label" transform="translate(950 498)">
               <rect x="-58" y="-15" width="116" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">MEME LAB</text>
             </g>
