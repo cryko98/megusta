@@ -269,8 +269,8 @@ button { font-family: inherit; }
   padding: 3.5rem 0 6.5rem;
 }
 .island {
-  width: min(1020px, 86vw);
-  max-height: 68vh;
+  width: min(1180px, 96vw);
+  max-height: 78vh;
 }
 .island__float {
   animation: islandFloat 7s ease-in-out infinite;
@@ -890,7 +890,7 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .nav { background: rgba(5,5,5,.85); }
   .nav__badge { font-size: .58rem; padding: .38rem .7rem; }
   .world { padding-top: 4.2rem; }
-  .island { width: 96vw; max-width: none; max-height: 46vh; }
+  .island { width: 112vw; max-width: none; max-height: 54vh; }
   .spot__label { opacity: 1; }
   .lab__wrap { grid-template-columns: 1fr; }
   .worldfoot { display: none; }

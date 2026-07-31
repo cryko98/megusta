@@ -138,7 +138,7 @@ bar.addEventListener("keydown", (e) => {
 
 // ---------- Starfield ----------
 const starsBox = document.getElementById("stars");
-for (let i = 0; i < 90; i++) {
+for (let i = 0; i < 38; i++) {
   const s = document.createElement("i");
   s.style.left = Math.random() * 100 + "%";
   s.style.top = Math.random() * 100 + "%";
