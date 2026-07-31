@@ -224,14 +224,25 @@
             <use href="#flower" transform="translate(1050 450)"/>
           </g>
 
-          <!-- ============ THE FACE — geoglyph of the original drawing ============ -->
-          <g transform="translate(600 428) scale(2.9 1.36) translate(-112 -114)">
-            <!-- lighter mowed-grass face plate -->
-            <image href="Megusta.jpg" width="224" height="224" clip-path="url(#headClip)" filter="url(#platePlate)" opacity=".55"/>
-            <!-- engraved dark sketch lines -->
-            <image href="Megusta.jpg" width="224" height="224" clip-path="url(#headClip)" filter="url(#inkLines)"/>
-            <!-- the grin fills with water: this IS the lake -->
-            <path fill="url(#lakeGrad)" fill-opacity=".55" d="M 48 116 C 80 106 150 103 182 112 C 175 146 152 165 116 166 C 85 166 58 143 48 116 Z"/>
+          <!-- ============ SAND + LAKE ============ -->
+          <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M430 470 C 432 424 500 392 600 392 C 700 392 770 426 768 472 C 766 516 700 552 600 552 C 500 552 428 516 430 470 Z"/>
+          <g fill="#d9c98e" stroke="none">
+            <circle cx="470" cy="432" r="2.5"/><circle cx="505" cy="528" r="2.5"/>
+            <circle cx="700" cy="420" r="2.5"/><circle cx="730" cy="516" r="2.5"/>
+            <circle cx="620" cy="545" r="2"/><circle cx="452" cy="478" r="2"/>
+          </g>
+          <ellipse cx="600" cy="470" rx="150" ry="62" fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5"/>
+          <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M478 448 C 510 422 552 412 600 412"/>
+          <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".75">
+            <path d="M500 455 q 20 8 44 2"/>
+            <path d="M640 492 q 22 8 46 0"/>
+            <path d="M552 488 q 16 6 34 2"/>
+          </g>
+          <g stroke="#101010" stroke-width="2">
+            <ellipse cx="498" cy="496" rx="13" ry="6.5" fill="#57a844"/>
+            <path d="M498 496 l13 -3" stroke="#2f6b2a"/>
+            <ellipse cx="692" cy="452" rx="11" ry="5.5" fill="#4c9440"/>
+            <path d="M692 452 l11 -2.5" stroke="#2f6b2a"/>
           </g>
           <!-- SE beach cove -->
           <path fill="#eee0a9" stroke="#101010" stroke-width="3" d="M 838 505 C 842 488 862 478 890 478 C 918 478 936 490 938 507 C 938 524 918 534 890 535 C 862 535 836 522 838 505 Z"/>
@@ -241,21 +252,21 @@
 
           <!-- ============ WATERFALL ============ -->
           <g stroke="#101010" stroke-width="3">
-            <ellipse cx="552" cy="510" rx="12" ry="8" fill="#8d929b"/>
-            <ellipse cx="662" cy="510" rx="13" ry="8" fill="#7d828b"/>
+            <ellipse cx="548" cy="546" rx="12" ry="8" fill="#8d929b"/>
+            <ellipse cx="664" cy="546" rx="13" ry="8" fill="#7d828b"/>
           </g>
-          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M562 502 C 558 610 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 652 610 650 502 Z"/>
+          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 538 C 556 620 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 653 620 650 538 Z"/>
           <g class="fall-lines" stroke="#e9f7ff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85">
-            <path d="M575 514 C 572 630 568 720 562 860"/>
-            <path d="M605 519 C 604 640 602 725 600 865"/>
-            <path d="M635 514 C 637 630 640 720 645 858"/>
+            <path d="M575 550 C 572 640 568 720 562 860"/>
+            <path d="M605 555 C 604 645 602 725 600 865"/>
+            <path d="M635 550 C 637 640 640 720 645 858"/>
           </g>
           <g class="fall-lines fall-lines--slow" stroke="#cdeefb" stroke-width="3" stroke-linecap="round" fill="none" opacity=".6">
-            <path d="M590 516 C 588 645 585 730 580 862"/>
-            <path d="M620 516 C 620 645 621 730 624 862"/>
+            <path d="M590 552 C 588 650 585 730 580 862"/>
+            <path d="M620 552 C 620 650 621 730 624 862"/>
           </g>
           <!-- foam lip -->
-          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M558 499 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
+          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 535 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
           <!-- mist -->
           <g fill="#ffffff" stroke="none">
             <ellipse class="mist mist--1" cx="580" cy="845" rx="26" ry="12"/>
@@ -264,7 +275,7 @@
           </g>
 
           <!-- ============ BOAT ============ -->
-          <g class="boat" stroke="#101010" stroke-width="3" transform="translate(-30 -26)">
+          <g class="boat" stroke="#101010" stroke-width="3" transform="translate(-20 -10)">
             <path fill="#d9463e" d="M666 496 L 736 496 Q 731 514 712 514 L 690 514 Q 671 514 666 496 Z"/>
             <path fill="none" stroke="#f2f0ea" stroke-width="3" d="M672 504 L 730 504"/>
             <path fill="#5b4326" d="M700 442 v54 h3 v-54 Z"/>
