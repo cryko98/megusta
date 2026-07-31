@@ -60,144 +60,433 @@
       <svg class="island" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Me Gusta floating island">
         <defs>
           <clipPath id="faceClip"><circle cx="0" cy="0" r="34"/></clipPath>
-          <linearGradient id="fallGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#aee3f7"/>
-            <stop offset=".75" stop-color="#7fc8ec"/>
-            <stop offset="1" stop-color="#7fc8ec" stop-opacity="0"/>
+          <clipPath id="statueClip"><circle cx="0" cy="0" r="16"/></clipPath>
+
+          <radialGradient id="grassGrad" cx="50%" cy="40%" r="68%">
+            <stop offset="0" stop-color="#a5e37a"/>
+            <stop offset=".55" stop-color="#84d15c"/>
+            <stop offset="1" stop-color="#5fae3e"/>
+          </radialGradient>
+          <linearGradient id="rockGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8d929b"/>
+            <stop offset=".6" stop-color="#6b7078"/>
+            <stop offset="1" stop-color="#4e535b"/>
           </linearGradient>
+          <radialGradient id="lakeGrad" cx="50%" cy="42%" r="70%">
+            <stop offset="0" stop-color="#c9eefc"/>
+            <stop offset=".6" stop-color="#93d8f4"/>
+            <stop offset="1" stop-color="#6fc0e8"/>
+          </radialGradient>
+          <linearGradient id="fallGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#b6e7f8"/>
+            <stop offset=".7" stop-color="#84cbee"/>
+            <stop offset="1" stop-color="#84cbee" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="domeGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#cfccc2"/>
+          </linearGradient>
+          <radialGradient id="portalGrad" cx="50%" cy="45%" r="60%">
+            <stop offset="0" stop-color="#c8f5ec"/>
+            <stop offset=".55" stop-color="#4cc4b2"/>
+            <stop offset="1" stop-color="#146058"/>
+          </radialGradient>
           <linearGradient id="skyGlow" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#ffffff" stop-opacity=".08"/>
             <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
           </linearGradient>
+
+          <!-- reusable flora -->
+          <g id="tree" stroke="#101010" stroke-width="3">
+            <rect x="-4" y="2" width="8" height="18" fill="#7c4a24"/>
+            <circle cx="-9" cy="-4" r="13" fill="#3e7d33"/>
+            <circle cx="9" cy="-6" r="12" fill="#4c9440"/>
+            <circle cx="0" cy="-15" r="13" fill="#57a844"/>
+            <circle cx="-4" cy="-17" r="3" fill="#8adf68" stroke="none"/>
+          </g>
+          <g id="pine" stroke="#101010" stroke-width="3">
+            <rect x="-3" y="12" width="6" height="10" fill="#7c4a24"/>
+            <path d="M0 -30 L13 -10 L-13 -10 Z" fill="#2f6b2a"/>
+            <path d="M0 -18 L16 2 L-16 2 Z" fill="#3e7d33"/>
+            <path d="M0 -6 L19 14 L-19 14 Z" fill="#4c9440"/>
+          </g>
+          <g id="bush" stroke="#101010" stroke-width="3">
+            <circle cx="-8" cy="0" r="8" fill="#3e7d33"/>
+            <circle cx="8" cy="0" r="8" fill="#4c9440"/>
+            <circle cx="0" cy="-5" r="8" fill="#57a844"/>
+          </g>
+          <g id="tuft" fill="none" stroke="#3f8a2e" stroke-width="2.5" stroke-linecap="round">
+            <path d="M-5 0 q 2 -7 0 -12"/>
+            <path d="M0 0 q 1 -8 4 -13"/>
+            <path d="M4 1 q 4 -6 9 -8"/>
+          </g>
+          <g id="flower" stroke="#101010" stroke-width="1.5">
+            <line x1="0" y1="0" x2="0" y2="-8" stroke="#3f8a2e" stroke-width="2"/>
+            <circle cx="0" cy="-10" r="4" fill="#f2f0ea"/>
+            <circle cx="0" cy="-10" r="1.8" fill="#ffd23f" stroke="none"/>
+          </g>
+          <path id="spark4" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z" fill="#ffffff"/>
         </defs>
 
         <g class="island__float">
 
           <!-- glow behind island -->
-          <ellipse cx="600" cy="430" rx="480" ry="230" fill="url(#skyGlow)"/>
+          <ellipse cx="600" cy="425" rx="545" ry="265" fill="url(#skyGlow)"/>
 
-          <!-- rock underside -->
+          <!-- ============ ROCK UNDERSIDE ============ -->
           <g stroke="#101010" stroke-width="4" stroke-linejoin="round">
-            <path fill="#787d87" d="M170 430 L205 472 L188 522 L262 560 L252 622 L342 642 L352 702 L462 712 L482 782 L600 832 L702 788 L722 718 L822 698 L832 638 L922 608 L912 548 L992 520 L976 470 L1030 430 C 990 560 780 622 600 622 C 420 622 210 560 170 430 Z"/>
-            <path fill="#5f646e" stroke="none" d="M262 560 L252 622 L342 642 L352 702 L300 640 L310 590 Z"/>
-            <path fill="#5f646e" stroke="none" d="M822 698 L832 638 L922 608 L870 668 L860 700 Z"/>
-            <path fill="#5f646e" stroke="none" d="M482 782 L600 832 L560 760 L500 740 Z"/>
+            <path fill="url(#rockGrad)" d="M110 425 L150 470 L130 525 L215 565 L205 630 L300 655 L312 715 L430 728 L452 800 L600 850 L715 805 L738 730 L845 712 L858 650 L950 620 L940 555 L1030 528 L1012 472 L1090 425 C 1045 570 810 635 600 635 C 390 635 155 570 110 425 Z"/>
+          </g>
+          <!-- rock facets & cracks -->
+          <g stroke="none">
+            <path fill="#575c64" d="M215 565 L205 630 L300 655 L312 715 L255 650 L262 595 Z"/>
+            <path fill="#575c64" d="M845 712 L858 650 L950 620 L890 686 L880 716 Z"/>
+            <path fill="#575c64" d="M452 800 L600 850 L556 770 L470 750 Z"/>
+            <path fill="#7d828b" d="M150 470 L130 525 L215 565 L192 508 Z"/>
+            <path fill="#7d828b" d="M940 555 L1030 528 L1012 472 L965 505 Z"/>
+            <path fill="#464b52" d="M600 850 L715 805 L738 730 L655 775 Z"/>
+            <path fill="#868b94" d="M312 715 L430 728 L390 682 L345 672 Z"/>
+          </g>
+          <g fill="none" stroke="#3d4148" stroke-width="2.5" stroke-linecap="round" opacity=".8">
+            <path d="M285 620 l24 28 -6 32"/>
+            <path d="M775 655 l-18 30 8 28"/>
+            <path d="M545 715 l20 26 -5 35"/>
+            <path d="M900 600 l-14 24"/>
+          </g>
+          <!-- moss hanging over the rim -->
+          <g fill="#57a03b" stroke="#101010" stroke-width="3">
+            <rect x="-26" y="-8" width="52" height="16" rx="8" transform="translate(985 548) rotate(32)"/>
+            <rect x="-24" y="-8" width="48" height="16" rx="8" transform="translate(860 606) rotate(15)"/>
+            <rect x="-22" y="-8" width="44" height="16" rx="8" transform="translate(480 626) rotate(-4)"/>
+            <rect x="-24" y="-8" width="48" height="16" rx="8" transform="translate(395 616) rotate(-12)"/>
+            <rect x="-24" y="-8" width="48" height="16" rx="8" transform="translate(270 582) rotate(-24)"/>
+            <rect x="-26" y="-8" width="52" height="16" rx="8" transform="translate(215 548) rotate(-32)"/>
+          </g>
+          <!-- hanging vines -->
+          <g fill="none" stroke="#4f9c37" stroke-width="3" stroke-linecap="round">
+            <path d="M430 655 q 5 16 -2 34 q -4 12 2 20"/>
+            <path d="M790 645 q -4 18 2 34 q 3 10 -3 18"/>
+            <path d="M950 596 q 4 14 -2 28"/>
+          </g>
+          <g fill="#57a844" stroke="#101010" stroke-width="1.5">
+            <ellipse cx="428" cy="675" rx="5" ry="3"/>
+            <ellipse cx="430" cy="701" rx="5" ry="3"/>
+            <ellipse cx="792" cy="665" rx="5" ry="3"/>
+            <ellipse cx="790" cy="689" rx="5" ry="3"/>
+            <ellipse cx="949" cy="614" rx="4.5" ry="3"/>
           </g>
           <!-- floating rock crumbs -->
-          <g stroke="#101010" stroke-width="3" fill="#6b7078">
-            <path class="crumb crumb--1" d="M300 780 l28 -12 22 14 -8 24 -30 6 -16 -18 Z"/>
-            <path class="crumb crumb--2" d="M880 770 l24 -10 18 12 -6 20 -26 5 -13 -15 Z"/>
-            <path class="crumb crumb--3" d="M1040 600 l20 -8 15 10 -5 17 -22 4 -11 -13 Z"/>
+          <g stroke="#101010" stroke-width="3">
+            <path class="crumb crumb--1" fill="#6b7078" d="M280 790 l28 -12 22 14 -8 24 -30 6 -16 -18 Z"/>
+            <path class="crumb crumb--2" fill="#7d828b" d="M900 780 l24 -10 18 12 -6 20 -26 5 -13 -15 Z"/>
+            <path class="crumb crumb--3" fill="#6b7078" d="M1075 610 l20 -8 15 10 -5 17 -22 4 -11 -13 Z"/>
+            <path class="crumb crumb--2" fill="#575c64" d="M115 640 l16 -7 13 9 -4 15 -19 3 -9 -11 Z"/>
+            <path class="crumb crumb--1" fill="#7d828b" d="M1110 710 l14 -6 11 8 -3 13 -16 3 -8 -10 Z"/>
           </g>
 
-          <!-- grass top -->
-          <path fill="#82cf5a" stroke="#101010" stroke-width="4" d="M170 430 C 220 290 420 238 600 238 C 780 238 985 290 1030 430 C 990 560 780 622 600 622 C 420 622 210 560 170 430 Z"/>
-          <path fill="none" stroke="#4f9c37" stroke-width="10" stroke-linecap="round" opacity=".55" d="M225 480 C 340 580 480 608 600 608 C 730 608 890 570 975 480"/>
+          <!-- ============ GRASS TOP ============ -->
+          <path fill="url(#grassGrad)" stroke="#101010" stroke-width="4" d="M110 425 C 165 275 400 215 600 215 C 800 215 1035 275 1090 425 C 1045 570 810 635 600 635 C 390 635 155 570 110 425 Z"/>
+          <!-- front & back rims for depth -->
+          <path fill="none" stroke="#4f9c37" stroke-width="10" stroke-linecap="round" opacity=".55" d="M162 478 C 300 592 460 620 600 620 C 745 620 915 578 1040 476"/>
+          <path fill="none" stroke="#b9ec92" stroke-width="7" stroke-linecap="round" opacity=".5" d="M175 372 C 320 268 460 240 600 240 C 740 240 890 270 1025 372"/>
 
-          <!-- sand + lake -->
-          <ellipse cx="600" cy="478" rx="222" ry="96" fill="#ecdfa3" stroke="#101010" stroke-width="3.5"/>
-          <ellipse cx="600" cy="474" rx="200" ry="80" fill="#8fd6f2" stroke="#101010" stroke-width="3.5"/>
-          <path fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".7" d="M480 460 q 20 8 44 2 M640 500 q 22 8 46 0 M540 495 q 16 6 34 2"/>
+          <!-- ============ ROADS ============ -->
+          <g fill="none" stroke-linecap="round">
+            <path stroke="#101010" stroke-width="21" d="M458 330 C 560 308 630 318 686 366"/>
+            <path stroke="#101010" stroke-width="21" d="M402 336 C 352 380 334 440 332 545"/>
+            <path stroke="#101010" stroke-width="21" d="M276 372 C 290 402 310 430 332 470"/>
+            <path stroke="#101010" stroke-width="21" d="M916 402 C 900 430 870 456 845 480"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M458 330 C 560 308 630 318 686 366"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M402 336 C 352 380 334 440 332 545"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M276 372 C 290 402 310 430 332 470"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M916 402 C 900 430 870 456 845 480"/>
+            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M458 330 C 560 308 630 318 686 366"/>
+            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M402 336 C 352 380 334 440 332 545"/>
+          </g>
 
-          <!-- waterfall -->
-          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 548 C 556 620 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 653 620 650 548 Z"/>
+          <!-- ============ GRASS TEXTURE ============ -->
+          <g>
+            <use href="#tuft" transform="translate(195 455)"/>
+            <use href="#tuft" transform="translate(240 390)"/>
+            <use href="#tuft" transform="translate(320 508)"/>
+            <use href="#tuft" transform="translate(545 258)"/>
+            <use href="#tuft" transform="translate(660 242)"/>
+            <use href="#tuft" transform="translate(1035 470)"/>
+            <use href="#tuft" transform="translate(1000 530)"/>
+            <use href="#tuft" transform="translate(890 560)"/>
+            <use href="#tuft" transform="translate(430 610)"/>
+            <use href="#tuft" transform="translate(690 585)"/>
+            <use href="#tuft" transform="translate(555 300)"/>
+            <use href="#tuft" transform="translate(150 468)"/>
+          </g>
+          <g fill="#5aab3e" opacity=".7" stroke="none">
+            <circle cx="250" cy="420" r="2.5"/><circle cx="300" cy="470" r="2"/>
+            <circle cx="360" cy="300" r="2.5"/><circle cx="500" cy="320" r="2"/>
+            <circle cx="720" cy="240" r="2.5"/><circle cx="950" cy="320" r="2"/>
+            <circle cx="980" cy="470" r="2.5"/><circle cx="1030" cy="500" r="2"/>
+            <circle cx="500" cy="600" r="2.5"/><circle cx="760" cy="600" r="2"/>
+            <circle cx="640" cy="615" r="2"/><circle cx="180" cy="450" r="2"/>
+          </g>
+          <g>
+            <use href="#flower" transform="translate(230 430)"/>
+            <use href="#flower" transform="translate(1010 500)"/>
+            <use href="#flower" transform="translate(560 250)"/>
+            <use href="#flower" transform="translate(680 595)"/>
+            <use href="#flower" transform="translate(1050 450)"/>
+          </g>
+
+          <!-- ============ SAND + LAKE ============ -->
+          <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M430 470 C 432 424 500 392 600 392 C 700 392 770 426 768 472 C 782 466 812 464 832 476 C 852 488 858 502 852 514 C 840 530 802 532 772 522 C 742 542 676 552 600 552 C 500 552 428 516 430 470 Z"/>
+          <g fill="#d9c98e" stroke="none">
+            <circle cx="470" cy="432" r="2.5"/><circle cx="505" cy="528" r="2.5"/>
+            <circle cx="700" cy="420" r="2.5"/><circle cx="730" cy="516" r="2.5"/>
+            <circle cx="820" cy="500" r="2.5"/><circle cx="848" cy="512" r="2"/>
+            <circle cx="620" cy="545" r="2"/><circle cx="452" cy="478" r="2"/>
+          </g>
+          <ellipse cx="600" cy="470" rx="150" ry="62" fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5"/>
+          <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M478 448 C 510 422 552 412 600 412"/>
+          <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".75">
+            <path d="M500 455 q 20 8 44 2"/>
+            <path d="M640 492 q 22 8 46 0"/>
+            <path d="M552 488 q 16 6 34 2"/>
+            <path d="M662 438 q 18 7 38 2"/>
+          </g>
+          <!-- lily pads -->
+          <g stroke="#101010" stroke-width="2">
+            <ellipse cx="498" cy="496" rx="13" ry="6.5" fill="#57a844"/>
+            <path d="M498 496 l13 -3" stroke="#2f6b2a"/>
+            <ellipse cx="692" cy="452" rx="11" ry="5.5" fill="#4c9440"/>
+            <path d="M692 452 l11 -2.5" stroke="#2f6b2a"/>
+          </g>
+
+          <!-- ============ WATERFALL ============ -->
+          <g stroke="#101010" stroke-width="3">
+            <ellipse cx="548" cy="546" rx="12" ry="8" fill="#8d929b"/>
+            <ellipse cx="664" cy="546" rx="13" ry="8" fill="#7d828b"/>
+          </g>
+          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 538 C 556 620 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 653 620 650 538 Z"/>
           <g class="fall-lines" stroke="#e9f7ff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85">
-            <path d="M575 560 C 572 640 568 720 562 860"/>
-            <path d="M605 565 C 604 645 602 725 600 865"/>
-            <path d="M635 560 C 637 640 640 720 645 858"/>
+            <path d="M575 550 C 572 640 568 720 562 860"/>
+            <path d="M605 555 C 604 645 602 725 600 865"/>
+            <path d="M635 550 C 637 640 640 720 645 858"/>
+          </g>
+          <g class="fall-lines fall-lines--slow" stroke="#cdeefb" stroke-width="3" stroke-linecap="round" fill="none" opacity=".6">
+            <path d="M590 552 C 588 650 585 730 580 862"/>
+            <path d="M620 552 C 620 650 621 730 624 862"/>
+          </g>
+          <!-- foam lip -->
+          <path fill="#e9f7ff" stroke="#101010" stroke-width="2.5" d="M556 535 q 11 9 23 1 q 11 9 23 1 q 11 9 23 1 q 12 8 22 -2 l 3 9 q -48 15 -97 0 Z"/>
+          <!-- mist -->
+          <g fill="#ffffff" stroke="none">
+            <ellipse class="mist mist--1" cx="580" cy="845" rx="26" ry="12"/>
+            <ellipse class="mist mist--2" cx="630" cy="858" rx="30" ry="13"/>
+            <ellipse class="mist mist--3" cx="602" cy="872" rx="22" ry="10"/>
           </g>
 
-          <!-- boat -->
-          <g class="boat" stroke="#101010" stroke-width="3">
-            <path fill="#d9463e" d="M690 496 h58 l-12 16 h-36 Z"/>
-            <path fill="#ffffff" d="M719 452 v42 h-2 v-42 Z"/>
-            <path fill="#f2f0ea" d="M721 454 l30 36 h-30 Z"/>
+          <!-- ============ BOAT ============ -->
+          <g class="boat" stroke="#101010" stroke-width="3" transform="translate(-20 -10)">
+            <path fill="#d9463e" d="M666 496 L 736 496 Q 731 514 712 514 L 690 514 Q 671 514 666 496 Z"/>
+            <path fill="none" stroke="#f2f0ea" stroke-width="3" d="M672 504 L 730 504"/>
+            <path fill="#5b4326" d="M700 442 v54 h3 v-54 Z"/>
+            <path fill="#f2f0ea" d="M705 446 l32 42 h-32 Z"/>
+            <path fill="#e8e4da" d="M697 452 l-22 34 h22 Z"/>
+            <path fill="#d9463e" d="M701 442 l14 5 -14 5 Z"/>
           </g>
 
-          <!-- trees -->
-          <g class="trees" stroke="#101010" stroke-width="3">
-            <g transform="translate(255,395)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="17" fill="#3e7d33"/></g>
-            <g transform="translate(300,340)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="14" fill="#4c9440"/></g>
-            <g transform="translate(505,300)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="15" fill="#3e7d33"/></g>
-            <g transform="translate(905,430)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="16" fill="#4c9440"/></g>
-            <g transform="translate(945,380)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="13" fill="#3e7d33"/></g>
-            <g transform="translate(430,590)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="14" fill="#4c9440"/></g>
-            <g transform="translate(790,575)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="15" fill="#3e7d33"/></g>
+          <!-- ============ TREES & BUSHES ============ -->
+          <use href="#tree" transform="translate(200 430)"/>
+          <use href="#pine" transform="translate(215 392) scale(.9)"/>
+          <use href="#tree" transform="translate(520 268) scale(.9)"/>
+          <use href="#tree" transform="translate(1010 472)"/>
+          <use href="#pine" transform="translate(1042 420) scale(.85)"/>
+          <use href="#tree" transform="translate(385 592) scale(.85)"/>
+          <use href="#pine" transform="translate(755 590) scale(.8)"/>
+          <use href="#tree" transform="translate(940 520) scale(.8)"/>
+          <use href="#bush" transform="translate(548 286) scale(.9)"/>
+          <use href="#bush" transform="translate(1050 480) scale(.8)"/>
+          <use href="#bush" transform="translate(300 548) scale(.85)"/>
+
+          <!-- ============ BEACH SET ============ -->
+          <g stroke="#101010" stroke-width="3" transform="translate(-48 -4)">
+            <line x1="884" y1="446" x2="884" y2="504" stroke-width="4" stroke="#7c4a24"/>
+            <path fill="#d9463e" d="M850 452 q 10 -26 34 -26 q 24 0 34 26 q -8 -7 -17 1 q -8 -8 -17 0 q -8 -8 -17 0 q -9 -8 -17 -1 Z"/>
+            <path fill="#f2f0ea" stroke="none" d="M867 429 q 8 -3 17 -3 l 0 24 q -9 -6 -17 1 Z" opacity=".85"/>
+            <path fill="#ffd23f" d="M846 512 l30 10 -6 12 -30 -10 Z"/>
+            <path fill="#4d7dbf" d="M886 520 l30 10 -6 12 -30 -10 Z"/>
           </g>
 
-          <!-- ====== HOTSPOT: GUSTA CITY → LORE ====== -->
-          <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="Gusta City — open the Lore">
-            <g stroke="#101010" stroke-width="3.5">
-              <rect x="352" y="268" width="46" height="78" fill="#4d7dbf"/>
-              <rect x="398" y="288" width="52" height="58" fill="#6fa3e0"/>
-              <rect x="450" y="252" width="40" height="94" fill="#3d6299"/>
-              <g fill="#ffe9a8" stroke="none">
-                <rect x="360" y="278" width="9" height="9"/><rect x="378" y="278" width="9" height="9"/>
-                <rect x="360" y="298" width="9" height="9"/><rect x="378" y="298" width="9" height="9"/>
-                <rect x="406" y="298" width="9" height="9"/><rect x="424" y="298" width="9" height="9"/>
-                <rect x="458" y="262" width="8" height="8"/><rect x="472" y="262" width="8" height="8"/>
-                <rect x="458" y="280" width="8" height="8"/><rect x="472" y="280" width="8" height="8"/>
-                <rect x="458" y="298" width="8" height="8"/><rect x="472" y="298" width="8" height="8"/>
-              </g>
-              <g transform="translate(424,240)">
-                <circle r="37" fill="#f2f0ea"/>
-                <image href="Megusta.jpg" x="-34" y="-34" width="68" height="68" clip-path="url(#faceClip)"/>
-              </g>
+          <!-- ============ GUSTA STATUE ============ -->
+          <g stroke="#101010" stroke-width="3">
+            <ellipse cx="639" cy="319" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <rect x="625" y="300" width="30" height="16" rx="3" fill="#a8a8a0"/>
+            <g transform="translate(640 284)">
+              <circle r="17" fill="#c9c9c2"/>
+              <image class="statue-img" href="Megusta.jpg" x="-16" y="-16" width="32" height="32" clip-path="url(#statueClip)"/>
             </g>
-            <g class="spot__label" transform="translate(420,376)">
+          </g>
+
+          <!-- ============ HOTSPOT: GUSTA CITY → LORE ============ -->
+          <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="Gusta City — open the Lore">
+            <g>
+             <g transform="translate(0 -14)">
+              <ellipse cx="424" cy="352" rx="92" ry="17" fill="#3f8a2e" opacity=".45"/>
+              <g stroke="#101010" stroke-width="3.5">
+                <!-- back building -->
+                <rect x="352" y="258" width="46" height="90" fill="#3d6299"/>
+                <rect x="349" y="252" width="52" height="8" fill="#2f4f7d"/>
+                <g fill="#ffe9a8" stroke="none">
+                  <rect x="360" y="270" width="9" height="9"/><rect x="378" y="270" width="9" height="9"/>
+                  <rect x="360" y="288" width="9" height="9"/><rect x="378" y="288" width="9" height="9"/>
+                  <rect x="360" y="306" width="9" height="9"/><rect x="378" y="306" width="9" height="9"/>
+                  <rect x="360" y="324" width="9" height="9"/>
+                </g>
+                <!-- tall building -->
+                <rect x="447" y="238" width="42" height="110" fill="#2f4f7d"/>
+                <line x1="468" y1="238" x2="468" y2="218"/>
+                <circle cx="468" cy="215" r="3.5" fill="#d9463e"/>
+                <g fill="#bfe0ff" stroke="none">
+                  <rect x="455" y="250" width="8" height="8"/><rect x="470" y="250" width="8" height="8"/>
+                  <rect x="455" y="266" width="8" height="8"/><rect x="470" y="266" width="8" height="8"/>
+                  <rect x="455" y="282" width="8" height="8"/><rect x="470" y="282" width="8" height="8"/>
+                  <rect x="455" y="298" width="8" height="8"/><rect x="470" y="298" width="8" height="8"/>
+                  <rect x="455" y="314" width="8" height="8"/><rect x="470" y="314" width="8" height="8"/>
+                </g>
+                <!-- front building -->
+                <rect x="385" y="294" width="70" height="54" fill="#6fa3e0"/>
+                <rect x="381" y="288" width="78" height="8" fill="#4d7dbf"/>
+                <g fill="#ffe9a8" stroke="none">
+                  <rect x="394" y="304" width="10" height="10"/><rect x="430" y="304" width="10" height="10"/>
+                </g>
+                <rect x="410" y="320" width="18" height="28" rx="2" fill="#35414f"/>
+                <path d="M406 320 h26 l-4 -7 h-18 Z" fill="#d9463e"/>
+              </g>
+              <!-- billboard with face -->
+              <g stroke="#101010" stroke-width="3.5">
+                <line x1="424" y1="252" x2="424" y2="230"/>
+                <g transform="translate(424 224)">
+                  <circle r="41" fill="#35414f"/>
+                  <circle r="36" fill="#f2f0ea"/>
+                  <image href="Megusta.jpg" x="-34" y="-34" width="68" height="68" clip-path="url(#faceClip)"/>
+                  <g fill="#ffd23f" stroke="none">
+                    <circle cx="0" cy="-41" r="3" class="blink" style="animation-delay:0s"/>
+                    <circle cx="29" cy="-29" r="3" class="blink" style="animation-delay:.2s"/>
+                    <circle cx="41" cy="0" r="3" class="blink" style="animation-delay:.4s"/>
+                    <circle cx="29" cy="29" r="3" class="blink" style="animation-delay:.6s"/>
+                    <circle cx="0" cy="41" r="3" class="blink" style="animation-delay:.8s"/>
+                    <circle cx="-29" cy="29" r="3" class="blink" style="animation-delay:1s"/>
+                    <circle cx="-41" cy="0" r="3" class="blink" style="animation-delay:1.2s"/>
+                    <circle cx="-29" cy="-29" r="3" class="blink" style="animation-delay:1.4s"/>
+                  </g>
+                </g>
+              </g>
+             </g>
+            </g>
+            <g class="spot__label" transform="translate(420 372)">
               <rect x="-62" y="-15" width="124" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">GUSTA CITY</text>
             </g>
           </g>
 
-          <!-- ====== HOTSPOT: OBSERVATORY → MEME LAB ====== -->
+          <!-- ============ HOTSPOT: OBSERVATORY → MEME LAB ============ -->
           <g class="spot" data-panel="lab" tabindex="0" role="button" aria-label="Meme Observatory — open the Meme Lab">
-            <g stroke="#101010" stroke-width="3.5">
-              <path fill="#d8d5cc" d="M762 322 h96 v34 a48 20 0 0 1 -96 0 Z"/>
-              <path fill="#f2f0ea" d="M762 322 a48 42 0 0 1 96 0 Z"/>
-              <path fill="#b8b4a9" d="M796 268 l40 -26 14 12 -40 30 Z"/>
-              <rect x="800" y="352" width="20" height="18" fill="#5b5850"/>
+            <g>
+             <g transform="translate(120 18)">
+              <ellipse cx="812" cy="372" rx="72" ry="15" fill="#3f8a2e" opacity=".45"/>
+              <g stroke="#101010" stroke-width="3.5">
+                <path fill="#c9c6bc" d="M768 330 h84 v26 a42 14 0 0 1 -84 0 Z"/>
+                <path fill="#b3b0a6" stroke="none" d="M836 332 h14 v24 a42 14 0 0 1 -18 11 Z"/>
+                <line x1="768" y1="338" x2="852" y2="338"/>
+                <path fill="url(#domeGrad)" d="M768 330 a42 42 0 0 1 84 0 Z"/>
+                <path fill="#55524b" d="M806 291 L822 291 L827 330 L801 330 Z"/>
+                <path fill="none" d="M778 314 a42 42 0 0 1 18 -22 M842 314 a42 42 0 0 0 -14 -20" stroke-width="2" opacity=".4"/>
+                <path fill="#9a968c" d="M818 296 L846 262 L858 271 L830 305 Z"/>
+                <path fill="#35414f" d="M846 262 L858 271 L853 277 L841 268 Z"/>
+                <rect x="800" y="346" width="18" height="21" rx="3" fill="#5b5850"/>
+                <circle cx="782" cy="350" r="5" fill="#ffe9a8"/>
+              </g>
+             </g>
             </g>
-            <g class="spot__label" transform="translate(810,398)">
+            <g class="spot__label" transform="translate(932 424)">
               <rect x="-58" y="-15" width="116" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">MEME LAB</text>
             </g>
           </g>
 
-          <!-- ====== HOTSPOT: PYRAMID → MOODS ====== -->
+          <!-- ============ HOTSPOT: PYRAMID → MOODS ============ -->
           <g class="spot" data-panel="moods" tabindex="0" role="button" aria-label="Mood Pyramid — open the Moods gallery">
-            <g stroke="#101010" stroke-width="3.5">
-              <path fill="#bfe6f5" fill-opacity=".85" d="M330 560 L410 452 L490 560 Z"/>
-              <path fill="none" stroke-width="2" d="M410 452 L410 560 M370 506 L450 506 M350 533 L470 533"/>
+            <g>
+             <g transform="translate(-12 10)">
+              <ellipse cx="340" cy="562" rx="98" ry="17" fill="#cdd3d8" stroke="#101010" stroke-width="3"/>
+              <g stroke="#101010" stroke-width="3.5">
+                <path fill="#9fd3ea" fill-opacity=".92" d="M340 452 L 262 560 L 352 560 Z"/>
+                <path fill="#cdeaf8" fill-opacity=".92" d="M340 452 L 352 560 L 420 560 Z"/>
+                <g stroke-width="1.8" fill="none" opacity=".8">
+                  <path d="M340 452 L 346 560"/>
+                  <path d="M314 488 L 372 488"/>
+                  <path d="M291 520 L 394 520"/>
+                  <path d="M276 542 L 408 542"/>
+                </g>
+              </g>
+              <use href="#spark4" class="spark" transform="translate(316 492)" style="animation-delay:0s"/>
+              <use href="#spark4" class="spark" transform="translate(376 530) scale(.7)" style="animation-delay:1.1s"/>
+             </g>
             </g>
-            <g class="spot__label" transform="translate(410,590)">
+            <g class="spot__label" transform="translate(328 608)">
               <rect x="-46" y="-15" width="92" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">MOODS</text>
             </g>
           </g>
 
-          <!-- ====== HOTSPOT: MOUNTAIN → HOW TO ====== -->
+          <!-- ============ HOTSPOT: MOUNTAIN → HOW TO ============ -->
           <g class="spot" data-panel="how" tabindex="0" role="button" aria-label="Mount Gusta — open How To Gusta">
-            <g stroke="#101010" stroke-width="3.5">
-              <path fill="#8f86b8" d="M648 420 L718 300 L796 420 Z"/>
-              <path fill="#f2f0ea" d="M696 338 L718 300 L742 338 L730 332 L718 344 L706 331 Z"/>
-              <path fill="#d9463e" d="M718 300 l0 -26 22 8 -22 8 Z"/>
-              <path fill="none" d="M718 274 v26"/>
+            <g>
+              <ellipse cx="786" cy="398" rx="100" ry="16" fill="#3f8a2e" opacity=".45"/>
+              <g stroke="#101010" stroke-width="3.5">
+                <!-- back peak -->
+                <path fill="#7a719f" d="M846 320 L 794 400 L 878 400 Z"/>
+                <path fill="#f2f0ea" stroke-width="2.5" d="M836 338 L 846 320 L 857 339 L 850 334 L 844 343 L 839 334 Z"/>
+                <!-- main peak -->
+                <path fill="#9c93c4" d="M782 262 L 704 400 L 864 400 Z"/>
+                <path fill="#847bb0" stroke="none" d="M782 262 L 790 400 L 864 400 Z" opacity=".55"/>
+                <path fill="#f2f0ea" stroke-width="2.5" d="M758 318 L 782 262 L 808 316 L 797 308 L 789 324 L 779 310 L 769 326 L 762 310 Z"/>
+                <!-- flag -->
+                <line x1="782" y1="262" x2="782" y2="232"/>
+                <path class="flag" fill="#d9463e" d="M782 232 q 12 -3 24 2 q -12 5 -24 8 Z"/>
+              </g>
+              <!-- scree -->
+              <g stroke="#101010" stroke-width="2">
+                <ellipse cx="726" cy="402" rx="8" ry="5" fill="#8d929b"/>
+                <ellipse cx="822" cy="404" rx="7" ry="4.5" fill="#7d828b"/>
+                <ellipse cx="856" cy="400" rx="6" ry="4" fill="#8d929b"/>
+              </g>
             </g>
-            <g class="spot__label" transform="translate(722,450)">
+            <g class="spot__label" transform="translate(786 432)">
               <rect x="-74" y="-15" width="148" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">HOW TO GUSTA</text>
             </g>
           </g>
 
-          <!-- ====== HOTSPOT: PORTAL → COMMUNITY ====== -->
+          <!-- ============ HOTSPOT: PORTAL → COMMUNITY ============ -->
           <g class="spot" data-panel="community" tabindex="0" role="button" aria-label="Portal — open Community links">
-            <g stroke="#101010" stroke-width="3.5">
-              <path fill="#c98a4b" d="M236 292 a54 62 0 1 1 108 0 a54 62 0 1 1 -108 0 Z"/>
-              <path class="portal-swirl" fill="#7ce0d3" d="M248 292 a42 50 0 1 1 84 0 a42 50 0 1 1 -84 0 Z"/>
-              <path fill="none" stroke="#0e6e63" stroke-width="4" d="M290 262 a 26 30 0 1 0 18 52 a 16 18 0 1 1 -22 -40"/>
+            <g>
+             <g transform="translate(-18 16)">
+              <ellipse cx="290" cy="356" rx="66" ry="13" fill="#3f8a2e" opacity=".45"/>
+              <g stroke="#101010" stroke-width="3.5">
+                <rect x="248" y="344" width="84" height="12" rx="6" fill="#97a0a8"/>
+                <rect x="258" y="334" width="64" height="12" rx="6" fill="#aab3ba"/>
+                <ellipse cx="290" cy="282" rx="57" ry="64" fill="#a97c50"/>
+                <g stroke-width="2.5" opacity=".7">
+                  <path d="M290 218 l0 12 M340 250 l-10 7 M347 292 l-12 -2 M330 334 l-9 -8 M240 250 l10 7 M233 292 l12 -2 M250 334 l9 -8"/>
+                </g>
+                <ellipse class="portal-swirl" cx="290" cy="282" rx="42" ry="50" fill="url(#portalGrad)"/>
+                <path fill="none" stroke="#0c7d6f" stroke-width="4" d="M290 246 a 38 38 0 0 1 0 74 a 26 26 0 0 1 -6 -51 a 15 15 0 0 1 10 28"/>
+              </g>
+              <use href="#spark4" class="spark" transform="translate(238 222) scale(.8)" style="animation-delay:.4s"/>
+              <use href="#spark4" class="spark" transform="translate(344 244) scale(.65)" style="animation-delay:1.4s"/>
+              <use href="#spark4" class="spark" transform="translate(252 340) scale(.6)" style="animation-delay:.9s"/>
+             </g>
             </g>
-            <g class="spot__label" transform="translate(290,384)">
+            <g class="spot__label" transform="translate(272 404)">
               <rect x="-64" y="-15" width="128" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">COMMUNITY</text>
             </g>
