@@ -1,5 +1,21 @@
 /* ============ ME GUSTA WORLD — script ============ */
 
+// ---------- Boot screen ----------
+const boot = document.getElementById("boot");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    boot.classList.add("gone");
+    setTimeout(() => boot.remove(), 700);
+  }, 2000);
+});
+// fallback if load never fires
+setTimeout(() => {
+  if (document.getElementById("boot")) {
+    boot.classList.add("gone");
+    setTimeout(() => boot.remove(), 700);
+  }
+}, 4500);
+
 // ---------- Slide to unlock ----------
 const site = document.getElementById("site");
 const bar = document.getElementById("unlockbar");
