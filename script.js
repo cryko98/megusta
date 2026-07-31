@@ -23,8 +23,39 @@ async function updateMcap() {
     const chip = document.getElementById("mcapChip");
     document.getElementById("mcapValue").textContent = formatMcap(best.marketCap || best.fdv);
     if (best.url) chip.href = best.url;
-    chip.hidden = false;
   } catch { /* keep last value */ }
+}
+
+const mcapChip = document.getElementById("mcapChip");
+const caChip = document.getElementById("caChip");
+const caValue = document.getElementById("caValue");
+
+function flashValue(el, text) {
+  const old = el.textContent;
+  el.textContent = text;
+  setTimeout(() => { el.textContent = old; }, 1400);
+}
+
+mcapChip.addEventListener("click", (e) => {
+  if (!TOKEN_CA) {
+    e.preventDefault();
+    flashValue(document.getElementById("mcapValue"), "SOON™");
+  }
+});
+
+caChip.addEventListener("click", () => {
+  if (!TOKEN_CA) {
+    flashValue(caValue, "SOON™");
+    return;
+  }
+  navigator.clipboard.writeText(TOKEN_CA).then(
+    () => flashValue(caValue, "COPIED!"),
+    () => flashValue(caValue, TOKEN_CA.slice(0, 8) + "…")
+  );
+});
+
+if (TOKEN_CA) {
+  caValue.textContent = TOKEN_CA.slice(0, 4) + "…" + TOKEN_CA.slice(-4);
 }
 updateMcap();
 setInterval(updateMcap, 60000);

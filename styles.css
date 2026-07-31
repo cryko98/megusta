@@ -410,30 +410,38 @@ button { font-family: inherit; }
   box-shadow: 0 12px 34px rgba(0,0,0,.6);
   transition: opacity .5s ease, transform .5s ease;
 }
-.dock__mcap {
+.dock__stats {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  align-self: stretch;
+  padding-right: 1.4rem;
+  border-right: 1px solid rgba(255,255,255,.14);
+}
+.dock__stat {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: .15rem;
-  align-self: stretch;
-  padding-right: 1.3rem;
-  border-right: 1px solid rgba(255,255,255,.14);
+  background: none;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
+  padding: 0;
 }
-.dock__mcap[hidden] { display: none; }
-.dock__mcap-label {
+.dock__stat-label {
   font-size: .58rem;
   letter-spacing: .22em;
   color: var(--grey);
 }
-.dock__mcap-value {
+.dock__stat-value {
   font-family: var(--display);
-  font-size: .95rem;
+  font-size: .9rem;
   letter-spacing: .04em;
   color: var(--accent);
 }
-.dock__mcap:hover .dock__mcap-value { color: var(--white); }
+.dock__stat:hover .dock__stat-value { color: var(--white); }
 .site.locked .dock {
   opacity: 0;
   transform: translateX(-50%) translateY(20px);
@@ -747,5 +755,5 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .world { padding-bottom: 6rem; }
   .dock { gap: 1.1rem; padding: .5rem 1rem .4rem; }
   .dock__icon { width: 36px; height: 36px; }
-  .dock__mcap { padding-right: 1rem; }
+  .dock__stats { gap: .9rem; padding-right: 1rem; }
 }
