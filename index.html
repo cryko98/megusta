@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ME GUSTA</title>
+  <meta name="description" content="Me Gusta — the face you make when it feels weird but you like it. Since 2010.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:title" content="ME GUSTA">
+  <meta property="og:description" content="When it feels weird... but you like it.">
+  <meta property="og:image" content="Megusta.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ LOCK SCREEN ============ -->
+  <div class="lock" id="lock">
+    <div class="lock__noise"></div>
+    <div class="lock__clock" id="lockClock">4:20</div>
+    <div class="lock__date" id="lockDate">Monday, March 8</div>
+    <img class="lock__face" src="Megusta.jpg" alt="Me Gusta face" draggable="false">
+    <div class="lock__hint">me gusta unlocking things</div>
+    <div class="lock__slider" id="slider">
+      <div class="lock__slider-track">
+        <span class="lock__slider-label">SLIDE TO UNLOCK</span>
+        <div class="lock__slider-thumb" id="sliderThumb">
+          <img src="Megusta.jpg" alt="" draggable="false">
+        </div>
+      </div>
+    </div>
+    <button class="lock__skip" id="lockSkip">skip &gt;</button>
+  </div>
+
+  <!-- ============ MAIN SITE ============ -->
+  <div class="site" id="site">
+
+    <header class="nav">
+      <a class="nav__logo" href="#top">
+        <img src="Megusta.jpg" alt="Me Gusta logo">
+        <span>ME<br>GUSTA</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#lore">Lore</a>
+        <a href="#moods">Moods</a>
+        <a href="#lab">Meme Lab</a>
+        <a href="#how">How To Gusta</a>
+      </nav>
+      <div class="nav__socials">
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+        <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">KYM</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <span>ME GUSTA</span><span>ME GUSTA</span><span>ME GUSTA</span>
+        <span>ME GUSTA</span><span>ME GUSTA</span><span>ME GUSTA</span>
+      </div>
+      <img class="hero__face" id="heroFace" src="Megusta.jpg" alt="Me Gusta" draggable="false">
+      <h1 class="hero__title">ME<span class="hero__title-face"><img src="Megusta.jpg" alt="O"></span>GUSTA</h1>
+      <p class="hero__tag">when it feels weird… but you like it</p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#lab">MAKE A MEME</a>
+        <a class="btn" href="#lore">THE LORE</a>
+      </div>
+      <div class="hero__scroll">▼ scroll, me gusta ▼</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__inner">
+        <span>ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ </span>
+        <span>ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ </span>
+      </div>
+    </div>
+
+    <!-- LORE -->
+    <section class="lore section" id="lore">
+      <h2 class="section__title">THE LORE</h2>
+      <div class="lore__grid">
+        <div class="lore__card">
+          <div class="lore__year">2010</div>
+          <h3>BORN ON A TABLET</h3>
+          <p>In March 2010, illustrator Matt Oswald draws a bulging-eyed, creepily grinning face for a rage comic about the strange joy of gross things. He posts it. The internet never recovers.</p>
+        </div>
+        <div class="lore__card">
+          <div class="lore__year">2011</div>
+          <h3>RAGE COMIC ROYALTY</h3>
+          <p>Me Gusta becomes a core cast member of rage comics everywhere — the official reaction to enjoying things you probably shouldn't. Shower water in the ears? Me gusta.</p>
+        </div>
+        <div class="lore__card">
+          <div class="lore__year">2012</div>
+          <h3>WORLD DOMINATION</h3>
+          <p>T-shirts, masks, keyboards, birthday cakes. The face is everywhere. "Me gusta" — Spanish for "I like it" — becomes the universal caption for questionable pleasure.</p>
+        </div>
+        <div class="lore__card">
+          <div class="lore__year">NOW</div>
+          <h3>ETERNAL GUSTA</h3>
+          <p>Memes die. Legends don't. A decade later the face still appears exactly when something feels wrong and right at the same time. That's forever content.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOODS / GALLERY -->
+    <section class="moods section" id="moods">
+      <h2 class="section__title">MOODS OF GUSTA</h2>
+      <p class="section__sub">same face, different feelings</p>
+      <div class="moods__grid">
+        <figure class="mood"><img src="Megusta.jpg" alt="Classic Me Gusta" class="mood--classic"><figcaption>CLASSIC</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Inverted Me Gusta" class="mood--void"><figcaption>VOID GUSTA</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Red Me Gusta" class="mood--rage"><figcaption>RAGE GUSTA</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Green Me Gusta" class="mood--toxic"><figcaption>TOXIC GUSTA</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Blurry Me Gusta" class="mood--drunk"><figcaption>3AM GUSTA</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Pixelated Me Gusta" class="mood--retro"><figcaption>1998 GUSTA</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Golden Me Gusta" class="mood--gold"><figcaption>GOLDEN GUSTA</figcaption></figure>
+        <figure class="mood"><img src="Megusta.jpg" alt="Ghost Me Gusta" class="mood--ghost"><figcaption>GHOST GUSTA</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- MEME LAB -->
+    <section class="lab section" id="lab">
+      <h2 class="section__title">MEME LAB</h2>
+      <p class="section__sub">type something weird, get a certified meme</p>
+      <div class="lab__wrap">
+        <canvas id="memeCanvas" width="600" height="600"></canvas>
+        <div class="lab__controls">
+          <label>TOP TEXT
+            <input type="text" id="topText" maxlength="40" value="WHEN IT FEELS WEIRD" autocomplete="off">
+          </label>
+          <label>BOTTOM TEXT
+            <input type="text" id="bottomText" maxlength="40" value="BUT YOU LIKE IT" autocomplete="off">
+          </label>
+          <div class="lab__buttons">
+            <button class="btn btn--solid" id="downloadMeme">DOWNLOAD</button>
+            <button class="btn" id="randomMeme">RANDOM</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO GUSTA -->
+    <section class="how section" id="how">
+      <h2 class="section__title">HOW TO GUSTA</h2>
+      <ol class="how__steps">
+        <li><span>01</span><h3>ENCOUNTER SOMETHING WEIRD</h3><p>A strange texture. A cursed sound. A questionable snack combination.</p></li>
+        <li><span>02</span><h3>REALIZE YOU ENJOY IT</h3><p>Do not fight it. The enjoyment is already inside you.</p></li>
+        <li><span>03</span><h3>MAKE THE FACE</h3><p>Eyes bulge. Grin spreads. Chin does the thing.</p></li>
+        <li><span>04</span><h3>SAY THE WORDS</h3><p>"Me gusta." That's it. That's the whole ritual.</p></li>
+      </ol>
+    </section>
+
+    <!-- BIG FACE OUTRO -->
+    <section class="outro">
+      <img src="Megusta.jpg" alt="Me Gusta" class="outro__face" draggable="false">
+      <h2 class="outro__text">ME GUSTA<br>FOREVER</h2>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__links">
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+        <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">Know Your Meme</a>
+      </div>
+      <p class="footer__note">© 2010–forever · me gusta is a state of mind · no rights reserved, me gusta sharing</p>
+      <p class="footer__still">still gustaing</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
