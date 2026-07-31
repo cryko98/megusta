@@ -40,7 +40,7 @@
         <button data-panel="lab">Meme Lab</button>
         <button data-panel="how">How To MeGusta</button>
         <button data-panel="community">Community</button>
-        <button data-panel="listings">Listings</button>
+        <button data-panel="listings">MeGusta Hub</button>
       </nav>
     </header>
 
@@ -374,8 +374,10 @@
           <use href="#tree" transform="translate(240 418) scale(.8)"/>
           <use href="#pine" transform="translate(872 296) scale(.75)"/>
 
-          <!-- COMING SOON shop -->
-          <g stroke="#101010" stroke-width="3" transform="translate(0 8)">
+          <!-- COMING SOON shop → LISTINGS -->
+          <g class="spot" data-panel="listings" tabindex="0" role="button" aria-label="Shop — open Listings">
+           <g>
+            <g stroke="#101010" stroke-width="3" transform="translate(0 8)">
             <ellipse cx="660" cy="300" rx="66" ry="11" fill="#3f8a2e" opacity=".45" stroke="none"/>
             <path fill="#d5d2ca" d="M 714 258 L 726 250 L 726 288 L 714 296 Z"/>
             <path fill="#eceae4" d="M 606 258 L 714 258 L 714 296 L 606 296 Z"/>
@@ -395,8 +397,8 @@
               <circle cx="680" cy="245" r="2.5" class="blink" style="animation-delay:.45s"/>
               <circle cx="700" cy="242" r="2.5" class="blink" style="animation-delay:1.35s"/>
             </g>
-            <text x="660" y="228" class="shopsign shopsign--1">COMING</text>
-            <text x="660" y="243" class="shopsign shopsign--2">SOON</text>
+            <text x="660" y="227" class="shopsign shopsign--1">MEGUSTA HUB</text>
+            <text x="660" y="242" class="shopsign shopsign--2">COMING SOON</text>
             <!-- awnings + door + windows -->
             <g fill="#bfe0ff" stroke-width="2">
               <rect x="614" y="270" width="24" height="13"/>
@@ -408,6 +410,12 @@
             </g>
             <rect x="650" y="272" width="20" height="24" rx="2" fill="#35414f"/>
             <line x1="660" y1="272" x2="660" y2="296" stroke-width="2"/>
+            </g>
+           </g>
+            <g class="spot__label" transform="translate(660 336)">
+              <rect x="-75" y="-15" width="150" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
+              <text text-anchor="middle" dy="6">MEGUSTA HUB</text>
+            </g>
           </g>
 
           <!-- cave mound -->
@@ -785,11 +793,11 @@
       </div>
     </div>
 
-    <div class="panel" id="panel-listings" role="dialog" aria-modal="true" aria-label="Listings">
+    <div class="panel" id="panel-listings" role="dialog" aria-modal="true" aria-label="MeGusta Hub">
       <div class="panel__inner panel__inner--narrow panel__inner--left">
         <button class="panel__close" aria-label="Close">✕</button>
-        <h2 class="section__title">LISTINGS</h2>
-        <p class="section__sub">where to get $MEGUSTA</p>
+        <h2 class="section__title">MEGUSTA HUB</h2>
+        <p class="section__sub">listings · updates · marketing · articles — coming soon</p>
         <div class="listing__head">
           <img src="Megusta.jpg" alt="MeGusta token">
           <div>
