@@ -7,7 +7,8 @@ A tribute site for the classic **Me Gusta** rage-comic meme (2010–forever).
 ## Features
 
 - 📱 iPhone-style "slide to unlock" intro screen
-- 😏 Hero with the legendary face
+- 🏝️ Floating island world (hand-drawn SVG) in a twinkling starfield
+- 🖱️ Clickable landmarks — city, pyramid, observatory, mountain, portal — each opens a section overlay
 - 📜 Lore timeline (2010 → now)
 - 🎭 Moods of Gusta gallery (CSS-filter variations)
 - 🧪 Meme Lab — built-in meme generator with PNG download

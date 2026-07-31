@@ -1,4 +1,4 @@
-/* ============ ME GUSTA — script ============ */
+/* ============ ME GUSTA WORLD — script ============ */
 
 // ---------- Lock screen clock ----------
 function updateClock() {
@@ -70,7 +70,6 @@ window.addEventListener("touchend", onUp);
 
 document.getElementById("lockSkip").addEventListener("click", unlock);
 
-// Keyboard access: Enter/Space on slider unlocks
 slider.setAttribute("tabindex", "0");
 slider.setAttribute("role", "button");
 slider.setAttribute("aria-label", "Slide to unlock");
@@ -78,20 +77,69 @@ slider.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); unlock(); }
 });
 
+// ---------- Starfield ----------
+const starsBox = document.getElementById("stars");
+for (let i = 0; i < 90; i++) {
+  const s = document.createElement("i");
+  s.style.left = Math.random() * 100 + "%";
+  s.style.top = Math.random() * 100 + "%";
+  const size = Math.random() < 0.15 ? 4 : Math.random() < 0.5 ? 3 : 2;
+  s.style.width = s.style.height = size + "px";
+  s.style.animationDelay = (Math.random() * 3).toFixed(2) + "s";
+  s.style.animationDuration = (2 + Math.random() * 3).toFixed(2) + "s";
+  starsBox.appendChild(s);
+}
+
 // ---------- Mobile nav ----------
 const burger = document.getElementById("burger");
 const nav = document.querySelector(".nav");
 burger.addEventListener("click", () => nav.classList.toggle("open"));
-nav.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => nav.classList.remove("open"))
-);
 
-// ---------- Hero face spin ----------
-const heroFace = document.getElementById("heroFace");
-heroFace.addEventListener("click", () => {
-  heroFace.classList.remove("spin");
-  void heroFace.offsetWidth; // restart animation
-  heroFace.classList.add("spin");
+// ---------- Panels ----------
+let openedPanel = null;
+let lastTrigger = null;
+
+function openPanel(name, trigger) {
+  const panel = document.getElementById("panel-" + name);
+  if (!panel) return;
+  closePanel();
+  panel.classList.add("open");
+  openedPanel = panel;
+  lastTrigger = trigger || null;
+  nav.classList.remove("open");
+  const closeBtn = panel.querySelector(".panel__close");
+  if (closeBtn) closeBtn.focus();
+  if (name === "lab") renderMeme();
+}
+
+function closePanel() {
+  if (!openedPanel) return;
+  openedPanel.classList.remove("open");
+  openedPanel = null;
+  if (lastTrigger && lastTrigger.focus) lastTrigger.focus();
+  lastTrigger = null;
+}
+
+document.querySelectorAll("[data-panel]").forEach((el) => {
+  el.addEventListener("click", () => openPanel(el.dataset.panel, el));
+  el.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openPanel(el.dataset.panel, el);
+    }
+  });
+});
+
+document.querySelectorAll(".panel__close").forEach((btn) =>
+  btn.addEventListener("click", closePanel)
+);
+document.querySelectorAll(".panel").forEach((panel) =>
+  panel.addEventListener("click", (e) => {
+    if (e.target === panel) closePanel();
+  })
+);
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePanel();
 });
 
 // ---------- Meme Lab ----------
@@ -135,7 +183,6 @@ function renderMeme() {
 face.onload = renderMeme;
 topInput.addEventListener("input", renderMeme);
 bottomInput.addEventListener("input", renderMeme);
-// Re-render once webfont is ready so canvas uses Archivo Black
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderMeme);
 renderMeme();
 

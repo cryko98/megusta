@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ME GUSTA</title>
-  <meta name="description" content="Me Gusta — the face you make when it feels weird but you like it. Since 2010.">
+  <meta name="description" content="Me Gusta World — a floating island of questionable pleasure. Since 2010.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:title" content="ME GUSTA">
@@ -35,142 +35,281 @@
     <button class="lock__skip" id="lockSkip">skip &gt;</button>
   </div>
 
-  <!-- ============ MAIN SITE ============ -->
+  <!-- ============ WORLD ============ -->
   <div class="site" id="site">
 
     <header class="nav">
-      <a class="nav__logo" href="#top">
+      <a class="nav__logo" href="#">
         <img src="Megusta.jpg" alt="Me Gusta logo">
         <span>ME<br>GUSTA</span>
       </a>
       <nav class="nav__links">
-        <a href="#lore">Lore</a>
-        <a href="#moods">Moods</a>
-        <a href="#lab">Meme Lab</a>
-        <a href="#how">How To Gusta</a>
+        <button data-panel="lore">Lore</button>
+        <button data-panel="moods">Moods</button>
+        <button data-panel="lab">Meme Lab</button>
+        <button data-panel="how">How To Gusta</button>
+        <button data-panel="community">Community</button>
       </nav>
-      <div class="nav__socials">
-        <a href="https://x.com" target="_blank" rel="noopener">X</a>
-        <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">KYM</a>
-      </div>
       <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero__bg" aria-hidden="true">
-        <span>ME GUSTA</span><span>ME GUSTA</span><span>ME GUSTA</span>
-        <span>ME GUSTA</span><span>ME GUSTA</span><span>ME GUSTA</span>
-      </div>
-      <img class="hero__face" id="heroFace" src="Megusta.jpg" alt="Me Gusta" draggable="false">
-      <h1 class="hero__title">ME<span class="hero__title-face"><img src="Megusta.jpg" alt="O"></span>GUSTA</h1>
-      <p class="hero__tag">when it feels weird… but you like it</p>
-      <div class="hero__cta">
-        <a class="btn btn--solid" href="#lab">MAKE A MEME</a>
-        <a class="btn" href="#lore">THE LORE</a>
-      </div>
-      <div class="hero__scroll">▼ scroll, me gusta ▼</div>
-    </section>
+    <div class="stars" id="stars" aria-hidden="true"></div>
 
-    <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__inner">
-        <span>ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ </span>
-        <span>ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ ME GUSTA ✦ </span>
-      </div>
-    </div>
+    <!-- FLOATING ISLAND -->
+    <main class="world">
+      <svg class="island" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Me Gusta floating island">
+        <defs>
+          <clipPath id="faceClip"><circle cx="0" cy="0" r="34"/></clipPath>
+          <linearGradient id="fallGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#aee3f7"/>
+            <stop offset=".75" stop-color="#7fc8ec"/>
+            <stop offset="1" stop-color="#7fc8ec" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="skyGlow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity=".08"/>
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
 
-    <!-- LORE -->
-    <section class="lore section" id="lore">
-      <h2 class="section__title">THE LORE</h2>
-      <div class="lore__grid">
-        <div class="lore__card">
-          <div class="lore__year">2010</div>
-          <h3>BORN ON A TABLET</h3>
-          <p>In March 2010, illustrator Matt Oswald draws a bulging-eyed, creepily grinning face for a rage comic about the strange joy of gross things. He posts it. The internet never recovers.</p>
-        </div>
-        <div class="lore__card">
-          <div class="lore__year">2011</div>
-          <h3>RAGE COMIC ROYALTY</h3>
-          <p>Me Gusta becomes a core cast member of rage comics everywhere — the official reaction to enjoying things you probably shouldn't. Shower water in the ears? Me gusta.</p>
-        </div>
-        <div class="lore__card">
-          <div class="lore__year">2012</div>
-          <h3>WORLD DOMINATION</h3>
-          <p>T-shirts, masks, keyboards, birthday cakes. The face is everywhere. "Me gusta" — Spanish for "I like it" — becomes the universal caption for questionable pleasure.</p>
-        </div>
-        <div class="lore__card">
-          <div class="lore__year">NOW</div>
-          <h3>ETERNAL GUSTA</h3>
-          <p>Memes die. Legends don't. A decade later the face still appears exactly when something feels wrong and right at the same time. That's forever content.</p>
-        </div>
-      </div>
-    </section>
+        <g class="island__float">
 
-    <!-- MOODS / GALLERY -->
-    <section class="moods section" id="moods">
-      <h2 class="section__title">MOODS OF GUSTA</h2>
-      <p class="section__sub">same face, different feelings</p>
-      <div class="moods__grid">
-        <figure class="mood"><img src="Megusta.jpg" alt="Classic Me Gusta" class="mood--classic"><figcaption>CLASSIC</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Inverted Me Gusta" class="mood--void"><figcaption>VOID GUSTA</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Red Me Gusta" class="mood--rage"><figcaption>RAGE GUSTA</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Green Me Gusta" class="mood--toxic"><figcaption>TOXIC GUSTA</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Blurry Me Gusta" class="mood--drunk"><figcaption>3AM GUSTA</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Pixelated Me Gusta" class="mood--retro"><figcaption>1998 GUSTA</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Golden Me Gusta" class="mood--gold"><figcaption>GOLDEN GUSTA</figcaption></figure>
-        <figure class="mood"><img src="Megusta.jpg" alt="Ghost Me Gusta" class="mood--ghost"><figcaption>GHOST GUSTA</figcaption></figure>
-      </div>
-    </section>
+          <!-- glow behind island -->
+          <ellipse cx="600" cy="430" rx="480" ry="230" fill="url(#skyGlow)"/>
 
-    <!-- MEME LAB -->
-    <section class="lab section" id="lab">
-      <h2 class="section__title">MEME LAB</h2>
-      <p class="section__sub">type something weird, get a certified meme</p>
-      <div class="lab__wrap">
-        <canvas id="memeCanvas" width="600" height="600"></canvas>
-        <div class="lab__controls">
-          <label>TOP TEXT
-            <input type="text" id="topText" maxlength="40" value="WHEN IT FEELS WEIRD" autocomplete="off">
-          </label>
-          <label>BOTTOM TEXT
-            <input type="text" id="bottomText" maxlength="40" value="BUT YOU LIKE IT" autocomplete="off">
-          </label>
-          <div class="lab__buttons">
-            <button class="btn btn--solid" id="downloadMeme">DOWNLOAD</button>
-            <button class="btn" id="randomMeme">RANDOM</button>
+          <!-- rock underside -->
+          <g stroke="#101010" stroke-width="4" stroke-linejoin="round">
+            <path fill="#787d87" d="M170 430 L205 472 L188 522 L262 560 L252 622 L342 642 L352 702 L462 712 L482 782 L600 832 L702 788 L722 718 L822 698 L832 638 L922 608 L912 548 L992 520 L976 470 L1030 430 C 990 560 780 622 600 622 C 420 622 210 560 170 430 Z"/>
+            <path fill="#5f646e" stroke="none" d="M262 560 L252 622 L342 642 L352 702 L300 640 L310 590 Z"/>
+            <path fill="#5f646e" stroke="none" d="M822 698 L832 638 L922 608 L870 668 L860 700 Z"/>
+            <path fill="#5f646e" stroke="none" d="M482 782 L600 832 L560 760 L500 740 Z"/>
+          </g>
+          <!-- floating rock crumbs -->
+          <g stroke="#101010" stroke-width="3" fill="#6b7078">
+            <path class="crumb crumb--1" d="M300 780 l28 -12 22 14 -8 24 -30 6 -16 -18 Z"/>
+            <path class="crumb crumb--2" d="M880 770 l24 -10 18 12 -6 20 -26 5 -13 -15 Z"/>
+            <path class="crumb crumb--3" d="M1040 600 l20 -8 15 10 -5 17 -22 4 -11 -13 Z"/>
+          </g>
+
+          <!-- grass top -->
+          <path fill="#82cf5a" stroke="#101010" stroke-width="4" d="M170 430 C 220 290 420 238 600 238 C 780 238 985 290 1030 430 C 990 560 780 622 600 622 C 420 622 210 560 170 430 Z"/>
+          <path fill="none" stroke="#4f9c37" stroke-width="10" stroke-linecap="round" opacity=".55" d="M225 480 C 340 580 480 608 600 608 C 730 608 890 570 975 480"/>
+
+          <!-- sand + lake -->
+          <ellipse cx="600" cy="478" rx="222" ry="96" fill="#ecdfa3" stroke="#101010" stroke-width="3.5"/>
+          <ellipse cx="600" cy="474" rx="200" ry="80" fill="#8fd6f2" stroke="#101010" stroke-width="3.5"/>
+          <path fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".7" d="M480 460 q 20 8 44 2 M640 500 q 22 8 46 0 M540 495 q 16 6 34 2"/>
+
+          <!-- waterfall -->
+          <path fill="url(#fallGrad)" stroke="#101010" stroke-width="3.5" d="M560 548 C 556 620 552 660 548 720 L 540 880 L 672 880 L 662 720 C 657 660 653 620 650 548 Z"/>
+          <g class="fall-lines" stroke="#e9f7ff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85">
+            <path d="M575 560 C 572 640 568 720 562 860"/>
+            <path d="M605 565 C 604 645 602 725 600 865"/>
+            <path d="M635 560 C 637 640 640 720 645 858"/>
+          </g>
+
+          <!-- boat -->
+          <g class="boat" stroke="#101010" stroke-width="3">
+            <path fill="#d9463e" d="M690 496 h58 l-12 16 h-36 Z"/>
+            <path fill="#ffffff" d="M719 452 v42 h-2 v-42 Z"/>
+            <path fill="#f2f0ea" d="M721 454 l30 36 h-30 Z"/>
+          </g>
+
+          <!-- trees -->
+          <g class="trees" stroke="#101010" stroke-width="3">
+            <g transform="translate(255,395)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="17" fill="#3e7d33"/></g>
+            <g transform="translate(300,340)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="14" fill="#4c9440"/></g>
+            <g transform="translate(505,300)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="15" fill="#3e7d33"/></g>
+            <g transform="translate(905,430)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="16" fill="#4c9440"/></g>
+            <g transform="translate(945,380)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="13" fill="#3e7d33"/></g>
+            <g transform="translate(430,590)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="14" fill="#4c9440"/></g>
+            <g transform="translate(790,575)"><rect x="-4" y="6" width="8" height="16" fill="#7c4a24"/><circle cy="-2" r="15" fill="#3e7d33"/></g>
+          </g>
+
+          <!-- ====== HOTSPOT: GUSTA CITY → LORE ====== -->
+          <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="Gusta City — open the Lore">
+            <g stroke="#101010" stroke-width="3.5">
+              <rect x="352" y="268" width="46" height="78" fill="#4d7dbf"/>
+              <rect x="398" y="288" width="52" height="58" fill="#6fa3e0"/>
+              <rect x="450" y="252" width="40" height="94" fill="#3d6299"/>
+              <g fill="#ffe9a8" stroke="none">
+                <rect x="360" y="278" width="9" height="9"/><rect x="378" y="278" width="9" height="9"/>
+                <rect x="360" y="298" width="9" height="9"/><rect x="378" y="298" width="9" height="9"/>
+                <rect x="406" y="298" width="9" height="9"/><rect x="424" y="298" width="9" height="9"/>
+                <rect x="458" y="262" width="8" height="8"/><rect x="472" y="262" width="8" height="8"/>
+                <rect x="458" y="280" width="8" height="8"/><rect x="472" y="280" width="8" height="8"/>
+                <rect x="458" y="298" width="8" height="8"/><rect x="472" y="298" width="8" height="8"/>
+              </g>
+              <g transform="translate(424,240)">
+                <circle r="37" fill="#f2f0ea"/>
+                <image href="Megusta.jpg" x="-34" y="-34" width="68" height="68" clip-path="url(#faceClip)"/>
+              </g>
+            </g>
+            <g class="spot__label" transform="translate(420,376)">
+              <rect x="-62" y="-15" width="124" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
+              <text text-anchor="middle" dy="6">GUSTA CITY</text>
+            </g>
+          </g>
+
+          <!-- ====== HOTSPOT: OBSERVATORY → MEME LAB ====== -->
+          <g class="spot" data-panel="lab" tabindex="0" role="button" aria-label="Meme Observatory — open the Meme Lab">
+            <g stroke="#101010" stroke-width="3.5">
+              <path fill="#d8d5cc" d="M762 322 h96 v34 a48 20 0 0 1 -96 0 Z"/>
+              <path fill="#f2f0ea" d="M762 322 a48 42 0 0 1 96 0 Z"/>
+              <path fill="#b8b4a9" d="M796 268 l40 -26 14 12 -40 30 Z"/>
+              <rect x="800" y="352" width="20" height="18" fill="#5b5850"/>
+            </g>
+            <g class="spot__label" transform="translate(810,398)">
+              <rect x="-58" y="-15" width="116" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
+              <text text-anchor="middle" dy="6">MEME LAB</text>
+            </g>
+          </g>
+
+          <!-- ====== HOTSPOT: PYRAMID → MOODS ====== -->
+          <g class="spot" data-panel="moods" tabindex="0" role="button" aria-label="Mood Pyramid — open the Moods gallery">
+            <g stroke="#101010" stroke-width="3.5">
+              <path fill="#bfe6f5" fill-opacity=".85" d="M330 560 L410 452 L490 560 Z"/>
+              <path fill="none" stroke-width="2" d="M410 452 L410 560 M370 506 L450 506 M350 533 L470 533"/>
+            </g>
+            <g class="spot__label" transform="translate(410,590)">
+              <rect x="-46" y="-15" width="92" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
+              <text text-anchor="middle" dy="6">MOODS</text>
+            </g>
+          </g>
+
+          <!-- ====== HOTSPOT: MOUNTAIN → HOW TO ====== -->
+          <g class="spot" data-panel="how" tabindex="0" role="button" aria-label="Mount Gusta — open How To Gusta">
+            <g stroke="#101010" stroke-width="3.5">
+              <path fill="#8f86b8" d="M648 420 L718 300 L796 420 Z"/>
+              <path fill="#f2f0ea" d="M696 338 L718 300 L742 338 L730 332 L718 344 L706 331 Z"/>
+              <path fill="#d9463e" d="M718 300 l0 -26 22 8 -22 8 Z"/>
+              <path fill="none" d="M718 274 v26"/>
+            </g>
+            <g class="spot__label" transform="translate(722,450)">
+              <rect x="-74" y="-15" width="148" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
+              <text text-anchor="middle" dy="6">HOW TO GUSTA</text>
+            </g>
+          </g>
+
+          <!-- ====== HOTSPOT: PORTAL → COMMUNITY ====== -->
+          <g class="spot" data-panel="community" tabindex="0" role="button" aria-label="Portal — open Community links">
+            <g stroke="#101010" stroke-width="3.5">
+              <path fill="#c98a4b" d="M236 292 a54 62 0 1 1 108 0 a54 62 0 1 1 -108 0 Z"/>
+              <path class="portal-swirl" fill="#7ce0d3" d="M248 292 a42 50 0 1 1 84 0 a42 50 0 1 1 -84 0 Z"/>
+              <path fill="none" stroke="#0e6e63" stroke-width="4" d="M290 262 a 26 30 0 1 0 18 52 a 16 18 0 1 1 -22 -40"/>
+            </g>
+            <g class="spot__label" transform="translate(290,384)">
+              <rect x="-64" y="-15" width="128" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
+              <text text-anchor="middle" dy="6">COMMUNITY</text>
+            </g>
+          </g>
+
+        </g>
+      </svg>
+      <p class="world__hint">click around the island, me gusta exploring</p>
+    </main>
+
+    <footer class="worldfoot">© 2010–forever ME GUSTA. no rights reserved, me gusta sharing.</footer>
+
+    <!-- ============ PANELS ============ -->
+    <div class="panel" id="panel-lore" role="dialog" aria-modal="true" aria-label="The Lore">
+      <div class="panel__inner">
+        <button class="panel__close" aria-label="Close">✕</button>
+        <h2 class="section__title">THE LORE</h2>
+        <p class="section__sub">a brief history of questionable pleasure</p>
+        <div class="lore__grid">
+          <div class="lore__card">
+            <div class="lore__year">2010</div>
+            <h3>BORN ON A TABLET</h3>
+            <p>In March 2010, illustrator Matt Oswald draws a bulging-eyed, creepily grinning face for a rage comic about the strange joy of gross things. He posts it. The internet never recovers.</p>
+          </div>
+          <div class="lore__card">
+            <div class="lore__year">2011</div>
+            <h3>RAGE COMIC ROYALTY</h3>
+            <p>Me Gusta becomes a core cast member of rage comics everywhere — the official reaction to enjoying things you probably shouldn't. Shower water in the ears? Me gusta.</p>
+          </div>
+          <div class="lore__card">
+            <div class="lore__year">2012</div>
+            <h3>WORLD DOMINATION</h3>
+            <p>T-shirts, masks, keyboards, birthday cakes. The face is everywhere. "Me gusta" — Spanish for "I like it" — becomes the universal caption for questionable pleasure.</p>
+          </div>
+          <div class="lore__card">
+            <div class="lore__year">NOW</div>
+            <h3>ETERNAL GUSTA</h3>
+            <p>Memes die. Legends don't. A decade later the face still appears exactly when something feels wrong and right at the same time. That's forever content.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- HOW TO GUSTA -->
-    <section class="how section" id="how">
-      <h2 class="section__title">HOW TO GUSTA</h2>
-      <ol class="how__steps">
-        <li><span>01</span><h3>ENCOUNTER SOMETHING WEIRD</h3><p>A strange texture. A cursed sound. A questionable snack combination.</p></li>
-        <li><span>02</span><h3>REALIZE YOU ENJOY IT</h3><p>Do not fight it. The enjoyment is already inside you.</p></li>
-        <li><span>03</span><h3>MAKE THE FACE</h3><p>Eyes bulge. Grin spreads. Chin does the thing.</p></li>
-        <li><span>04</span><h3>SAY THE WORDS</h3><p>"Me gusta." That's it. That's the whole ritual.</p></li>
-      </ol>
-    </section>
-
-    <!-- BIG FACE OUTRO -->
-    <section class="outro">
-      <img src="Megusta.jpg" alt="Me Gusta" class="outro__face" draggable="false">
-      <h2 class="outro__text">ME GUSTA<br>FOREVER</h2>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__links">
-        <a href="https://x.com" target="_blank" rel="noopener">X</a>
-        <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">Know Your Meme</a>
+    <div class="panel" id="panel-moods" role="dialog" aria-modal="true" aria-label="Moods of Gusta">
+      <div class="panel__inner">
+        <button class="panel__close" aria-label="Close">✕</button>
+        <h2 class="section__title">MOODS OF GUSTA</h2>
+        <p class="section__sub">same face, different feelings</p>
+        <div class="moods__grid">
+          <figure class="mood"><img src="Megusta.jpg" alt="Classic Me Gusta" class="mood--classic"><figcaption>CLASSIC</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Inverted Me Gusta" class="mood--void"><figcaption>VOID GUSTA</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Red Me Gusta" class="mood--rage"><figcaption>RAGE GUSTA</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Green Me Gusta" class="mood--toxic"><figcaption>TOXIC GUSTA</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Blurry Me Gusta" class="mood--drunk"><figcaption>3AM GUSTA</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Pixelated Me Gusta" class="mood--retro"><figcaption>1998 GUSTA</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Golden Me Gusta" class="mood--gold"><figcaption>GOLDEN GUSTA</figcaption></figure>
+          <figure class="mood"><img src="Megusta.jpg" alt="Ghost Me Gusta" class="mood--ghost"><figcaption>GHOST GUSTA</figcaption></figure>
+        </div>
       </div>
-      <p class="footer__note">© 2010–forever · me gusta is a state of mind · no rights reserved, me gusta sharing</p>
-      <p class="footer__still">still gustaing</p>
-    </footer>
+    </div>
+
+    <div class="panel" id="panel-lab" role="dialog" aria-modal="true" aria-label="Meme Lab">
+      <div class="panel__inner">
+        <button class="panel__close" aria-label="Close">✕</button>
+        <h2 class="section__title">MEME LAB</h2>
+        <p class="section__sub">type something weird, get a certified meme</p>
+        <div class="lab__wrap">
+          <canvas id="memeCanvas" width="600" height="600"></canvas>
+          <div class="lab__controls">
+            <label>TOP TEXT
+              <input type="text" id="topText" maxlength="40" value="WHEN IT FEELS WEIRD" autocomplete="off">
+            </label>
+            <label>BOTTOM TEXT
+              <input type="text" id="bottomText" maxlength="40" value="BUT YOU LIKE IT" autocomplete="off">
+            </label>
+            <div class="lab__buttons">
+              <button class="btn btn--solid" id="downloadMeme">DOWNLOAD</button>
+              <button class="btn" id="randomMeme">RANDOM</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-how" role="dialog" aria-modal="true" aria-label="How to Gusta">
+      <div class="panel__inner">
+        <button class="panel__close" aria-label="Close">✕</button>
+        <h2 class="section__title">HOW TO GUSTA</h2>
+        <p class="section__sub">the sacred four-step ritual</p>
+        <ol class="how__steps">
+          <li><span>01</span><h3>ENCOUNTER SOMETHING WEIRD</h3><p>A strange texture. A cursed sound. A questionable snack combination.</p></li>
+          <li><span>02</span><h3>REALIZE YOU ENJOY IT</h3><p>Do not fight it. The enjoyment is already inside you.</p></li>
+          <li><span>03</span><h3>MAKE THE FACE</h3><p>Eyes bulge. Grin spreads. Chin does the thing.</p></li>
+          <li><span>04</span><h3>SAY THE WORDS</h3><p>"Me gusta." That's it. That's the whole ritual.</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-community" role="dialog" aria-modal="true" aria-label="Community">
+      <div class="panel__inner panel__inner--narrow">
+        <button class="panel__close" aria-label="Close">✕</button>
+        <h2 class="section__title">COMMUNITY</h2>
+        <p class="section__sub">step through the portal</p>
+        <div class="community__links">
+          <a class="btn btn--big" href="https://x.com" target="_blank" rel="noopener">X / TWITTER</a>
+          <a class="btn btn--big" href="https://t.me" target="_blank" rel="noopener">TELEGRAM</a>
+          <a class="btn btn--big" href="https://knowyourmeme.com/memes/me-gusta" target="_blank" rel="noopener">KNOW YOUR MEME</a>
+        </div>
+        <img class="community__face" src="Megusta.jpg" alt="Me Gusta">
+      </div>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
