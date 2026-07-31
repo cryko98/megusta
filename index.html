@@ -176,16 +176,15 @@
 
           <!-- ============ ROADS ============ -->
           <g fill="none" stroke-linecap="round">
-            <path stroke="#101010" stroke-width="21" d="M458 330 C 560 308 630 318 686 366"/>
-            <path stroke="#101010" stroke-width="21" d="M402 336 C 352 380 334 440 332 545"/>
+            <path stroke="#101010" stroke-width="21" d="M380 336 C 345 380 334 440 332 545"/>
             <path stroke="#101010" stroke-width="21" d="M276 372 C 290 402 310 430 332 470"/>
-            <path stroke="#101010" stroke-width="21" d="M916 402 C 900 430 870 456 845 480"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M458 330 C 560 308 630 318 686 366"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M402 336 C 352 380 334 440 332 545"/>
+            <path stroke="#101010" stroke-width="21" d="M962 350 C 978 382 972 402 955 418"/>
+            <path stroke="#101010" stroke-width="21" d="M936 478 C 912 494 892 500 858 502"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M380 336 C 345 380 334 440 332 545"/>
             <path stroke="#e6d6a4" stroke-width="15" d="M276 372 C 290 402 310 430 332 470"/>
-            <path stroke="#e6d6a4" stroke-width="15" d="M916 402 C 900 430 870 456 845 480"/>
-            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M458 330 C 560 308 630 318 686 366"/>
-            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M402 336 C 352 380 334 440 332 545"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M962 350 C 978 382 972 402 955 418"/>
+            <path stroke="#e6d6a4" stroke-width="15" d="M936 478 C 912 494 892 500 858 502"/>
+            <path stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 14" opacity=".55" d="M380 336 C 345 380 334 440 332 545"/>
           </g>
 
           <!-- ============ GRASS TEXTURE ============ -->
@@ -193,14 +192,11 @@
             <use href="#tuft" transform="translate(195 455)"/>
             <use href="#tuft" transform="translate(240 390)"/>
             <use href="#tuft" transform="translate(320 508)"/>
-            <use href="#tuft" transform="translate(545 258)"/>
-            <use href="#tuft" transform="translate(660 242)"/>
             <use href="#tuft" transform="translate(1035 470)"/>
             <use href="#tuft" transform="translate(1000 530)"/>
             <use href="#tuft" transform="translate(890 560)"/>
             <use href="#tuft" transform="translate(430 610)"/>
             <use href="#tuft" transform="translate(690 585)"/>
-            <use href="#tuft" transform="translate(555 300)"/>
             <use href="#tuft" transform="translate(150 468)"/>
           </g>
           <g fill="#5aab3e" opacity=".7" stroke="none">
@@ -214,12 +210,54 @@
           <g>
             <use href="#flower" transform="translate(230 430)"/>
             <use href="#flower" transform="translate(1010 500)"/>
-            <use href="#flower" transform="translate(560 250)"/>
+            <use href="#flower" transform="translate(350 470)"/>
             <use href="#flower" transform="translate(680 595)"/>
             <use href="#flower" transform="translate(1050 450)"/>
           </g>
 
-          <!-- ============ SAND + LAKE ============ -->
+          <!-- ============ FACE FEATURES (domborulatok) ============ -->
+          <!-- forehead wrinkles: recessed folds -->
+          <g fill="none" stroke-linecap="round">
+            <path stroke="#101010" stroke-width="10" opacity=".25" d="M 480 265 C 570 251 660 249 745 263"/>
+            <path stroke="#357a26" stroke-width="8" opacity="1" d="M 480 262 C 570 248 660 246 745 260"/>
+            <path stroke="#b9ec92" stroke-width="3.5" opacity=".7" d="M 485 269 C 570 256 658 254 740 267"/>
+            <path stroke="#101010" stroke-width="9" opacity=".22" d="M 515 239 C 585 229 650 229 715 239"/>
+            <path stroke="#357a26" stroke-width="7" opacity="1" d="M 515 236 C 585 226 650 226 715 236"/>
+            <path stroke="#b9ec92" stroke-width="3" opacity=".65" d="M 519 243 C 585 234 648 234 711 242"/>
+          </g>
+          <!-- heavy brow ridge -->
+          <g fill="none" stroke-linecap="round">
+            <path stroke="#101010" stroke-width="15" opacity=".28" d="M 415 327 C 500 297 700 293 800 323"/>
+            <path stroke="#357a26" stroke-width="12" opacity="1" d="M 415 322 C 500 292 700 288 800 318"/>
+            <path stroke="#b9ec92" stroke-width="4.5" opacity=".7" d="M 421 314 C 502 285 698 281 794 310"/>
+          </g>
+          <!-- bulging eye mounds -->
+          <g class="eye">
+            <ellipse cx="490" cy="368" rx="52" ry="34" fill="#3f8a2e" opacity=".35"/>
+            <ellipse cx="490" cy="360" rx="48" ry="32" fill="#f7f5ee" stroke="#101010" stroke-width="3.5"/>
+            <ellipse cx="490" cy="360" rx="38" ry="24" fill="none" stroke="#101010" stroke-width="1.5" opacity=".22"/>
+            <path fill="none" stroke="#c9c6bc" stroke-width="5" opacity=".6" d="M 455 375 C 470 386 510 386 525 375"/>
+            <ellipse cx="504" cy="366" rx="8" ry="6.5" fill="#101010"/>
+            <circle cx="501" cy="363" r="2.2" fill="#ffffff"/>
+          </g>
+          <g class="eye">
+            <ellipse cx="725" cy="356" rx="60" ry="38" fill="#3f8a2e" opacity=".35"/>
+            <ellipse cx="725" cy="348" rx="56" ry="36" fill="#f7f5ee" stroke="#101010" stroke-width="3.5"/>
+            <ellipse cx="725" cy="348" rx="45" ry="27" fill="none" stroke="#101010" stroke-width="1.5" opacity=".22"/>
+            <path fill="none" stroke="#101010" stroke-width="3" opacity=".85" d="M 682 334 C 705 320 748 320 768 333"/>
+            <path fill="none" stroke="#c9c6bc" stroke-width="5" opacity=".6" d="M 685 366 C 703 378 748 378 765 366"/>
+            <ellipse cx="708" cy="352" rx="7" ry="5.5" fill="#101010"/>
+            <circle cx="705" cy="349" r="2" fill="#ffffff"/>
+          </g>
+          <!-- chin creases beside the waterfall -->
+          <g fill="none" stroke-linecap="round">
+            <path stroke="#101010" stroke-width="7" opacity=".15" d="M 478 572 C 504 582 524 585 538 585"/>
+            <path stroke="#3f8a2e" stroke-width="5.5" opacity=".8" d="M 478 570 C 504 580 524 583 538 583"/>
+            <path stroke="#101010" stroke-width="7" opacity=".15" d="M 674 585 C 692 584 714 578 736 568"/>
+            <path stroke="#3f8a2e" stroke-width="5.5" opacity=".8" d="M 674 583 C 692 582 714 576 736 566"/>
+          </g>
+
+          <!-- ============ SAND + LAKE = THE GRIN ============ -->
           <path fill="#eee0a9" stroke="#101010" stroke-width="3.5" d="M430 470 C 432 424 500 392 600 392 C 700 392 770 426 768 472 C 782 466 812 464 832 476 C 852 488 858 502 852 514 C 840 530 802 532 772 522 C 742 542 676 552 600 552 C 500 552 428 516 430 470 Z"/>
           <g fill="#d9c98e" stroke="none">
             <circle cx="470" cy="432" r="2.5"/><circle cx="505" cy="528" r="2.5"/>
@@ -227,21 +265,29 @@
             <circle cx="820" cy="500" r="2.5"/><circle cx="848" cy="512" r="2"/>
             <circle cx="620" cy="545" r="2"/><circle cx="452" cy="478" r="2"/>
           </g>
+          <!-- nose mound over the lip -->
+          <g>
+            <ellipse cx="600" cy="398" rx="32" ry="17" fill="#3f8a2e" opacity=".3"/>
+            <ellipse cx="600" cy="392" rx="30" ry="16" fill="#9edd77" stroke="#101010" stroke-width="3"/>
+            <path fill="none" stroke="#b9ec92" stroke-width="3" opacity=".7" d="M 582 386 C 590 380 610 380 618 386"/>
+            <ellipse cx="590" cy="395" rx="3.5" ry="2.5" fill="#101010" opacity=".8"/>
+            <ellipse cx="610" cy="395" rx="3.5" ry="2.5" fill="#101010" opacity=".8"/>
+          </g>
           <ellipse cx="600" cy="470" rx="150" ry="62" fill="url(#lakeGrad)" stroke="#101010" stroke-width="3.5"/>
           <path fill="none" stroke="#5fb2dd" stroke-width="5" opacity=".6" d="M478 448 C 510 422 552 412 600 412"/>
-          <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".75">
-            <path d="M500 455 q 20 8 44 2"/>
-            <path d="M640 492 q 22 8 46 0"/>
-            <path d="M552 488 q 16 6 34 2"/>
-            <path d="M662 438 q 18 7 38 2"/>
+          <!-- grin teeth -->
+          <g fill="none" stroke="#e7d8a2" stroke-width="5" stroke-linecap="round" opacity=".85">
+            <path d="M480 431 Q 476 470 480 509"/>
+            <path d="M510 421 Q 506 470 510 519"/>
+            <path d="M540 414 Q 536 470 540 526"/>
+            <path d="M570 410 Q 566 470 570 530"/>
+            <path d="M600 408 Q 596 470 600 532"/>
+            <path d="M630 410 Q 626 470 630 530"/>
+            <path d="M660 414 Q 656 470 660 526"/>
+            <path d="M690 421 Q 686 470 690 519"/>
+            <path d="M720 431 Q 716 470 720 509"/>
           </g>
-          <!-- lily pads -->
-          <g stroke="#101010" stroke-width="2">
-            <ellipse cx="498" cy="496" rx="13" ry="6.5" fill="#57a844"/>
-            <path d="M498 496 l13 -3" stroke="#2f6b2a"/>
-            <ellipse cx="692" cy="452" rx="11" ry="5.5" fill="#4c9440"/>
-            <path d="M692 452 l11 -2.5" stroke="#2f6b2a"/>
-          </g>
+          <path fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity=".6" d="M640 492 q 22 8 46 0"/>
 
           <!-- ============ WATERFALL ============ -->
           <g stroke="#101010" stroke-width="3">
@@ -280,14 +326,12 @@
           <!-- ============ TREES & BUSHES ============ -->
           <use href="#tree" transform="translate(200 430)"/>
           <use href="#pine" transform="translate(215 392) scale(.9)"/>
-          <use href="#tree" transform="translate(520 268) scale(.9)"/>
           <use href="#tree" transform="translate(1010 472)"/>
-          <use href="#pine" transform="translate(1042 420) scale(.85)"/>
+          <use href="#pine" transform="translate(1052 428) scale(.85)"/>
           <use href="#tree" transform="translate(385 592) scale(.85)"/>
           <use href="#pine" transform="translate(755 590) scale(.8)"/>
-          <use href="#tree" transform="translate(940 520) scale(.8)"/>
-          <use href="#bush" transform="translate(548 286) scale(.9)"/>
-          <use href="#bush" transform="translate(1050 480) scale(.8)"/>
+          <use href="#tree" transform="translate(940 530) scale(.8)"/>
+          <use href="#bush" transform="translate(1052 482) scale(.8)"/>
           <use href="#bush" transform="translate(300 548) scale(.85)"/>
 
           <!-- ============ BEACH SET ============ -->
@@ -301,9 +345,9 @@
 
           <!-- ============ GUSTA STATUE ============ -->
           <g stroke="#101010" stroke-width="3">
-            <ellipse cx="639" cy="319" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
-            <rect x="625" y="300" width="30" height="16" rx="3" fill="#a8a8a0"/>
-            <g transform="translate(640 284)">
+            <ellipse cx="744" cy="549" rx="34" ry="9" fill="#3f8a2e" opacity=".45" stroke="none"/>
+            <rect x="730" y="530" width="30" height="16" rx="3" fill="#a8a8a0"/>
+            <g transform="translate(745 514)">
               <circle r="17" fill="#c9c9c2"/>
               <image class="statue-img" href="Megusta.jpg" x="-16" y="-16" width="32" height="32" clip-path="url(#statueClip)"/>
             </g>
@@ -312,7 +356,7 @@
           <!-- ============ HOTSPOT: GUSTA CITY → LORE ============ -->
           <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="Gusta City — open the Lore">
             <g>
-             <g transform="translate(0 -14)">
+             <g transform="translate(-25 -25)">
               <ellipse cx="424" cy="352" rx="92" ry="17" fill="#3f8a2e" opacity=".45"/>
               <g stroke="#101010" stroke-width="3.5">
                 <!-- back building -->
@@ -365,7 +409,7 @@
               </g>
              </g>
             </g>
-            <g class="spot__label" transform="translate(420 372)">
+            <g class="spot__label" transform="translate(395 362)">
               <rect x="-62" y="-15" width="124" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">GUSTA CITY</text>
             </g>
@@ -374,7 +418,7 @@
           <!-- ============ HOTSPOT: OBSERVATORY → MEME LAB ============ -->
           <g class="spot" data-panel="lab" tabindex="0" role="button" aria-label="Meme Observatory — open the Meme Lab">
             <g>
-             <g transform="translate(120 18)">
+             <g transform="translate(140 122)">
               <ellipse cx="812" cy="372" rx="72" ry="15" fill="#3f8a2e" opacity=".45"/>
               <g stroke="#101010" stroke-width="3.5">
                 <path fill="#c9c6bc" d="M768 330 h84 v26 a42 14 0 0 1 -84 0 Z"/>
@@ -390,7 +434,7 @@
               </g>
              </g>
             </g>
-            <g class="spot__label" transform="translate(932 424)">
+            <g class="spot__label" transform="translate(950 512)">
               <rect x="-58" y="-15" width="116" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">MEME LAB</text>
             </g>
@@ -424,27 +468,27 @@
           <!-- ============ HOTSPOT: MOUNTAIN → HOW TO ============ -->
           <g class="spot" data-panel="how" tabindex="0" role="button" aria-label="Mount Gusta — open How To Gusta">
             <g>
-              <ellipse cx="786" cy="398" rx="100" ry="16" fill="#3f8a2e" opacity=".45"/>
+              <ellipse cx="965" cy="338" rx="88" ry="14" fill="#3f8a2e" opacity=".45"/>
               <g stroke="#101010" stroke-width="3.5">
                 <!-- back peak -->
-                <path fill="#7a719f" d="M846 320 L 794 400 L 878 400 Z"/>
-                <path fill="#f2f0ea" stroke-width="2.5" d="M836 338 L 846 320 L 857 339 L 850 334 L 844 343 L 839 334 Z"/>
+                <path fill="#7a719f" d="M1008 268 L 975 340 L 1042 340 Z"/>
+                <path fill="#f2f0ea" stroke-width="2.5" d="M999 285 L 1008 268 L 1018 286 L 1012 281 L 1007 289 L 1002 281 Z"/>
                 <!-- main peak -->
-                <path fill="#9c93c4" d="M782 262 L 704 400 L 864 400 Z"/>
-                <path fill="#847bb0" stroke="none" d="M782 262 L 790 400 L 864 400 Z" opacity=".55"/>
-                <path fill="#f2f0ea" stroke-width="2.5" d="M758 318 L 782 262 L 808 316 L 797 308 L 789 324 L 779 310 L 769 326 L 762 310 Z"/>
+                <path fill="#9c93c4" d="M965 238 L 900 340 L 1030 340 Z"/>
+                <path fill="#847bb0" stroke="none" d="M965 238 L 972 340 L 1030 340 Z" opacity=".55"/>
+                <path fill="#f2f0ea" stroke-width="2.5" d="M944 282 L 965 238 L 987 280 L 978 273 L 971 287 L 962 275 L 953 289 L 947 275 Z"/>
                 <!-- flag -->
-                <line x1="782" y1="262" x2="782" y2="232"/>
-                <path class="flag" fill="#d9463e" d="M782 232 q 12 -3 24 2 q -12 5 -24 8 Z"/>
+                <line x1="965" y1="238" x2="965" y2="210"/>
+                <path class="flag" fill="#d9463e" d="M965 210 q 12 -3 24 2 q -12 5 -24 8 Z"/>
               </g>
               <!-- scree -->
               <g stroke="#101010" stroke-width="2">
-                <ellipse cx="726" cy="402" rx="8" ry="5" fill="#8d929b"/>
-                <ellipse cx="822" cy="404" rx="7" ry="4.5" fill="#7d828b"/>
-                <ellipse cx="856" cy="400" rx="6" ry="4" fill="#8d929b"/>
+                <ellipse cx="925" cy="342" rx="8" ry="5" fill="#8d929b"/>
+                <ellipse cx="1000" cy="344" rx="7" ry="4.5" fill="#7d828b"/>
+                <ellipse cx="1028" cy="340" rx="6" ry="4" fill="#8d929b"/>
               </g>
             </g>
-            <g class="spot__label" transform="translate(786 432)">
+            <g class="spot__label" transform="translate(965 372)">
               <rect x="-74" y="-15" width="148" height="30" rx="15" fill="#101010" stroke="#f2f0ea" stroke-width="2"/>
               <text text-anchor="middle" dy="6">HOW TO GUSTA</text>
             </g>
