@@ -49,79 +49,31 @@
     <!-- ============ EARTH IN THE BACKGROUND ============ -->
     <svg class="planet" viewBox="0 0 220 220" aria-hidden="true">
       <defs>
-        <radialGradient id="oceanGrad" cx="33%" cy="27%" r="80%">
-          <stop offset="0" stop-color="#7fd2f7"/>
-          <stop offset=".3" stop-color="#3287cb"/>
-          <stop offset=".66" stop-color="#15508c"/>
-          <stop offset="1" stop-color="#05203d"/>
+        <radialGradient id="shadeGrad" cx="34%" cy="28%" r="82%">
+          <stop offset=".5" stop-color="#03192e" stop-opacity="0"/>
+          <stop offset="1" stop-color="#03192e" stop-opacity=".45"/>
         </radialGradient>
-        <radialGradient id="landGrad" cx="33%" cy="27%" r="80%">
-          <stop offset="0" stop-color="#9bdc7e"/>
-          <stop offset=".45" stop-color="#4a9c50"/>
-          <stop offset="1" stop-color="#1b512e"/>
-        </radialGradient>
-        <radialGradient id="terminator" cx="31%" cy="25%" r="84%">
-          <stop offset=".42" stop-color="#000814" stop-opacity="0"/>
-          <stop offset=".74" stop-color="#000814" stop-opacity=".3"/>
-          <stop offset=".92" stop-color="#000814" stop-opacity=".66"/>
-          <stop offset="1" stop-color="#000814" stop-opacity=".85"/>
-        </radialGradient>
-        <radialGradient id="specular" cx="50%" cy="50%" r="50%">
-          <stop offset="0" stop-color="#ffffff" stop-opacity=".5"/>
-          <stop offset=".6" stop-color="#ffffff" stop-opacity=".12"/>
-          <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="atmoGlow" cx="50%" cy="50%" r="50%">
-          <stop offset=".62" stop-color="#4fbdf0" stop-opacity="0"/>
-          <stop offset=".82" stop-color="#4fbdf0" stop-opacity=".18"/>
-          <stop offset=".93" stop-color="#a5e4ff" stop-opacity=".42"/>
-          <stop offset="1" stop-color="#a5e4ff" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="rimLight" x1="18%" y1="12%" x2="88%" y2="92%">
-          <stop offset="0" stop-color="#d8f3ff" stop-opacity="0"/>
-          <stop offset=".5" stop-color="#7fd0f5" stop-opacity=".15"/>
-          <stop offset="1" stop-color="#d8f3ff" stop-opacity=".75"/>
-        </linearGradient>
         <clipPath id="globeClip"><circle cx="110" cy="110" r="82"/></clipPath>
-        <filter id="cloudBlur" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="4.5"/>
-        </filter>
-        <filter id="haloBlur" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="7"/>
-        </filter>
         <!-- turns white-background face art into dark ink on the globe.
              The alpha row keeps the 1.12 in the A column, otherwise fully
              transparent pixels outside the image would become opaque. -->
         <filter id="planetInk" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-          <feColorMatrix type="matrix" values="0 0 0 0 0.02  0 0 0 0 0.05  0 0 0 0 0.09  -0.60 -1.18 -0.22 1.12 0"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.03  0 0 0 0 0.06  0 0 0 0 0.10  -0.60 -1.18 -0.22 1.12 0"/>
         </filter>
       </defs>
 
-      <!-- soft outer halo -->
-      <circle cx="110" cy="110" r="90" fill="#3fa9e0" opacity=".2" filter="url(#haloBlur)"/>
-      <circle cx="110" cy="110" r="104" fill="url(#atmoGlow)"/>
-
-      <!-- ocean sphere -->
-      <circle cx="110" cy="110" r="82" fill="url(#oceanGrad)"/>
-
-      <!-- land + ice, shaded with the same light direction -->
-      <g clip-path="url(#globeClip)">
-        <g fill="url(#landGrad)" stroke="#12482a" stroke-width="1.2" stroke-opacity=".55">
-          <path d="M 40 74 C 52 54 82 46 102 58 C 120 68 114 88 94 96 C 72 104 30 92 40 74 Z"/>
-          <path d="M 126 40 C 148 30 180 38 190 58 C 198 74 178 88 156 82 C 132 76 116 54 126 40 Z"/>
-          <path d="M 48 130 C 68 114 102 122 110 144 C 118 168 94 190 68 184 C 42 178 28 148 48 130 Z"/>
-          <path d="M 134 126 C 158 112 190 122 194 144 C 198 168 170 184 148 170 C 126 156 118 138 134 126 Z"/>
-          <ellipse cx="166" cy="102" rx="10" ry="6.5"/>
-          <ellipse cx="94" cy="114" rx="8" ry="5"/>
-          <ellipse cx="120" cy="96" rx="6" ry="4"/>
-        </g>
-        <g fill="#eaf7ff" opacity=".55">
-          <ellipse cx="96" cy="28" rx="46" ry="14"/>
-          <ellipse cx="128" cy="192" rx="48" ry="15"/>
-        </g>
+      <!-- plain earth: flat ocean disc + flat continents, island line style -->
+      <circle cx="110" cy="110" r="82" fill="#4d9fdc" stroke="#101010" stroke-width="4"/>
+      <g clip-path="url(#globeClip)" fill="#57a844" stroke="#101010" stroke-width="3.5">
+        <path d="M 40 74 C 52 54 82 46 102 58 C 120 68 114 88 94 96 C 72 104 30 92 40 74 Z"/>
+        <path d="M 126 40 C 148 30 180 38 190 58 C 198 74 178 88 156 82 C 132 76 116 54 126 40 Z"/>
+        <path d="M 48 130 C 68 114 102 122 110 144 C 118 168 94 190 68 184 C 42 178 28 148 48 130 Z"/>
+        <path d="M 134 126 C 158 112 190 122 194 144 C 198 168 170 184 148 170 C 126 156 118 138 134 126 Z"/>
+        <ellipse cx="166" cy="102" rx="10" ry="6.5"/>
+        <ellipse cx="94" cy="114" rx="8" ry="5"/>
       </g>
 
-      <!-- the face, painted onto the surface (user-supplied art) -->
+      <!-- the logo, painted onto the surface -->
       <image id="planetFaceImg" x="38" y="46" width="144" height="128" preserveAspectRatio="xMidYMid meet"
              clip-path="url(#globeClip)" filter="url(#planetInk)" style="display:none"/>
       <g id="planetFaceDrawn" clip-path="url(#globeClip)" transform="translate(10 10)">
@@ -156,20 +108,9 @@
         </g>
       </g>
 
-      <!-- cloud wisps drifting over the surface -->
-      <g clip-path="url(#globeClip)" filter="url(#cloudBlur)" fill="#ffffff" opacity=".26">
-        <ellipse cx="72" cy="66" rx="30" ry="8" transform="rotate(-14 72 66)"/>
-        <ellipse cx="146" cy="88" rx="26" ry="7" transform="rotate(9 146 88)"/>
-        <ellipse cx="88" cy="150" rx="28" ry="8" transform="rotate(-8 88 150)"/>
-        <ellipse cx="158" cy="140" rx="20" ry="6" transform="rotate(14 158 140)"/>
-      </g>
-
-      <!-- sphere shading -->
-      <circle cx="110" cy="110" r="82" fill="url(#terminator)"/>
-      <ellipse cx="80" cy="76" rx="40" ry="30" fill="url(#specular)" transform="rotate(-24 80 76)"/>
-      <!-- limb: dark edge + bounce light on the shadow side -->
-      <circle cx="110" cy="110" r="81" fill="none" stroke="#04182e" stroke-width="2.5" opacity=".5"/>
-      <circle cx="110" cy="110" r="81" fill="none" stroke="url(#rimLight)" stroke-width="3"/>
+      <!-- gentle sphere shading + crisp outline -->
+      <circle cx="110" cy="110" r="82" fill="url(#shadeGrad)"/>
+      <circle cx="110" cy="110" r="82" fill="none" stroke="#101010" stroke-width="4"/>
     </svg>
 
     <!-- FLOATING ISLAND -->
