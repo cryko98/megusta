@@ -136,6 +136,24 @@ bar.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); unlock(); }
 });
 
+// ---------- Face image on the background planet ----------
+// troll.png (white background art) is inked onto the globe; falls back to the
+// drawn face if the file is missing.
+const PLANET_FACE_SRC = "troll.png";
+(() => {
+  const img = document.getElementById("planetFaceImg");
+  const drawn = document.getElementById("planetFaceDrawn");
+  if (!img || !drawn) return;
+  const probe = new Image();
+  probe.onload = () => {
+    img.setAttribute("href", PLANET_FACE_SRC);
+    img.style.display = "";
+    drawn.style.display = "none";
+  };
+  probe.onerror = () => img.remove();
+  probe.src = PLANET_FACE_SRC;
+})();
+
 // ---------- Starfield ----------
 const starsBox = document.getElementById("stars");
 for (let i = 0; i < 38; i++) {
