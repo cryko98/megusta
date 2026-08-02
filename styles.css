@@ -173,6 +173,23 @@ button { font-family: inherit; }
   50% { opacity: .8; transform: scale(1.2); }
 }
 
+/* ============ BACKGROUND EARTH ============ */
+.planet {
+  position: fixed;
+  right: 2vw;
+  top: 9vh;
+  width: clamp(120px, 15vw, 210px);
+  height: auto;
+  z-index: 0;
+  opacity: .55;
+  pointer-events: none;
+  animation: planetFloat 20s ease-in-out infinite;
+}
+@keyframes planetFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
 /* ============ NAV — badge left, logo center, burger right ============ */
 .nav {
   position: fixed;
@@ -365,19 +382,23 @@ button { font-family: inherit; }
   transform: scale(1.08);
 }
 .spot__label {
-  opacity: 0;
-  transition: opacity .2s ease, transform .2s ease;
   pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,.85));
 }
 .spot__label text {
   font-family: var(--display);
-  font-size: 15px;
-  letter-spacing: .08em;
+  font-size: 17px;
+  letter-spacing: .07em;
   fill: var(--white);
 }
-.spot:hover .spot__label,
-.spot:focus-visible .spot__label {
-  opacity: 1;
+.spot:hover .spot__label rect,
+.spot:focus-visible .spot__label rect {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+.spot:hover .spot__label text,
+.spot:focus-visible .spot__label text {
+  fill: #0a0a0a;
 }
 
 .world__hint {
@@ -891,7 +912,7 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .nav__badge { font-size: .58rem; padding: .38rem .7rem; }
   .world { padding-top: 4.2rem; }
   .island { width: 112vw; max-width: none; max-height: 54vh; }
-  .spot__label { opacity: 1; }
+  .planet { width: 34vw; right: 1vw; top: 10vh; opacity: .45; }
   .lab__wrap { grid-template-columns: 1fr; }
   .worldfoot { display: none; }
   .world { padding-bottom: 6rem; }
