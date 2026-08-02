@@ -142,15 +142,16 @@ bar.addEventListener("keydown", (e) => {
 const PLANET_FACE_SRC = "troll.png";
 (() => {
   const img = document.getElementById("planetFaceImg");
+  const wrap = document.getElementById("planetFace");
   const drawn = document.getElementById("planetFaceDrawn");
-  if (!img || !drawn) return;
+  if (!img || !wrap || !drawn) return;
   const probe = new Image();
   probe.onload = () => {
     img.setAttribute("href", PLANET_FACE_SRC);
-    img.style.display = "";
+    wrap.style.display = "";
     drawn.style.display = "none";
   };
-  probe.onerror = () => img.remove();
+  probe.onerror = () => wrap.remove();
   probe.src = PLANET_FACE_SRC;
 })();
 
