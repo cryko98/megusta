@@ -60,7 +60,7 @@ button { font-family: inherit; }
   width: .88em;
   height: .88em;
   border-radius: 50%;
-  filter: grayscale(1) brightness(.72);
+  filter: grayscale(1) brightness(.42);
   margin: 0 .03em;
 }
 .boot__bar {

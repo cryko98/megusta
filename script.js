@@ -233,7 +233,7 @@ const topInput = document.getElementById("topText");
 const bottomInput = document.getElementById("bottomText");
 
 const face = new Image();
-face.src = "Megusta.jpg";
+face.src = "megustalogo.png";
 
 function drawMemeText(text, y, baseline) {
   if (!text) return;
@@ -258,7 +258,14 @@ function renderMeme() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (face.complete && face.naturalWidth) {
     const s = Math.min(canvas.width, canvas.height) * 0.78;
-    ctx.drawImage(face, (canvas.width - s) / 2, (canvas.height - s) / 2, s, s);
+    const x = (canvas.width - s) / 2;
+    const y = (canvas.height - s) / 2;
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2, s / 2, 0, Math.PI * 2);
+    ctx.clip();
+    ctx.drawImage(face, x, y, s, s);
+    ctx.restore();
   }
   drawMemeText(topInput.value.toUpperCase(), 26, "top");
   drawMemeText(bottomInput.value.toUpperCase(), canvas.height - 26, "bottom");
