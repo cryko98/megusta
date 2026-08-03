@@ -136,6 +136,23 @@ bar.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); unlock(); }
 });
 
+// ---------- Exchange logos in the hub listings ----------
+// Each badge carries data-logo="<file>". Drop that file next to index.html and
+// it replaces the letter badge; missing files just keep the letter.
+document.querySelectorAll(".listing__q[data-logo]").forEach((badge) => {
+  const src = badge.dataset.logo;
+  const probe = new Image();
+  probe.onload = () => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "";
+    badge.textContent = "";
+    badge.appendChild(img);
+    badge.classList.add("listing__q--logo");
+  };
+  probe.src = src;
+});
+
 // ---------- Starfield ----------
 const starsBox = document.getElementById("stars");
 for (let i = 0; i < 38; i++) {
