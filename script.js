@@ -1,8 +1,8 @@
 /* ============ ME GUSTA WORLD — script ============ */
 
 // ---------- Live market cap ----------
-// Ide írd be a token contract address-t (CA) — amíg üres, az MCAP chip rejtve marad.
-const TOKEN_CA = "";
+// Token contract address (CA). Empty string keeps the chips in "SOON" mode.
+const TOKEN_CA = "2YxEmTED9G5ZpxwfBHuVzPVQ4TfMYTAjMo5Tx1WApump";
 
 function formatMcap(v) {
   if (v >= 1e9) return "$" + (v / 1e9).toFixed(2) + "B";
@@ -135,25 +135,6 @@ window.addEventListener("touchend", onUp);
 bar.addEventListener("keydown", (e) => {
   if (e.key === "Enter" || e.key === " ") { e.preventDefault(); unlock(); }
 });
-
-// ---------- Face image on the background planet ----------
-// troll.png (white background art) is inked onto the globe; falls back to the
-// drawn face if the file is missing.
-const PLANET_FACE_SRC = "troll.png";
-(() => {
-  const img = document.getElementById("planetFaceImg");
-  const wrap = document.getElementById("planetFace");
-  const drawn = document.getElementById("planetFaceDrawn");
-  if (!img || !wrap || !drawn) return;
-  const probe = new Image();
-  probe.onload = () => {
-    img.setAttribute("href", PLANET_FACE_SRC);
-    wrap.style.display = "";
-    drawn.style.display = "none";
-  };
-  probe.onerror = () => wrap.remove();
-  probe.src = PLANET_FACE_SRC;
-})();
 
 // ---------- Starfield ----------
 const starsBox = document.getElementById("stars");

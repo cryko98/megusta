@@ -173,23 +173,6 @@ button { font-family: inherit; }
   50% { opacity: .8; transform: scale(1.2); }
 }
 
-/* ============ BACKGROUND EARTH ============ */
-.planet {
-  position: fixed;
-  right: 2vw;
-  top: 9vh;
-  width: clamp(88px, 11vw, 150px);
-  height: auto;
-  z-index: 0;
-  opacity: .55;
-  pointer-events: none;
-  animation: planetFloat 20s ease-in-out infinite;
-}
-@keyframes planetFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
 /* ============ NAV — badge left, logo center, burger right ============ */
 .nav {
   position: fixed;
@@ -912,7 +895,6 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .nav__badge { font-size: .58rem; padding: .38rem .7rem; }
   .world { padding-top: 4.2rem; }
   .island { width: 112vw; max-width: none; max-height: 54vh; }
-  .planet { width: 25vw; right: 2vw; top: 10vh; opacity: .5; }
   .lab__wrap { grid-template-columns: 1fr; }
   .worldfoot { display: none; }
   .world { padding-bottom: 6rem; }

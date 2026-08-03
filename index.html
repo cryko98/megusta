@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ME GUSTA</title>
-  <meta name="description" content="Me Gusta World — a floating island of questionable pleasure. Since 2010.">
+  <meta name="description" content="Me Gusta World â€” a floating island of questionable pleasure. Since 2010.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:title" content="ME GUSTA">
@@ -21,7 +21,7 @@
   <div class="boot" id="boot">
     <div class="boot__logo">ME<img src="megustalogo.png" alt="">GUSTA</div>
     <div class="boot__bar"><i></i></div>
-    <div class="boot__text">&gt; booting megustaworld <span class="boot__cursor">▊</span></div>
+    <div class="boot__text">&gt; booting megustaworld <span class="boot__cursor">â–Š</span></div>
   </div>
 
   <!-- ============ WORLD ============ -->
@@ -33,7 +33,7 @@
         <img src="megustalogo.png" alt="Me Gusta logo">
         <span>ME GUSTA</span>
       </a>
-      <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
+      <button class="nav__burger" id="burger" aria-label="Menu">â°</button>
       <nav class="nav__links">
         <button data-panel="lore">Lore</button>
         <button data-panel="moods">Moods</button>
@@ -45,74 +45,6 @@
     </header>
 
     <div class="stars" id="stars" aria-hidden="true"></div>
-
-    <!-- ============ EARTH IN THE BACKGROUND ============ -->
-    <svg class="planet" viewBox="0 0 220 220" aria-hidden="true">
-      <defs>
-        <radialGradient id="shadeGrad" cx="34%" cy="28%" r="82%">
-          <stop offset=".5" stop-color="#03192e" stop-opacity="0"/>
-          <stop offset="1" stop-color="#03192e" stop-opacity=".45"/>
-        </radialGradient>
-        <clipPath id="globeClip"><circle cx="110" cy="110" r="82"/></clipPath>
-        <!-- head silhouette traced from troll.png, as fractions of the image box,
-             so the artwork keeps its own white fill right up to the black outline -->
-        <clipPath id="faceSilhouette" clipPathUnits="objectBoundingBox">
-          <polygon points="0.3333,0.0556 0.2342,0.0889 0.2072,0.1222 0.1892,0.1556 0.1757,0.1889 0.1622,0.2222 0.1441,0.2556 0.1126,0.2889 0.0901,0.3222 0.0721,0.3556 0.0676,0.3889 0.0676,0.4222 0.0766,0.4556 0.0946,0.4889 0.1171,0.5222 0.1441,0.5556 0.1577,0.5889 0.1712,0.6222 0.1892,0.6556 0.2207,0.6889 0.2523,0.7222 0.2973,0.7556 0.3559,0.7889 0.4144,0.8222 0.4685,0.8556 0.5586,0.8889 0.6757,0.9222 0.7883,0.9222 0.8514,0.8889 0.8784,0.8556 0.8964,0.8222 0.8964,0.7889 0.8964,0.7556 0.8919,0.7222 0.8874,0.6889 0.8874,0.6556 0.8874,0.6222 0.8874,0.5889 0.8874,0.5556 0.8919,0.5222 0.9009,0.4889 0.9144,0.4556 0.9279,0.4222 0.9279,0.3889 0.9279,0.3556 0.9279,0.3222 0.9099,0.2889 0.8784,0.2556 0.8649,0.2222 0.8649,0.1889 0.8468,0.1556 0.8108,0.1222 0.7523,0.0889 0.5495,0.0556"/>
-        </clipPath>
-      </defs>
-
-      <!-- plain earth: flat ocean disc + flat continents, island line style -->
-      <circle cx="110" cy="110" r="82" fill="#4d9fdc" stroke="#101010" stroke-width="4"/>
-      <g clip-path="url(#globeClip)" fill="#57a844" stroke="#101010" stroke-width="3.5">
-        <path d="M 40 74 C 52 54 82 46 102 58 C 120 68 114 88 94 96 C 72 104 30 92 40 74 Z"/>
-        <path d="M 126 40 C 148 30 180 38 190 58 C 198 74 178 88 156 82 C 132 76 116 54 126 40 Z"/>
-        <path d="M 48 130 C 68 114 102 122 110 144 C 118 168 94 190 68 184 C 42 178 28 148 48 130 Z"/>
-        <path d="M 134 126 C 158 112 190 122 194 144 C 198 168 170 184 148 170 C 126 156 118 138 134 126 Z"/>
-        <ellipse cx="166" cy="102" rx="10" ry="6.5"/>
-        <ellipse cx="94" cy="114" rx="8" ry="5"/>
-      </g>
-
-      <!-- the logo on the surface: the artwork itself, cut to the head shape -->
-      <g id="planetFace" clip-path="url(#globeClip)" style="display:none">
-        <image id="planetFaceImg" x="38" y="51.6" width="144" height="116.8"
-               clip-path="url(#faceSilhouette)"/>
-      </g>
-      <g id="planetFaceDrawn" clip-path="url(#globeClip)" transform="translate(10 10)">
-        <!-- arched brows -->
-        <g fill="none" stroke="#08131f" stroke-width="5.5" stroke-linecap="round">
-          <path d="M 44 66 C 58 54 82 52 98 62"/>
-          <path d="M 110 60 C 124 49 150 52 160 65"/>
-        </g>
-        <!-- squinting crescent eyes -->
-        <g stroke="#08131f" stroke-width="4">
-          <path fill="#f2f0ea" d="M 48 84 C 60 70 86 70 96 82 C 84 92 58 94 48 84 Z"/>
-          <path fill="#f2f0ea" d="M 110 80 C 124 66 150 68 158 79 C 146 90 120 92 110 80 Z"/>
-          <circle cx="76" cy="83" r="5" fill="#08131f" stroke="none"/>
-          <circle cx="137" cy="80" r="5" fill="#08131f" stroke="none"/>
-        </g>
-        <!-- little hooked nose -->
-        <path fill="none" stroke="#08131f" stroke-width="4.5" stroke-linecap="round" d="M 103 84 C 97 95 94 104 105 106"/>
-        <!-- huge smug toothy grin, curling higher on one side -->
-        <path fill="#f2f0ea" stroke="#08131f" stroke-width="4.5" stroke-linejoin="round"
-              d="M 34 106 C 56 140 146 134 168 98 C 160 180 42 182 34 106 Z"/>
-        <g fill="none" stroke="#08131f" stroke-width="3" stroke-linecap="round">
-          <path d="M 58 120 L 57 142"/>
-          <path d="M 80 128 L 79 154"/>
-          <path d="M 102 131 L 102 161"/>
-          <path d="M 124 129 L 125 155"/>
-          <path d="M 145 121 L 147 144"/>
-        </g>
-        <!-- cheek smile lines -->
-        <g fill="none" stroke="#08131f" stroke-width="3.5" stroke-linecap="round">
-          <path d="M 36 104 C 28 96 26 88 30 82"/>
-          <path d="M 166 96 C 174 88 176 80 172 74"/>
-        </g>
-      </g>
-
-      <!-- gentle sphere shading + crisp outline -->
-      <circle cx="110" cy="110" r="82" fill="url(#shadeGrad)"/>
-      <circle cx="110" cy="110" r="82" fill="none" stroke="#101010" stroke-width="4"/>
-    </svg>
 
     <!-- FLOATING ISLAND -->
     <main class="world">
@@ -437,8 +369,8 @@
           <use href="#tree" transform="translate(240 418) scale(.8)"/>
           <use href="#pine" transform="translate(872 296) scale(.75)"/>
 
-          <!-- COMING SOON shop → LISTINGS -->
-          <g class="spot" data-panel="listings" tabindex="0" role="button" aria-label="Shop — open Listings">
+          <!-- COMING SOON shop â†’ LISTINGS -->
+          <g class="spot" data-panel="listings" tabindex="0" role="button" aria-label="Shop â€” open Listings">
            <g>
             <g stroke="#101010" stroke-width="3" transform="translate(0 8)">
             <ellipse cx="660" cy="300" rx="66" ry="11" fill="#3f8a2e" opacity=".45" stroke="none"/>
@@ -528,8 +460,8 @@
             </g>
           </g>
 
-          <!-- ============ HOTSPOT: GUSTA CITY → LORE ============ -->
-          <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="MeGusta City — open the Lore">
+          <!-- ============ HOTSPOT: GUSTA CITY â†’ LORE ============ -->
+          <g class="spot" data-panel="lore" tabindex="0" role="button" aria-label="MeGusta City â€” open the Lore">
             <g>
              <g transform="translate(10 -22)">
               <ellipse cx="424" cy="340" rx="100" ry="17" fill="#3f8a2e" opacity=".45"/>
@@ -602,8 +534,8 @@
             </g>
           </g>
 
-          <!-- ============ HOTSPOT: OBSERVATORY → MEME LAB ============ -->
-          <g class="spot" data-panel="lab" tabindex="0" role="button" aria-label="Meme Observatory — open the Meme Lab">
+          <!-- ============ HOTSPOT: OBSERVATORY â†’ MEME LAB ============ -->
+          <g class="spot" data-panel="lab" tabindex="0" role="button" aria-label="Meme Observatory â€” open the Meme Lab">
             <g>
              <g transform="translate(140 100)">
               <ellipse cx="812" cy="372" rx="72" ry="15" fill="#3f8a2e" opacity=".45"/>
@@ -627,8 +559,8 @@
             </g>
           </g>
 
-          <!-- ============ HOTSPOT: PYRAMID → MOODS ============ -->
-          <g class="spot" data-panel="moods" tabindex="0" role="button" aria-label="Mood Pyramid — open the Moods gallery">
+          <!-- ============ HOTSPOT: PYRAMID â†’ MOODS ============ -->
+          <g class="spot" data-panel="moods" tabindex="0" role="button" aria-label="Mood Pyramid â€” open the Moods gallery">
             <g>
              <g transform="translate(-12 10)">
               <ellipse cx="340" cy="562" rx="98" ry="17" fill="#cdd3d8" stroke="#101010" stroke-width="3"/>
@@ -652,8 +584,8 @@
             </g>
           </g>
 
-          <!-- ============ HOTSPOT: MOUNTAIN → HOW TO ============ -->
-          <g class="spot" data-panel="how" tabindex="0" role="button" aria-label="Mount MeGusta — open How To MeGusta">
+          <!-- ============ HOTSPOT: MOUNTAIN â†’ HOW TO ============ -->
+          <g class="spot" data-panel="how" tabindex="0" role="button" aria-label="Mount MeGusta â€” open How To MeGusta">
             <g>
               <ellipse cx="965" cy="338" rx="88" ry="14" fill="#3f8a2e" opacity=".45"/>
               <g stroke="#101010" stroke-width="3.5">
@@ -681,8 +613,8 @@
             </g>
           </g>
 
-          <!-- ============ HOTSPOT: PORTAL → COMMUNITY ============ -->
-          <g class="spot" data-panel="community" tabindex="0" role="button" aria-label="Portal — open Community links">
+          <!-- ============ HOTSPOT: PORTAL â†’ COMMUNITY ============ -->
+          <g class="spot" data-panel="community" tabindex="0" role="button" aria-label="Portal â€” open Community links">
             <g>
              <g transform="translate(-18 16)">
               <ellipse cx="290" cy="356" rx="66" ry="13" fill="#3f8a2e" opacity=".45"/>
@@ -715,7 +647,7 @@
 
     <!-- slide to unlock -->
     <div class="unlockbar" id="unlockbar" tabindex="0" role="button" aria-label="Slide to unlock">
-      <div class="unlockbar__thumb" id="unlockThumb">❯</div>
+      <div class="unlockbar__thumb" id="unlockThumb">âťŻ</div>
       <span class="unlockbar__label">SLIDE TO UNLOCK</span>
     </div>
 
@@ -724,11 +656,11 @@
       <div class="dock__stats">
         <a class="dock__stat" id="mcapChip" target="_blank" rel="noopener" aria-label="Market cap">
           <span class="dock__stat-label">MCAP</span>
-          <span class="dock__stat-value" id="mcapValue">—</span>
+          <span class="dock__stat-value" id="mcapValue">â€”</span>
         </a>
         <button class="dock__stat" id="caChip" type="button" aria-label="Contract address">
           <span class="dock__stat-label">CA</span>
-          <span class="dock__stat-value" id="caValue">—</span>
+          <span class="dock__stat-value" id="caValue">â€”</span>
         </button>
       </div>
       <a class="dock__item" href="https://x.com" target="_blank" rel="noopener" aria-label="X">
@@ -756,12 +688,12 @@
       </a>
     </div>
 
-    <footer class="worldfoot">© 2010–forever ME GUSTA. no rights reserved, me gusta sharing.</footer>
+    <footer class="worldfoot">Â© 2010â€“forever ME GUSTA. no rights reserved, me gusta sharing.</footer>
 
     <!-- ============ PANELS ============ -->
     <div class="panel" id="panel-lore" role="dialog" aria-modal="true" aria-label="The Lore">
       <div class="panel__inner">
-        <button class="panel__close" aria-label="Close">✕</button>
+        <button class="panel__close" aria-label="Close">âś•</button>
         <h2 class="section__title">THE LORE</h2>
         <p class="section__sub">a brief history of questionable pleasure</p>
         <div class="lore__grid">
@@ -773,12 +705,12 @@
           <div class="lore__card">
             <div class="lore__year">2011</div>
             <h3>RAGE COMIC ROYALTY</h3>
-            <p>Me Gusta becomes a core cast member of rage comics everywhere — the official reaction to enjoying things you probably shouldn't. Shower water in the ears? Me gusta.</p>
+            <p>Me Gusta becomes a core cast member of rage comics everywhere â€” the official reaction to enjoying things you probably shouldn't. Shower water in the ears? Me gusta.</p>
           </div>
           <div class="lore__card">
             <div class="lore__year">2012</div>
             <h3>WORLD DOMINATION</h3>
-            <p>T-shirts, masks, keyboards, birthday cakes. The face is everywhere. "Me gusta" — Spanish for "I like it" — becomes the universal caption for questionable pleasure.</p>
+            <p>T-shirts, masks, keyboards, birthday cakes. The face is everywhere. "Me gusta" â€” Spanish for "I like it" â€” becomes the universal caption for questionable pleasure.</p>
           </div>
           <div class="lore__card">
             <div class="lore__year">NOW</div>
@@ -791,7 +723,7 @@
 
     <div class="panel" id="panel-moods" role="dialog" aria-modal="true" aria-label="Moods of Gusta">
       <div class="panel__inner">
-        <button class="panel__close" aria-label="Close">✕</button>
+        <button class="panel__close" aria-label="Close">âś•</button>
         <h2 class="section__title">MOODS OF MEGUSTA</h2>
         <p class="section__sub">same face, different feelings</p>
         <div class="moods__grid">
@@ -809,7 +741,7 @@
 
     <div class="panel" id="panel-lab" role="dialog" aria-modal="true" aria-label="Meme Lab">
       <div class="panel__inner">
-        <button class="panel__close" aria-label="Close">✕</button>
+        <button class="panel__close" aria-label="Close">âś•</button>
         <h2 class="section__title">MEME LAB</h2>
         <p class="section__sub">type something weird, get a certified meme</p>
         <div class="lab__wrap">
@@ -832,7 +764,7 @@
 
     <div class="panel" id="panel-how" role="dialog" aria-modal="true" aria-label="How to MeGusta">
       <div class="panel__inner">
-        <button class="panel__close" aria-label="Close">✕</button>
+        <button class="panel__close" aria-label="Close">âś•</button>
         <h2 class="section__title">HOW TO MEGUSTA</h2>
         <p class="section__sub">the sacred four-step ritual</p>
         <ol class="how__steps">
@@ -846,7 +778,7 @@
 
     <div class="panel" id="panel-community" role="dialog" aria-modal="true" aria-label="Community">
       <div class="panel__inner panel__inner--narrow">
-        <button class="panel__close" aria-label="Close">✕</button>
+        <button class="panel__close" aria-label="Close">âś•</button>
         <h2 class="section__title">COMMUNITY</h2>
         <p class="section__sub">step through the portal</p>
         <div class="community__links">
@@ -860,25 +792,25 @@
 
     <div class="panel" id="panel-listings" role="dialog" aria-modal="true" aria-label="MeGusta Hub">
       <div class="panel__inner panel__inner--narrow panel__inner--left">
-        <button class="panel__close" aria-label="Close">✕</button>
+        <button class="panel__close" aria-label="Close">âś•</button>
         <h2 class="section__title">MEGUSTA HUB</h2>
-        <p class="section__sub">listings · updates · marketing · articles — coming soon</p>
+        <p class="section__sub">listings Â· updates Â· marketing Â· articles â€” coming soon</p>
         <div class="listing__head">
           <img src="megustalogo.png" alt="MeGusta token">
           <div>
-            <div class="listing__price" id="listPrice">$—</div>
-            <div class="listing__mcapline">MARKET CAP <b id="listMcap">—</b></div>
+            <div class="listing__price" id="listPrice">$â€”</div>
+            <div class="listing__mcapline">MARKET CAP <b id="listMcap">â€”</b></div>
           </div>
         </div>
         <svg class="listing__chart" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
           <polyline points="0,44 20,40 40,46 60,32 80,38 100,22 120,30 140,26 160,34 180,24 200,32 220,28 240,36 260,30 280,34 300,31" fill="none" stroke="#4a4a4a" stroke-width="2"/>
         </svg>
         <div class="listing__rows">
-          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">—</span></div>
-          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">—</span></div>
-          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">—</span></div>
+          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">â€”</span></div>
+          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">â€”</span></div>
+          <div class="listing__row"><span class="listing__q">?</span><span class="listing__name">COMING SOON</span><span class="listing__vol">â€”</span></div>
         </div>
-        <p class="listing__note">listings are not endorsements — do your own research. not financial advice.</p>
+        <p class="listing__note">listings are not endorsements â€” do your own research. not financial advice.</p>
       </div>
     </div>
 
