@@ -920,3 +920,34 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   .dock__icon { width: 36px; height: 36px; }
   .dock__stats { gap: .9rem; padding-right: 1rem; }
 }
+
+/* ============ CUSTOM CURSOR (the MeGusta face) ============ */
+html,
+body,
+.boot,
+.panel {
+  cursor: url("cursor.png") 16 16, auto;
+}
+a,
+button,
+input[type="button"],
+.btn,
+.nav__links button,
+.nav__burger,
+.spot,
+.mood,
+.dock__item,
+.dock__stat,
+.unlockbar,
+.unlockbar__thumb,
+.unlockbar__thumb:active,
+.panel__close,
+.moodblast,
+[data-panel] {
+  cursor: url("cursor.png") 16 16, pointer;
+}
+/* keep the text caret where people actually type */
+input[type="text"],
+textarea {
+  cursor: text;
+}
