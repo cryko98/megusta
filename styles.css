@@ -870,6 +870,72 @@ img.mood--ghost { filter: invert(1) opacity(.35) blur(1px); }
   line-height: 1.5;
 }
 
+/* ============ PRESS / FEATURED IN ============ */
+.press__title {
+  margin: 2.4rem 0 1rem;
+  font-family: var(--display);
+  font-size: .9rem;
+  letter-spacing: .2em;
+  color: var(--grey);
+}
+.press__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .6rem;
+}
+.press__item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 10px;
+  padding: .65rem .8rem;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  color: var(--grey);
+  text-decoration: none;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+.press__item::before {
+  content: "↗";
+  color: var(--accent);
+  font-size: .78rem;
+}
+.press__item:hover {
+  background: rgba(255,255,255,.08);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+/* coming-soon variant of the big buttons */
+.btn--soon {
+  position: relative;
+  opacity: .55;
+  cursor: default;
+}
+.btn--soon:hover {
+  background: transparent;
+  color: var(--white);
+  transform: none;
+}
+.btn__soon {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #0a0a0a;
+  font-family: var(--display);
+  font-style: normal;
+  font-size: .48rem;
+  letter-spacing: .1em;
+  line-height: 1;
+  padding: .3rem .5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
 /* ============ MOOD BLAST ============ */
 .mood { cursor: pointer; }
 .moodblast {
